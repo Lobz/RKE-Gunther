@@ -126,7 +126,7 @@ int main(int argc, char* argv[])
             fprintf(arquivo, "%d %f %f %f \n", obj.id, obj.tempo, obj.x, obj.y);
     }
     
-    fprintf(arquivo, ".s\n%f\n%f\n%f\n%f\n%f", barco_massa, barco_x, barco_y, barco_vx, barco_vy);
+    fprintf(arquivo, ".s\n%f\n%f\n%f\n%f\n%f\n", barco_massa, barco_x, barco_y, barco_vx, barco_vy);
     
     return 0;
 }

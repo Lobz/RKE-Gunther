@@ -13,4 +13,4 @@ rke-tmf: ./src/main.o ./src/fisica.o
 	$(CC) $(CFLAGS) ./src/fisica.c -o ./src/fisica.o
 
 clean:
-	rm -rf *.o rke-tmf
+	rm -rf ./src/*.o rke-tmf

@@ -43,7 +43,7 @@ void rke_set_vetor_mundo(double x, double y)
 void rke_set_numero_objetos(int numero)
 {
     objetos = malloc( (numero + 1) * sizeof(objeto) );
-    num_objetos = numero;
+    num_objetos = numero + 1;
 }
 
 
@@ -62,13 +62,15 @@ void itera_posicao(objeto* obj, vetor forca)
     obj->y += (obj->v_y * delta_t) + (forca.y / obj->massa) * (pow(delta_t, 2) / 2.0);
     
     // arrasto
-    obj->v_x -= (arrasto / delta_t) * obj->v_x;
-    obj->v_y -= (arrasto / delta_t) * obj->v_y;
+    obj->v_x -= (arrasto * delta_t) * obj->v_x;
+    obj->v_y -= (arrasto * delta_t) * obj->v_y;
     
-    obj->x -= (arrasto / delta_t) * (forca.x / obj->massa) * (pow(delta_t, 2) / 2.0);
-    obj->y -= (arrasto / delta_t) * (forca.y / obj->massa) * (pow(delta_t, 2) / 2.0);
+    obj->x -= (arrasto * delta_t) * (forca.x / obj->massa) * (pow(delta_t, 2) / 2.0);
+    obj->y -= (arrasto * delta_t) * (forca.y / obj->massa) * (pow(delta_t, 2) / 2.0);
     
     // tempo
+    if (obj->tempo == ESTATICO) return;
+    
     if (obj->tempo - delta_t <= 0.0) obj->tempo = 0.0;
     else obj->tempo -= delta_t;
 }

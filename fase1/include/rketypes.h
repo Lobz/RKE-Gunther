@@ -7,7 +7,7 @@
 //
 
 #define BARCOID  -1
-#define ESTATICO -1
+#define ESTATICO -1.0
 
 typedef struct struct_vetor
 {
