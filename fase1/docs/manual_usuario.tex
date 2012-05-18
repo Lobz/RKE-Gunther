@@ -1,0 +1,97 @@
+\documentclass[]{paper}
+\usepackage[utf8]{inputenc}
+\usepackage{fixltx2e}
+
+\begin{document}
+
+\title{Manual do Usuário \\ Módulo de Física - RKE v0.1}
+\author{Faca Vermelha Estúdios\\João da Silva, Marina Salles, Ricardo Macedo}
+\date{Today}
+\maketitle
+
+\section{Introdução}
+Este é o pequeno manual de usuário para o Módulo de Física do Red Knife Engine. Aproveite!
+\section{Uso}
+O Módulo de Física vem com um testador para facilitar o uso. Para utilizá-lo, basta chamá-lo em linha de comando:
+\\
+
+\texttt{./rke-tmf}
+
+\subsection{Argumentos}
+O testador possui alguns argumentos que devem ser colocados para que a simulação seja executada. São estes:
+\begin{description}
+\item[-f \emph{nome do arquivo}] Especifica o \textbf{arquivo} com as condições iniciais a ser carregado.
+\item[-d \emph{valor}] Especifica a \textbf{granularidade} (o tamanho do quanta de tempo) da simulação. Este valor é dado em milissegundos. \emph{[Padrão = 1000]}
+\item[-n \emph{valor}] Especifica o número de \textbf{iterações} que o módulo rodará. \emph{[Padrão = 1]}
+\item[-a \emph{valor}] Especifica o coeficiente de \textbf{arrasto} da superfície. Este valor deve estar entre 0.0 e 1.0. \emph{[Padrão = 0.0]}
+\end{description}
+
+\section{Formato do arquivo}
+O formato do arquivo, tanto de entrada quanto o de saída, seguem a seguinte especificação:
+
+\subsection{.w}
+Esta seção indica valores do vetor vento. Possui duas componentes:
+\begin{description}
+\item[vwx] Componente $x$ do vento
+\item[vwy] Componente $y$ do vento
+\end{description}
+\subsubsection{Exemplo}
+\texttt{.w\\
+0.5\\
+0.5}
+
+\subsection{.b}
+Esta é a seção que especifica as bombas presentes no mundo. Após o código \texttt{.b}, indica-se o número de bombas presentes na seção.
+
+Cada linha representa uma bomba, e cada bomba possui os seguintes parâmetros:
+\begin{description}
+\item[k\textsubscript{n}] Identificador único da $n$-ésima bomba.
+\item[t\textsubscript{n}] Tempo de vida (em segundos) da $n$-ésima bomba.
+\item[x\textsubscript{n}] Componente $x$ da $n$-ésima bomba.
+\item[y\textsubscript{n}] Componente $y$ da $n$-ésima bomba.
+\end{description}
+\subsubsection{Exemplo}
+\texttt{.b 2\\
+1 5 2 4\\
+2 10 3 2}
+
+\subsection{.s}
+Esta seção especifica os parâmetros do navio. Possui cinco componentes:
+\begin{description}
+\item[m] Massa do navio.
+\item[sx] Posição $x$ do navio.
+\item[sy] Posição $y$ do navio.
+\item[vsx] Componente $x$ da velocidade do navio.
+\item[vsy] Componente $y$ da velocidade do navio.
+\end{description}
+
+\subsubsection{Exemplo}
+\texttt{.s\\
+5.2\\
+2\\
+2\\
+1\\
+3}
+
+\subsection{Arquivo de exemplo}
+\texttt{.w\\
+0.5\\
+0.5\\
+.b 2\\
+1 5 2 4\\
+2 10 3 2\\
+.s\\
+5.2\\
+2\\
+2\\
+1\\
+3}
+
+
+\section{Saída do testador}
+O testador, dada as condições iniciais carregadas e os argumentos de linha de comando dados, grava um arquivo \texttt{saida.out} com o formato acima descrito contendo as informações do estado do mundo após as iterações da simulação.
+
+\section{Manual do desenvolvedor}
+Se você tem interesse em descobrir como funciona o Módulo de Física do Red Knife Engine, neste mesmo diretório, consulte os subdiretórios \texttt{/html} e \texttt{/latex} para a documentação em HTML e PDF, respectivamente.
+
+\end{document}
