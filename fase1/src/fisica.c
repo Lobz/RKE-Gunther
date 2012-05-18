@@ -1,3 +1,10 @@
+/**
+ * @file fisica.c
+ * @brief Esta é a biblioteca de funções que lidam com a física do Red Knife Engine.
+ *
+ * @author João da Silva, Marina Salles, Ricardo Macedo
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -15,24 +22,29 @@ int num_objetos = 0;
 objeto* objetos;
 
 
-/* set_delta_t(double d_t)
- *
- * indica qual a resolucao da simulacao
+/**
+ * Indica a resolução da simulação. Este é o tamanho do quanta de tempo.
+ * @param d_t   Resolução em segundos
  */
 void rke_set_delta_t(double d_t)
 {
     delta_t = d_t;
 }
 
+/**
+ * Configura o coeficiente de arrasto da superfície.
+ * @param coef_arrasto  Coeficiente de 0.0 a 1.0
+ */
 void rke_set_arrasto(double coef_arrasto)
 {
     arrasto = coef_arrasto;
 }
 
 
-/* set_vetor_mundo(double x, double y)
- *
- * configura o vetor base que regirá todos os objetos do mundo
+/**
+ * Configura o vetor base que regirá todos os objetos do mundo.
+ * @param x Componente x
+ * @param y Componente y
  */
 void rke_set_vetor_mundo(double x, double y)
 {
@@ -40,6 +52,10 @@ void rke_set_vetor_mundo(double x, double y)
     mundo.y = y;
 }
 
+/**
+ * Configura o número total de objetos a serem simulados.
+ * @param numero    Número de objetos
+ */
 void rke_set_numero_objetos(int numero)
 {
     objetos = malloc( (numero + 1) * sizeof(objeto) );
@@ -47,9 +63,10 @@ void rke_set_numero_objetos(int numero)
 }
 
 
-/* itera_posicao(objeto* obj, vetor forca)
- *
- * de acordo com a resolucao da simulacao, soma a forca indicada ao objeto
+/**
+ * De acordo com a velocidade do objeto, o tempo de vida dele, o vetor mundo e a massa, calcula a posição seguinte no próximo quanta de tempo.
+ * @param obj   Endereço do objeto
+ * @param forca Força a ser aplicada
  */
 void itera_posicao(objeto* obj, vetor forca)
 {
@@ -75,16 +92,16 @@ void itera_posicao(objeto* obj, vetor forca)
     else obj->tempo -= delta_t;
 }
 
-
-vetor calcula_resultante(vetor forca1, vetor forca2)
-{
-    vetor resultante;
-    resultante.x = forca1.x + forca2.x;
-    resultante.y = forca1.y + forca2.y;
-    
-    return resultante;
-}
-
+/**
+ * Adiciona um objeto à lista de objetos a serem simulados.
+ * @param id    Identificador único do objeto
+ * @param x Posição x do objeto
+ * @param y Posição y do objeto
+ * @param v_x Velocidade em x do objeto
+ * @param v_y Velocidade em y do objeto
+ * @param massa Massa do objeto
+ * @param tempo Tempo de vida do objeto em segundos
+ */
 void rke_adiciona_objeto(int id, double x, double y, double v_x, double v_y, double massa, double tempo)
 {
     objetos[ult_objeto].id    =    id;
@@ -97,11 +114,18 @@ void rke_adiciona_objeto(int id, double x, double y, double v_x, double v_y, dou
     ult_objeto++;
 }
 
+/**
+ * Retorna o i-ésimo objeto.
+ * @param i Índice do objeto
+ */
 objeto rke_get_objeto(int i)
 {
     return objetos[i];
 }
 
+/**
+ * Simula todos os objetos por um quanta de tempo.
+ */
 void rke_simula()
 {
     int i;

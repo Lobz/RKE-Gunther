@@ -1,10 +1,9 @@
-//
-//  rkefisica.h
-//  
-//
-//  Created by Ricardo Macedo on 17/05/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+/**
+ * @file rkefisica.h
+ * @brief Arquivo header da biblioteca de funções físicas.
+ *
+ * @author João da Silva, Marina Salles, Ricardo Macedo
+ */
 
 extern void rke_set_delta_t(double d_t);
 extern void rke_set_arrasto(double coef_arrasto);

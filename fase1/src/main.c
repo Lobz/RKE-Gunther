@@ -1,10 +1,10 @@
-//
-//  main.c
-//  
-//
-//  Created by Ricardo Macedo on 16/05/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+/**
+ * @file main.c
+ * @brief Este é o arquivo que implementa as funções descritas na fisica.c.
+ *        Aqui, carrega-se um arquivo texto com as condições iniciais e escreve um arquivo "saida.out" com as informações após as iterações.
+ *
+ * @author João da Silva, Marina Salles, Ricardo Macedo
+ */
 
 #include <stdio.h>
 #include <stdlib.h>

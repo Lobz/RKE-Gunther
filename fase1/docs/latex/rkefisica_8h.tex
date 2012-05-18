@@ -1,0 +1,136 @@
+\hypertarget{rkefisica_8h}{\section{include/rkefisica.h File Reference}
+\label{rkefisica_8h}\index{include/rkefisica.\-h@{include/rkefisica.\-h}}
+}
+
+
+Arquivo header da biblioteca de funções físicas.  
+
+
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rkefisica_8h_ae474cc3a29378896516478d39e1059b9}{rke\-\_\-set\-\_\-delta\-\_\-t} (double d\-\_\-t)
+\item 
+void \hyperlink{rkefisica_8h_ad9c136c98e2b18bb585f8c5b5c61152e}{rke\-\_\-set\-\_\-arrasto} (double coef\-\_\-arrasto)
+\item 
+void \hyperlink{rkefisica_8h_a4966d99bd4c2668b7d59a5e334330f86}{rke\-\_\-set\-\_\-vetor\-\_\-mundo} (double x, double y)
+\item 
+void \hyperlink{rkefisica_8h_ad669b81728dbf96d76dbed56981a3e84}{rke\-\_\-set\-\_\-numero\-\_\-objetos} (int numero)
+\item 
+void \hyperlink{rkefisica_8h_a4f887533c58a96b4cd5eff48ef195902}{rke\-\_\-adiciona\-\_\-objeto} (int id, double x, double y, double v\-\_\-x, double v\-\_\-y, double massa, double tempo)
+\item 
+\hyperlink{rketypes_8h_a216693704a51093135790527237245ec}{objeto} \hyperlink{rkefisica_8h_a3db469cd5f289d1376d1d27b53067875}{rke\-\_\-get\-\_\-objeto} (int i)
+\item 
+void \hyperlink{rkefisica_8h_ae68fcd8b02679fe3b05c319820641449}{rke\-\_\-simula} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo header da biblioteca de funções físicas. \begin{DoxyAuthor}{Author}
+João da Silva, Marina Salles, Ricardo Macedo 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{rkefisica_8h_a4f887533c58a96b4cd5eff48ef195902}{\index{rkefisica.\-h@{rkefisica.\-h}!rke\-\_\-adiciona\-\_\-objeto@{rke\-\_\-adiciona\-\_\-objeto}}
+\index{rke\-\_\-adiciona\-\_\-objeto@{rke\-\_\-adiciona\-\_\-objeto}!rkefisica.h@{rkefisica.\-h}}
+\subsubsection[{rke\-\_\-adiciona\-\_\-objeto}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-adiciona\-\_\-objeto} (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{v\-\_\-x, }
+\item[{double}]{v\-\_\-y, }
+\item[{double}]{massa, }
+\item[{double}]{tempo}
+\end{DoxyParamCaption}
+)}}\label{rkefisica_8h_a4f887533c58a96b4cd5eff48ef195902}
+Adiciona um objeto à lista de objetos a serem simulados. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único do objeto \\
+\hline
+{\em x} & Posição x do objeto \\
+\hline
+{\em y} & Posição y do objeto \\
+\hline
+{\em v\-\_\-x} & Velocidade em x do objeto \\
+\hline
+{\em v\-\_\-y} & Velocidade em y do objeto \\
+\hline
+{\em massa} & Massa do objeto \\
+\hline
+{\em tempo} & Tempo de vida do objeto em segundos \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkefisica_8h_a3db469cd5f289d1376d1d27b53067875}{\index{rkefisica.\-h@{rkefisica.\-h}!rke\-\_\-get\-\_\-objeto@{rke\-\_\-get\-\_\-objeto}}
+\index{rke\-\_\-get\-\_\-objeto@{rke\-\_\-get\-\_\-objeto}!rkefisica.h@{rkefisica.\-h}}
+\subsubsection[{rke\-\_\-get\-\_\-objeto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objeto} {\bf rke\-\_\-get\-\_\-objeto} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{rkefisica_8h_a3db469cd5f289d1376d1d27b53067875}
+Retorna o i-\/ésimo objeto. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Índice do objeto \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkefisica_8h_ad9c136c98e2b18bb585f8c5b5c61152e}{\index{rkefisica.\-h@{rkefisica.\-h}!rke\-\_\-set\-\_\-arrasto@{rke\-\_\-set\-\_\-arrasto}}
+\index{rke\-\_\-set\-\_\-arrasto@{rke\-\_\-set\-\_\-arrasto}!rkefisica.h@{rkefisica.\-h}}
+\subsubsection[{rke\-\_\-set\-\_\-arrasto}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-set\-\_\-arrasto} (
+\begin{DoxyParamCaption}
+\item[{double}]{coef\-\_\-arrasto}
+\end{DoxyParamCaption}
+)}}\label{rkefisica_8h_ad9c136c98e2b18bb585f8c5b5c61152e}
+Configura o coeficiente de arrasto da superfície. 
+\begin{DoxyParams}{Parameters}
+{\em coef\-\_\-arrasto} & Coeficiente de 0.\-0 a 1.\-0 \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkefisica_8h_ae474cc3a29378896516478d39e1059b9}{\index{rkefisica.\-h@{rkefisica.\-h}!rke\-\_\-set\-\_\-delta\-\_\-t@{rke\-\_\-set\-\_\-delta\-\_\-t}}
+\index{rke\-\_\-set\-\_\-delta\-\_\-t@{rke\-\_\-set\-\_\-delta\-\_\-t}!rkefisica.h@{rkefisica.\-h}}
+\subsubsection[{rke\-\_\-set\-\_\-delta\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-set\-\_\-delta\-\_\-t} (
+\begin{DoxyParamCaption}
+\item[{double}]{d\-\_\-t}
+\end{DoxyParamCaption}
+)}}\label{rkefisica_8h_ae474cc3a29378896516478d39e1059b9}
+Indica a resolução da simulação. Este é o tamanho do quanta de tempo. 
+\begin{DoxyParams}{Parameters}
+{\em d\-\_\-t} & Resolução em segundos \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkefisica_8h_ad669b81728dbf96d76dbed56981a3e84}{\index{rkefisica.\-h@{rkefisica.\-h}!rke\-\_\-set\-\_\-numero\-\_\-objetos@{rke\-\_\-set\-\_\-numero\-\_\-objetos}}
+\index{rke\-\_\-set\-\_\-numero\-\_\-objetos@{rke\-\_\-set\-\_\-numero\-\_\-objetos}!rkefisica.h@{rkefisica.\-h}}
+\subsubsection[{rke\-\_\-set\-\_\-numero\-\_\-objetos}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-set\-\_\-numero\-\_\-objetos} (
+\begin{DoxyParamCaption}
+\item[{int}]{numero}
+\end{DoxyParamCaption}
+)}}\label{rkefisica_8h_ad669b81728dbf96d76dbed56981a3e84}
+Configura o número total de objetos a serem simulados. 
+\begin{DoxyParams}{Parameters}
+{\em numero} & Número de objetos \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkefisica_8h_a4966d99bd4c2668b7d59a5e334330f86}{\index{rkefisica.\-h@{rkefisica.\-h}!rke\-\_\-set\-\_\-vetor\-\_\-mundo@{rke\-\_\-set\-\_\-vetor\-\_\-mundo}}
+\index{rke\-\_\-set\-\_\-vetor\-\_\-mundo@{rke\-\_\-set\-\_\-vetor\-\_\-mundo}!rkefisica.h@{rkefisica.\-h}}
+\subsubsection[{rke\-\_\-set\-\_\-vetor\-\_\-mundo}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-set\-\_\-vetor\-\_\-mundo} (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}}\label{rkefisica_8h_a4966d99bd4c2668b7d59a5e334330f86}
+Configura o vetor base que regirá todos os objetos do mundo. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Componente x \\
+\hline
+{\em y} & Componente y \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkefisica_8h_ae68fcd8b02679fe3b05c319820641449}{\index{rkefisica.\-h@{rkefisica.\-h}!rke\-\_\-simula@{rke\-\_\-simula}}
+\index{rke\-\_\-simula@{rke\-\_\-simula}!rkefisica.h@{rkefisica.\-h}}
+\subsubsection[{rke\-\_\-simula}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-simula} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{rkefisica_8h_ae68fcd8b02679fe3b05c319820641449}
+Simula todos os objetos por um quanta de tempo. 
