@@ -1,4 +1,4 @@
-\hypertarget{fisica_8c}{\section{src/fisica.c File Reference}
+\hypertarget{fisica_8c}{\section{Referência do Arquivo src/fisica.c}
 \label{fisica_8c}\index{src/fisica.\-c@{src/fisica.\-c}}
 }
 
@@ -10,8 +10,8 @@ Esta é a biblioteca de funções que lidam com a física do Red Knife Engine.
 {\ttfamily \#include $<$stdlib.\-h$>$}\\*
 {\ttfamily \#include $<$math.\-h$>$}\\*
 {\ttfamily \#include \char`\"{}../include/rketypes.\-h\char`\"{}}\\*
-Include dependency graph for fisica.\-c\-:
-\subsection*{Functions}
+Gráfico de dependência de inclusões para fisica.\-c\-:
+\subsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{fisica_8c_ae474cc3a29378896516478d39e1059b9}{rke\-\_\-set\-\_\-delta\-\_\-t} (double d\-\_\-t)
@@ -30,7 +30,7 @@ void \hyperlink{fisica_8c_a4f887533c58a96b4cd5eff48ef195902}{rke\-\_\-adiciona\-
 \item 
 void \hyperlink{fisica_8c_ae68fcd8b02679fe3b05c319820641449}{rke\-\_\-simula} ()
 \end{DoxyCompactItemize}
-\subsection*{Variables}
+\subsection*{Variáveis}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{fisica_8c_a4cfc079302fe9a34fe24637c4e44303a}{double {\bfseries delta\-\_\-t}}\label{fisica_8c_a4cfc079302fe9a34fe24637c4e44303a}
@@ -56,13 +56,13 @@ void \hyperlink{fisica_8c_ae68fcd8b02679fe3b05c319820641449}{rke\-\_\-simula} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-Esta é a biblioteca de funções que lidam com a física do Red Knife Engine. \begin{DoxyAuthor}{Author}
+\subsection{Descrição Detalhada}
+Esta é a biblioteca de funções que lidam com a física do Red Knife Engine. \begin{DoxyAuthor}{Autor}
 João da Silva, Marina Salles, Ricardo Macedo 
 \end{DoxyAuthor}
 
 
-\subsection{Function Documentation}
+\subsection{Funções}
 \hypertarget{fisica_8c_a4e96e803ac19354b2b63dd14a5f5e67d}{\index{fisica.\-c@{fisica.\-c}!itera\-\_\-posicao@{itera\-\_\-posicao}}
 \index{itera\-\_\-posicao@{itera\-\_\-posicao}!fisica.c@{fisica.\-c}}
 \subsubsection[{itera\-\_\-posicao}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf itera\-\_\-posicao} (
@@ -72,7 +72,7 @@ João da Silva, Marina Salles, Ricardo Macedo
 \end{DoxyParamCaption}
 )}}\label{fisica_8c_a4e96e803ac19354b2b63dd14a5f5e67d}
 De acordo com a velocidade do objeto, o tempo de vida dele, o vetor mundo e a massa, calcula a posição seguinte no próximo quanta de tempo. 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em obj} & Endereço do objeto \\
 \hline
 {\em forca} & Força a ser aplicada \\
@@ -92,7 +92,7 @@ De acordo com a velocidade do objeto, o tempo de vida dele, o vetor mundo e a ma
 \end{DoxyParamCaption}
 )}}\label{fisica_8c_a4f887533c58a96b4cd5eff48ef195902}
 Adiciona um objeto à lista de objetos a serem simulados. 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em id} & Identificador único do objeto \\
 \hline
 {\em x} & Posição x do objeto \\
@@ -116,7 +116,7 @@ Adiciona um objeto à lista de objetos a serem simulados.
 \end{DoxyParamCaption}
 )}}\label{fisica_8c_a3db469cd5f289d1376d1d27b53067875}
 Retorna o i-\/ésimo objeto. 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em i} & Índice do objeto \\
 \hline
 \end{DoxyParams}
@@ -128,7 +128,7 @@ Retorna o i-\/ésimo objeto.
 \end{DoxyParamCaption}
 )}}\label{fisica_8c_ad9c136c98e2b18bb585f8c5b5c61152e}
 Configura o coeficiente de arrasto da superfície. 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em coef\-\_\-arrasto} & Coeficiente de 0.\-0 a 1.\-0 \\
 \hline
 \end{DoxyParams}
@@ -140,7 +140,7 @@ Configura o coeficiente de arrasto da superfície.
 \end{DoxyParamCaption}
 )}}\label{fisica_8c_ae474cc3a29378896516478d39e1059b9}
 Indica a resolução da simulação. Este é o tamanho do quanta de tempo. 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em d\-\_\-t} & Resolução em segundos \\
 \hline
 \end{DoxyParams}
@@ -152,7 +152,7 @@ Indica a resolução da simulação. Este é o tamanho do quanta de tempo.
 \end{DoxyParamCaption}
 )}}\label{fisica_8c_ad669b81728dbf96d76dbed56981a3e84}
 Configura o número total de objetos a serem simulados. 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em numero} & Número de objetos \\
 \hline
 \end{DoxyParams}
@@ -165,7 +165,7 @@ Configura o número total de objetos a serem simulados.
 \end{DoxyParamCaption}
 )}}\label{fisica_8c_a4966d99bd4c2668b7d59a5e334330f86}
 Configura o vetor base que regirá todos os objetos do mundo. 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em x} & Componente x \\
 \hline
 {\em y} & Componente y \\

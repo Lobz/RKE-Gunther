@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  18 MAY 2012 09:27
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  18 MAY 2012 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,6 +706,20 @@ Now handling font encoding PU ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count121
+\U@D=\dimen130
+)
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
@@ -784,8 +798,8 @@ Package tocloft Info: The document has chapter divisions on input line 43.
 \cftbeforefigskip=\skip77
 \cftfigindent=\skip78
 \cftfignumwidth=\skip79
-\c@lofdepth=\count121
-\c@lotdepth=\count122
+\c@lofdepth=\count122
+\c@lotdepth=\count123
 \cftbeforelottitleskip=\skip80
 \cftafterlottitleskip=\skip81
 \cftbeforetabskip=\skip82
@@ -796,15 +810,15 @@ Package tocloft Info: The document has chapter divisions on input line 43.
 Package: doxygen 
  (/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count123
-\calc@Bcount=\count124
-\calc@Adimen=\dimen130
-\calc@Bdimen=\dimen131
+\calc@Acount=\count124
+\calc@Bcount=\count125
+\calc@Adimen=\dimen131
+\calc@Bdimen=\dimen132
 \calc@Askip=\skip85
 \calc@Bskip=\skip86
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count125
+\calc@Ccount=\count126
 \calc@Cskip=\skip87
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
@@ -824,16 +838,16 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTright=\skip98
 \LTpre=\skip99
 \LTpost=\skip100
-\LTchunksize=\count126
-\LTcapwidth=\dimen132
+\LTchunksize=\count127
+\LTcapwidth=\dimen133
 \LT@head=\box56
 \LT@firsthead=\box57
 \LT@foot=\box58
 \LT@lastfoot=\box59
-\LT@cols=\count127
-\LT@rows=\count128
-\c@LT@tables=\count129
-\c@LT@chunks=\count130
+\LT@cols=\count128
+\LT@rows=\count129
+\c@LT@tables=\count130
+\c@LT@chunks=\count131
 \LT@p@ftn=\toks23
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/tools/verbatim.sty
@@ -844,31 +858,31 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/xtab/xtab.sty
 Package: xtab 2010/02/06 v2.3e Extended supertabular package
-\c@tracingst=\count131
-\PWSTcapht=\dimen133
-\ST@wd=\dimen134
+\c@tracingst=\count132
+\PWSTcapht=\dimen134
+\ST@wd=\dimen135
 \ST@rightskip=\skip101
 \ST@leftskip=\skip102
 \ST@parfillskip=\skip103
-\c@PWSTtable=\count132
-\PWSTlastpage=\count133
-\PWSTpenultimate=\count134
-\PWSTcurpage=\count135
-\PWSTtempc=\count136
-\PWSTlines=\count137
-\PWST@lastht=\dimen135
-\PWST@generalht=\dimen136
-\PWST@ht=\dimen137
-\ST@pageleft=\dimen138
-\ST@headht=\dimen139
-\ST@tailht=\dimen140
-\ST@pagesofar=\dimen141
-\ST@pboxht=\dimen142
-\ST@lineht=\dimen143
-\ST@stretchht=\dimen144
-\ST@prevht=\dimen145
-\ST@toadd=\dimen146
-\ST@dimen=\dimen147
+\c@PWSTtable=\count133
+\PWSTlastpage=\count134
+\PWSTpenultimate=\count135
+\PWSTcurpage=\count136
+\PWSTtempc=\count137
+\PWSTlines=\count138
+\PWST@lastht=\dimen136
+\PWST@generalht=\dimen137
+\PWST@ht=\dimen138
+\ST@pageleft=\dimen139
+\ST@headht=\dimen140
+\ST@tailht=\dimen141
+\ST@pagesofar=\dimen142
+\ST@pboxht=\dimen143
+\ST@lineht=\dimen144
+\ST@stretchht=\dimen145
+\ST@prevht=\dimen146
+\ST@toadd=\dimen147
+\ST@dimen=\dimen148
 \ST@pbox=\box60
 )
 \tmplength=\skip104
@@ -899,35 +913,35 @@ Writing index file refman.idx
 (./refman.aux)
 \openout1 = `refman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 48.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 48.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 47.
+(Font)              scaled to size 8.99994pt on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -965,16 +979,16 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
-\scratchdimen=\dimen148
+\scratchcounter=\count139
+\scratchdimen=\dimen149
 \scratchbox=\box62
-\nofMPsegments=\count139
-\nofMParguments=\count140
+\nofMPsegments=\count140
+\nofMParguments=\count141
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count141
-\MPscratchDim=\dimen149
-\MPnumerator=\count142
-\makeMPintoPDFobject=\count143
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen150
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
 \everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -991,10 +1005,10 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count144
+\c@lstlisting=\count145
 \AtBeginShipoutBox=\box63
-Package backref Info: ** backref set up for natbib ** on input line 47.
-Package hyperref Info: Link coloring ON on input line 47.
+Package backref Info: ** backref set up for natbib ** on input line 48.
+Package hyperref Info: Link coloring ON on input line 48.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -1002,24 +1016,24 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count145
+\c@section@level=\count146
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
 
 (./refman.out) (./refman.out)
 \@outlinefile=\write4
 \openout4 = `refman.out'.
 
-\big@size=\dimen150
-Package hyperref Info: Option `pageanchor' set `false' on input line 48.
+\big@size=\dimen151
+Package hyperref Info: Option `pageanchor' set `false' on input line 49.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 52.
+(Font)              scaled to size 12.9599pt on input line 53.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 54.
+(Font)              scaled to size 10.79993pt on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 56.
+(Font)              scaled to size 8.09995pt on input line 57.
  [1
 
 
@@ -1027,58 +1041,58 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 61.
+(Font)              scaled to size 22.39185pt on input line 62.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 61.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 62.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 61.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 61.
+(Font)              scaled to size 22.39185pt on input line 62.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 62.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
-(Font)              scaled to size 22.39185pt on input line 61.
+(Font)              scaled to size 22.39185pt on input line 62.
  (./refman.toc
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 1.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 1.
+(Font)              scaled to size 8.99994pt on input line 2.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 2.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 1.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 2.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 1.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 2.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 1.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 2.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 1.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 2.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
  [1
 
 ])
@@ -1086,21 +1100,21 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \openout5 = `refman.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 62.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 62.
+(Font)              scaled to size 6.29996pt on input line 63.
  [2]
-Package hyperref Info: Option `pageanchor' set `true' on input line 64.
+Package hyperref Info: Option `pageanchor' set `true' on input line 65.
 
-Chapter 1.
+Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 65.
+(Font)              scaled to size 18.66588pt on input line 66.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 65.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 66.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 65.
+(Font)              scaled to size 18.66588pt on input line 66.
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
-(Font)              scaled to size 18.66588pt on input line 65.
+(Font)              scaled to size 18.66588pt on input line 66.
 (./annotated.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
@@ -1114,11 +1128,11 @@ LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
 ] [2
 
 ]
-Chapter 2.
+Cap\'{\i }tulo 2.
 (./files.tex) [3] [4
 
 ]
-Chapter 3.
+Cap\'{\i }tulo 3.
 (./structstruct__objeto.tex
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
 
@@ -1153,7 +1167,7 @@ Underfull \vbox (badness 10000) detected at line 26
  []
 
 ) [6]
-Chapter 4.
+Cap\'{\i }tulo 4.
 (./rkefisica_8h.tex
 LaTeX Font Info:    Font shape `OT1/phv/bc/it' in size <10> not available
 (Font)              Font shape `OT1/phv/bc/sl' tried instead on input line 48.
@@ -1194,7 +1208,7 @@ Underfull \vbox (badness 10000) detected at line 71
  []
 
 ) (./fisica_8c.tex
-Underfull \vbox (badness 4316) has occurred while \output is active []
+Underfull \vbox (badness 3769) has occurred while \output is active []
 
  [9]
 Underfull \vbox (badness 10000) detected at line 80
@@ -1227,23 +1241,23 @@ Underfull \vbox (badness 10000) detected at line 173
 ) (./main_8c.tex [11]) (./refman.ind [12] [13
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: C255931DBCBF3A16C87B054668D72FD0;6035.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
+(rerunfilecheck)             Checksum: BB38F2FF0AA3B897A0EE9CC068F8156A;6239.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 11303 strings out of 493633
- 159704 string characters out of 3143378
- 286996 words of memory out of 3000000
- 14258 multiletter control sequences out of 15000+200000
+ 11586 strings out of 493633
+ 163188 string characters out of 3143378
+ 293870 words of memory out of 3000000
+ 14530 multiletter control sequences out of 15000+200000
  56515 words of font info for 73 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 41i,12n,58p,382b,407s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,58p,382b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
@@ -1253,7 +1267,7 @@ live/2011/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/201
 fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/local/texlive/2011/texmf-dist/fonts
 /type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (17 pages, 102237 bytes).
+Output written on refman.pdf (17 pages, 104306 bytes).
 PDF statistics:
  482 PDF objects out of 1000 (max. 8388607)
  450 compressed objects within 5 object streams
