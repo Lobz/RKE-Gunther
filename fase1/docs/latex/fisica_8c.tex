@@ -28,6 +28,8 @@ void \hyperlink{fisica_8c_a4f887533c58a96b4cd5eff48ef195902}{rke\-\_\-adiciona\-
 \item 
 \hyperlink{rketypes_8h_a216693704a51093135790527237245ec}{objeto} \hyperlink{fisica_8c_a3db469cd5f289d1376d1d27b53067875}{rke\-\_\-get\-\_\-objeto} (int i)
 \item 
+int \hyperlink{fisica_8c_a1c031c9197d9bfc50cdee27c0d8dd60a}{rke\-\_\-conta\-\_\-objetos} ()
+\item 
 void \hyperlink{fisica_8c_ae68fcd8b02679fe3b05c319820641449}{rke\-\_\-simula} ()
 \end{DoxyCompactItemize}
 \subsection*{Variáveis}
@@ -78,7 +80,7 @@ De acordo com a velocidade do objeto, o tempo de vida dele, o vetor mundo e a ma
 {\em forca} & Força a ser aplicada \\
 \hline
 \end{DoxyParams}
-\hypertarget{fisica_8c_a4f887533c58a96b4cd5eff48ef195902}{\index{fisica.\-c@{fisica.\-c}!rke\-\_\-adiciona\-\_\-objeto@{rke\-\_\-adiciona\-\_\-objeto}}
+O arrasto é modelado como resistência viscosa, com um número de Reynolds desprezível. \hypertarget{fisica_8c_a4f887533c58a96b4cd5eff48ef195902}{\index{fisica.\-c@{fisica.\-c}!rke\-\_\-adiciona\-\_\-objeto@{rke\-\_\-adiciona\-\_\-objeto}}
 \index{rke\-\_\-adiciona\-\_\-objeto@{rke\-\_\-adiciona\-\_\-objeto}!fisica.c@{fisica.\-c}}
 \subsubsection[{rke\-\_\-adiciona\-\_\-objeto}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-adiciona\-\_\-objeto} (
 \begin{DoxyParamCaption}
@@ -108,7 +110,14 @@ Adiciona um objeto à lista de objetos a serem simulados.
 {\em tempo} & Tempo de vida do objeto em segundos \\
 \hline
 \end{DoxyParams}
-\hypertarget{fisica_8c_a3db469cd5f289d1376d1d27b53067875}{\index{fisica.\-c@{fisica.\-c}!rke\-\_\-get\-\_\-objeto@{rke\-\_\-get\-\_\-objeto}}
+\hypertarget{fisica_8c_a1c031c9197d9bfc50cdee27c0d8dd60a}{\index{fisica.\-c@{fisica.\-c}!rke\-\_\-conta\-\_\-objetos@{rke\-\_\-conta\-\_\-objetos}}
+\index{rke\-\_\-conta\-\_\-objetos@{rke\-\_\-conta\-\_\-objetos}!fisica.c@{fisica.\-c}}
+\subsubsection[{rke\-\_\-conta\-\_\-objetos}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf rke\-\_\-conta\-\_\-objetos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{fisica_8c_a1c031c9197d9bfc50cdee27c0d8dd60a}
+Conta o número de objetos ativos, ou seja, com tempo de vida diferente de zero. \hypertarget{fisica_8c_a3db469cd5f289d1376d1d27b53067875}{\index{fisica.\-c@{fisica.\-c}!rke\-\_\-get\-\_\-objeto@{rke\-\_\-get\-\_\-objeto}}
 \index{rke\-\_\-get\-\_\-objeto@{rke\-\_\-get\-\_\-objeto}!fisica.c@{fisica.\-c}}
 \subsubsection[{rke\-\_\-get\-\_\-objeto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objeto} {\bf rke\-\_\-get\-\_\-objeto} (
 \begin{DoxyParamCaption}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  18 MAY 2012 09:33
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  18 MAY 2012 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1031,7 +1031,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 49.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 53.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 55.
+(Font)              scaled to size 10.79993pt on input line 53.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 57.
  [1
@@ -1170,33 +1170,37 @@ Underfull \vbox (badness 10000) detected at line 26
 Cap\'{\i }tulo 4.
 (./rkefisica_8h.tex
 LaTeX Font Info:    Font shape `OT1/phv/bc/it' in size <10> not available
-(Font)              Font shape `OT1/phv/bc/sl' tried instead on input line 48.
+(Font)              Font shape `OT1/phv/bc/sl' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/phv/bc/sl' will be
-(Font)              scaled to size 8.99994pt on input line 48.
+(Font)              scaled to size 8.99994pt on input line 50.
 
-Underfull \vbox (badness 10000) detected at line 65
+Underfull \vbox (badness 10000) detected at line 67
  []
+
+
+Overfull \vbox (7.7497pt too high) has occurred while \output is active []
+
 
 [7
 
 ]
-Underfull \vbox (badness 10000) detected at line 77
+Underfull \vbox (badness 10000) detected at line 86
  []
 
 
-Underfull \vbox (badness 10000) detected at line 89
+Underfull \vbox (badness 10000) detected at line 98
  []
 
 
-Underfull \vbox (badness 10000) detected at line 101
+Underfull \vbox (badness 10000) detected at line 110
  []
 
 
-Underfull \vbox (badness 10000) detected at line 113
+Underfull \vbox (badness 10000) detected at line 122
  []
 
 
-Underfull \vbox (badness 10000) detected at line 128
+Underfull \vbox (badness 10000) detected at line 137
  []
 
 ) (./rketypes_8h.tex [8]
@@ -1208,37 +1212,40 @@ Underfull \vbox (badness 10000) detected at line 71
  []
 
 ) (./fisica_8c.tex
-Underfull \vbox (badness 3769) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-Underfull \vbox (badness 10000) detected at line 80
+Underfull \vbox (badness 10000) detected at line 82
  []
 
 [10]
-Underfull \vbox (badness 10000) detected at line 110
+Underfull \vbox (badness 10000) detected at line 112
  []
 
 
-Underfull \vbox (badness 10000) detected at line 122
+Underfull \vbox (badness 10000) detected at line 131
  []
 
 
-Underfull \vbox (badness 10000) detected at line 134
+Underfull \vbox (badness 10000) detected at line 143
  []
 
 
-Underfull \vbox (badness 10000) detected at line 146
+Underfull \vbox (badness 10000) detected at line 155
  []
 
 
-Underfull \vbox (badness 10000) detected at line 158
+Underfull \vbox (badness 10000) detected at line 167
  []
 
 
-Underfull \vbox (badness 10000) detected at line 173
+Underfull \vbox (badness 2495) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) detected at line 182
  []
 
-) (./main_8c.tex [11]) (./refman.ind [12] [13
+) (./main_8c.tex) (./refman.ind [12] [13
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
@@ -1247,17 +1254,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: BB38F2FF0AA3B897A0EE9CC068F8156A;6239.
+(rerunfilecheck)             Checksum: 97D7EFF7EE9607198A451602815D3FB7;6621.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 11586 strings out of 493633
- 163188 string characters out of 3143378
- 293870 words of memory out of 3000000
- 14530 multiletter control sequences out of 15000+200000
+ 11593 strings out of 493633
+ 163450 string characters out of 3143378
+ 291870 words of memory out of 3000000
+ 14533 multiletter control sequences out of 15000+200000
  56515 words of font info for 73 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 41i,12n,58p,382b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,58p,382b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
@@ -1267,10 +1274,10 @@ live/2011/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/201
 fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/local/texlive/2011/texmf-dist/fonts
 /type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (17 pages, 104306 bytes).
+Output written on refman.pdf (17 pages, 105382 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 450 compressed objects within 5 object streams
- 121 named destinations out of 1000 (max. 500000)
- 305 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 500 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

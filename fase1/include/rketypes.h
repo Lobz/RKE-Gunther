@@ -1,8 +1,8 @@
 /**
- * @file rketypes.h
- * @brief Arquivo header de tipos e defines do Red Knife Engine
+ * \file rketypes.h
+ * \brief Arquivo header de tipos e defines do Red Knife Engine
  *
- * @author João da Silva, Marina Salles, Ricardo Macedo
+ * \author João da Silva, Marina Salles, Ricardo Macedo
  */
 
 #define BARCOID  -1
@@ -10,8 +10,8 @@
 
 /**
  * Struct vetor
- * @param x Componente x
- * @param y Componente y
+ * \param x Componente x
+ * \param y Componente y
  */
 typedef struct struct_vetor
 {
@@ -20,13 +20,13 @@ typedef struct struct_vetor
 
 /**
  * Struct objeto
- * @param id    Identificador único
- * @param x Componente x
- * @param y Componente y
- * @param v_x   Componente x da velocidade do objeto
- * @param v_y   Componente y da velocidade do objeto
- * @param massa Massa do objeto
- * @param tempo Tempo de vida do objeto
+ * \param id    Identificador único
+ * \param x Componente x
+ * \param y Componente y
+ * \param v_x   Componente x da velocidade do objeto
+ * \param v_y   Componente y da velocidade do objeto
+ * \param massa Massa do objeto
+ * \param tempo Tempo de vida do objeto
  */
 typedef struct struct_objeto
 {

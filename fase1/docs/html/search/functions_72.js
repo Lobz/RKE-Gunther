@@ -1,6 +1,7 @@
 var searchData=
 [
   ['rke_5fadiciona_5fobjeto',['rke_adiciona_objeto',['../rkefisica_8h.html#a4f887533c58a96b4cd5eff48ef195902',1,'rke_adiciona_objeto(int id, double x, double y, double v_x, double v_y, double massa, double tempo):&#160;fisica.c'],['../fisica_8c.html#a4f887533c58a96b4cd5eff48ef195902',1,'rke_adiciona_objeto(int id, double x, double y, double v_x, double v_y, double massa, double tempo):&#160;fisica.c']]],
+  ['rke_5fconta_5fobjetos',['rke_conta_objetos',['../rkefisica_8h.html#a1c031c9197d9bfc50cdee27c0d8dd60a',1,'rke_conta_objetos():&#160;fisica.c'],['../fisica_8c.html#a1c031c9197d9bfc50cdee27c0d8dd60a',1,'rke_conta_objetos():&#160;fisica.c']]],
   ['rke_5fget_5fobjeto',['rke_get_objeto',['../rkefisica_8h.html#a3db469cd5f289d1376d1d27b53067875',1,'rke_get_objeto(int i):&#160;fisica.c'],['../fisica_8c.html#a3db469cd5f289d1376d1d27b53067875',1,'rke_get_objeto(int i):&#160;fisica.c']]],
   ['rke_5fset_5farrasto',['rke_set_arrasto',['../rkefisica_8h.html#ad9c136c98e2b18bb585f8c5b5c61152e',1,'rke_set_arrasto(double coef_arrasto):&#160;fisica.c'],['../fisica_8c.html#ad9c136c98e2b18bb585f8c5b5c61152e',1,'rke_set_arrasto(double coef_arrasto):&#160;fisica.c']]],
   ['rke_5fset_5fdelta_5ft',['rke_set_delta_t',['../rkefisica_8h.html#ae474cc3a29378896516478d39e1059b9',1,'rke_set_delta_t(double d_t):&#160;fisica.c'],['../fisica_8c.html#ae474cc3a29378896516478d39e1059b9',1,'rke_set_delta_t(double d_t):&#160;fisica.c']]],

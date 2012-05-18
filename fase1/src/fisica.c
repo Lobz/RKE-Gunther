@@ -1,8 +1,8 @@
 /**
- * @file fisica.c
- * @brief Esta é a biblioteca de funções que lidam com a física do Red Knife Engine.
+ * \file fisica.c
+ * \brief Esta é a biblioteca de funções que lidam com a física do Red Knife Engine.
  *
- * @author João da Silva, Marina Salles, Ricardo Macedo
+ * \author João da Silva, Marina Salles, Ricardo Macedo
  */
 
 #include <stdio.h>
@@ -24,7 +24,7 @@ objeto* objetos;
 
 /**
  * Indica a resolução da simulação. Este é o tamanho do quanta de tempo.
- * @param d_t   Resolução em segundos
+ * \param d_t   Resolução em segundos
  */
 void rke_set_delta_t(double d_t)
 {
@@ -33,7 +33,7 @@ void rke_set_delta_t(double d_t)
 
 /**
  * Configura o coeficiente de arrasto da superfície.
- * @param coef_arrasto  Coeficiente de 0.0 a 1.0
+ * \param coef_arrasto  Coeficiente de 0.0 a 1.0
  */
 void rke_set_arrasto(double coef_arrasto)
 {
@@ -43,8 +43,8 @@ void rke_set_arrasto(double coef_arrasto)
 
 /**
  * Configura o vetor base que regirá todos os objetos do mundo.
- * @param x Componente x
- * @param y Componente y
+ * \param x Componente x
+ * \param y Componente y
  */
 void rke_set_vetor_mundo(double x, double y)
 {
@@ -54,7 +54,7 @@ void rke_set_vetor_mundo(double x, double y)
 
 /**
  * Configura o número total de objetos a serem simulados.
- * @param numero    Número de objetos
+ * \param numero    Número de objetos
  */
 void rke_set_numero_objetos(int numero)
 {
@@ -65,27 +65,27 @@ void rke_set_numero_objetos(int numero)
 
 /**
  * De acordo com a velocidade do objeto, o tempo de vida dele, o vetor mundo e a massa, calcula a posição seguinte no próximo quanta de tempo.
- * @param obj   Endereço do objeto
- * @param forca Força a ser aplicada
+ * \param obj   Endereço do objeto
+ * \param forca Força a ser aplicada
  */
 void itera_posicao(objeto* obj, vetor forca)
 {
     if (obj->tempo == 0.0) return;
     
-    obj->v_x += (forca.x / obj->massa);
-    obj->v_y += (forca.y / obj->massa);
-    
     obj->x += (obj->v_x * delta_t) + (forca.x / obj->massa) * (pow(delta_t, 2) / 2.0);
     obj->y += (obj->v_y * delta_t) + (forca.y / obj->massa) * (pow(delta_t, 2) / 2.0);
     
-    // arrasto
+    obj->v_x += delta_t * (forca.x / obj->massa);
+    obj->v_y += delta_t * (forca.y / obj->massa);
+    
+    /** O arrasto é modelado como resistência viscosa, com um número de Reynolds desprezível.*/
     obj->v_x -= (arrasto * delta_t) * obj->v_x;
     obj->v_y -= (arrasto * delta_t) * obj->v_y;
     
-    obj->x -= (arrasto * delta_t) * (forca.x / obj->massa) * (pow(delta_t, 2) / 2.0);
-    obj->y -= (arrasto * delta_t) * (forca.y / obj->massa) * (pow(delta_t, 2) / 2.0);
+    obj->x -= (arrasto * obj->v_x / obj->massa) * (pow(delta_t, 2) / 2.0);
+    obj->y -= (arrasto * obj->v_y / obj->massa) * (pow(delta_t, 2) / 2.0);
     
-    // tempo
+    /* tempo */
     if (obj->tempo == ESTATICO) return;
     
     if (obj->tempo - delta_t <= 0.0) obj->tempo = 0.0;
@@ -94,13 +94,13 @@ void itera_posicao(objeto* obj, vetor forca)
 
 /**
  * Adiciona um objeto à lista de objetos a serem simulados.
- * @param id    Identificador único do objeto
- * @param x Posição x do objeto
- * @param y Posição y do objeto
- * @param v_x Velocidade em x do objeto
- * @param v_y Velocidade em y do objeto
- * @param massa Massa do objeto
- * @param tempo Tempo de vida do objeto em segundos
+ * \param id    Identificador único do objeto
+ * \param x Posição x do objeto
+ * \param y Posição y do objeto
+ * \param v_x Velocidade em x do objeto
+ * \param v_y Velocidade em y do objeto
+ * \param massa Massa do objeto
+ * \param tempo Tempo de vida do objeto em segundos
  */
 void rke_adiciona_objeto(int id, double x, double y, double v_x, double v_y, double massa, double tempo)
 {
@@ -116,11 +116,27 @@ void rke_adiciona_objeto(int id, double x, double y, double v_x, double v_y, dou
 
 /**
  * Retorna o i-ésimo objeto.
- * @param i Índice do objeto
+ * \param i Índice do objeto
  */
 objeto rke_get_objeto(int i)
 {
     return objetos[i];
+}
+
+/**
+ * Conta o número de objetos ativos, ou seja, com tempo de vida diferente de zero.
+ */
+int rke_conta_objetos()
+{
+    int i, ativos = 0;
+    
+    for (i = 0; i < num_objetos; i++)
+    {
+        if (objetos[i].tempo != 0.0)
+            ativos++;
+    }
+    
+    return ativos;
 }
 
 /**

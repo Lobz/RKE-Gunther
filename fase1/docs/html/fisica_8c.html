@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">Módulo de Física - RKE
-   
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    
   </td>
@@ -47,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
-      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -120,6 +120,7 @@ Funções</h2></td></tr>
 <tr class="memitem:a4e96e803ac19354b2b63dd14a5f5e67d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fisica_8c.html#a4e96e803ac19354b2b63dd14a5f5e67d">itera_posicao</a> (<a class="el" href="rketypes_8h.html#a216693704a51093135790527237245ec">objeto</a> *obj, <a class="el" href="rketypes_8h.html#a27896866572b2a12760a22ea2654ed47">vetor</a> forca)</td></tr>
 <tr class="memitem:a4f887533c58a96b4cd5eff48ef195902"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fisica_8c.html#a4f887533c58a96b4cd5eff48ef195902">rke_adiciona_objeto</a> (int id, double x, double y, double v_x, double v_y, double massa, double tempo)</td></tr>
 <tr class="memitem:a3db469cd5f289d1376d1d27b53067875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rketypes_8h.html#a216693704a51093135790527237245ec">objeto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fisica_8c.html#a3db469cd5f289d1376d1d27b53067875">rke_get_objeto</a> (int i)</td></tr>
+<tr class="memitem:a1c031c9197d9bfc50cdee27c0d8dd60a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fisica_8c.html#a1c031c9197d9bfc50cdee27c0d8dd60a">rke_conta_objetos</a> ()</td></tr>
 <tr class="memitem:ae68fcd8b02679fe3b05c319820641449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fisica_8c.html#ae68fcd8b02679fe3b05c319820641449">rke_simula</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variáveis</h2></td></tr>
@@ -174,6 +175,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>num_objetos</b> = 0</t
   </table>
   </dd>
 </dl>
+<p>O arrasto é modelado como resistência viscosa, com um número de Reynolds desprezível. </p>
 
 </div>
 </div>
@@ -244,6 +246,23 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>num_objetos</b> = 0</t
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c031c9197d9bfc50cdee27c0d8dd60a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="fisica_8c.html#a1c031c9197d9bfc50cdee27c0d8dd60a">rke_conta_objetos</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Conta o número de objetos ativos, ou seja, com tempo de vida diferente de zero. </p>
 
 </div>
 </div>
@@ -399,7 +418,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>num_objetos</b> = 0</t
 
 
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 18 de Maio de 2012 09:33:30 para Módulo de Física - RKE por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 18 de Maio de 2012 14:25:31 para Módulo de Física - RKE por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

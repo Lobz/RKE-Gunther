@@ -1,9 +1,9 @@
 /**
- * @file main.c
- * @brief Este é o arquivo que implementa as funções descritas na fisica.c.
+ * \file main.c
+ * \brief Este é o arquivo que implementa as funções descritas na fisica.c.
  *        Aqui, carrega-se um arquivo texto com as condições iniciais e escreve um arquivo "saida.out" com as informações após as iterações.
  *
- * @author João da Silva, Marina Salles, Ricardo Macedo
+ * \author João da Silva, Marina Salles, Ricardo Macedo
  */
 
 #include <stdio.h>
@@ -70,6 +70,11 @@ int main(int argc, char* argv[])
     rke_set_arrasto(arrasto);
     
     arquivo = fopen(nome_arquivo, "r");
+    if (arquivo == NULL)
+    {
+        printf("Nao foi possivel abrir o arquivo %s\n", nome_arquivo);
+        return 0;
+    }
     
     while (!feof(arquivo))
     {
@@ -107,7 +112,7 @@ int main(int argc, char* argv[])
     
     fprintf(arquivo, ".w\n%f\n%f\n", vento_x, vento_y);
     
-    fprintf(arquivo, ".b\n");
+    fprintf(arquivo, ".b %d\n", rke_conta_objetos() - 1);
     for (i = 0; i < (bomba_num + 1); i++)
     {
         obj = rke_get_objeto(i);

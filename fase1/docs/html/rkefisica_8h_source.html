@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">Módulo de Física - RKE
-   
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    
   </td>
@@ -47,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
-      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
     </ul>
   </div>
 </div>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -100,12 +100,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <a name="l00011"></a>00011 <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rkefisica_8h.html#ad669b81728dbf96d76dbed56981a3e84">rke_set_numero_objetos</a>(<span class="keywordtype">int</span> numero);
 <a name="l00012"></a>00012 <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rkefisica_8h.html#a4f887533c58a96b4cd5eff48ef195902">rke_adiciona_objeto</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> v_x, <span class="keywordtype">double</span> v_y, <span class="keywordtype">double</span> massa, <span class="keywordtype">double</span> tempo);
 <a name="l00013"></a>00013 <span class="keyword">extern</span> <a class="code" href="structstruct__objeto.html">objeto</a> <a class="code" href="rkefisica_8h.html#a3db469cd5f289d1376d1d27b53067875">rke_get_objeto</a>(<span class="keywordtype">int</span> i);
-<a name="l00014"></a>00014 <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rkefisica_8h.html#ae68fcd8b02679fe3b05c319820641449">rke_simula</a>();
+<a name="l00014"></a>00014 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="rkefisica_8h.html#a1c031c9197d9bfc50cdee27c0d8dd60a">rke_conta_objetos</a>();
+<a name="l00015"></a>00015 <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="rkefisica_8h.html#ae68fcd8b02679fe3b05c319820641449">rke_simula</a>();
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 18 de Maio de 2012 09:33:30 para Módulo de Física - RKE por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 18 de Maio de 2012 14:25:31 para Módulo de Física - RKE por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
