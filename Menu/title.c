@@ -15,28 +15,31 @@ int title(SDL_Surface *screen){
 	SDL_Surface *Buttons = NULL;
 	SDL_Surface *Cannon = NULL;
 	
+	/* Qual botão está selecionado */
 	int selectedButton = NEWGAME;
 	
-	/* a primeira linha guarda onde se aplica o clip, a segunda, de onde tirar */
-	/* TITLE faz o papel de botão n+1 (vide headers.h) */
-	SDL_Rect ButtonsClip[2][TITLE];
-	SDL_Rect CannonClip[2][TITLE];
+	/* Para usar para DoubleInfoClip (v. graphics.c) */
+	/* TITLE faz o papel de botão n+1 (v. headers.h) */
+	SDL_Rect ButtonsClip[TITLE][2];
+	SDL_Rect CannonClip[TITLE][2];
 
 	TitleScreen = loadBMP("blankFULL.bmp");
 	TitleText = loadBMP("TitleText.bmp");
 	TitleBackground = loadBMP("TitleBackground.bmp");
-/*	loadClip("buttons",&Buttons,&ButtonsClip);
-	loadClip("cannon",&Cannon,&CannonClip);
-*/
-	/* Inicializa a tela */
-	applySurface(TitleBackground,TitleScreen);
-	applySurface(TitleText,TitleScreen);
+	Buttons = loadBMP("TitleButtonsClip.bmp");
+	Cannon = loadBMP("TitleCannonClip.bmp");
+	loadDoubleInfoClip("TitleButtons.dclip",ButtonsClip);
+	loadDoubleInfoClip("TitleCannon.dclip",CannonClip);
 
-	applySurface(TitleScreen,screen);
-/*
-	applyClip(Buttons,screen,ButtonsClip,selectedButton);
-	applyClip(Cannon,screen,CannonClip,selectedButton);
-*/
+	/* Inicializa a tela */
+	applySurface(TitleScreen,TitleBackground);
+	applySurface(TitleScreen,TitleText);
+
+	applySurface(screen,TitleScreen);
+
+//	applyDoubleInfoClip(screen,Buttons,ButtonsClip,selectedButton);
+//	applyDoubleInfoClip(screen,Cannon,CannonClip,selectedButton);
+
 	SDL_Flip(screen);
 	/* da loop */
 	while(!quit){
@@ -48,7 +51,7 @@ int title(SDL_Surface *screen){
 				switch(event.key.keysym.sym){
 					/* seleciona o botão mod(TITLE) para não selecionar botões inexistentes */
 					case SDLK_UP:
-						--selectedButton;
+						selectedButton += TITLE-1; /* isso equivale a += 1 mod TITLE */
 						selectedButton %= TITLE;
 						break;
 					case SDLK_DOWN:
@@ -61,29 +64,38 @@ int title(SDL_Surface *screen){
 		}
 
 		keystates = SDL_GetKeyState(NULL);
-/*
-		if(keystates[SDLK_UP])
-			selectedButton--;
 
-		if(keystates[SDLK_DOWN])
-			selectedButton++;
-
-*/		applySurface(TitleScreen,screen);
-/*		applyClip(Buttons,screen,ButtonsClip,selectedButton);
-		applyClip(Cannon,screen,CannonClip,selectedButton);
-*/
-		SDL_Flip(screen);
 		if(keystates[SDLK_RETURN])
 			break;
 
+		if(keystates[SDLK_ESCAPE]){
+			quit = true;
+			break;
+		}
+
+/*		if(keystates[SDLK_UP]){
+			selectedButton += TITLE-1;
+			selectedButton %= TITLE;
+		}
+
+		if(keystates[SDLK_DOWN]){
+			selectedButton++;
+			selectedButton %= TITLE;
+		}
+*/
+		applySurface(screen,TitleScreen);
+		applyDoubleInfoClip(screen,Buttons,ButtonsClip,selectedButton);
+		applyDoubleInfoClip(screen,Cannon,CannonClip,selectedButton);
+
+		SDL_Flip(screen);
 	}
 	
 	/* the end */
-/*	SDL_FreeSurface(Buttons);
-	SDL_FreeSurface(Cannon);
-*/	SDL_FreeSurface(TitleText);
-	SDL_FreeSurface(TitleBackground);
-	SDL_FreeSurface(TitleScreen);
+	safeFreeSurface(Buttons);
+	safeFreeSurface(Cannon);
+	safeFreeSurface(TitleText);
+	safeFreeSurface(TitleBackground);
+	safeFreeSurface(TitleScreen);
 
 	if(quit)
 		return QUIT;

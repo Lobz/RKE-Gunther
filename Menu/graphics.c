@@ -1,28 +1,10 @@
 #include "headers.h"
 
-bool initSDL(SDL_Surface **screen){
-	
-	if( SDL_Init(SDL_INIT_EVERYTHING) == -1){
-		return false;		
-	}
-
-	*screen = SDL_SetVideoMode(WIDTH, HEIGHT, RESOLUTION, SDL_SWSURFACE);
-
-	if(*screen == NULL){
-		return false;
-	}
-
-	return true;
+void applySurface(SDL_Surface *destination, SDL_Surface *source){
+	if(destination && source)
+		SDL_BlitSurface(source, NULL, destination, NULL);
 }
 
-void applySurface(SDL_Surface *source, SDL_Surface *destination){
-	SDL_BlitSurface(source, NULL, destination, NULL);
-}
-/*
-void applyClip(SDL_Surface *source, SDL_Surface *destination, SDL_Rect clip, int choice){
-	SDL_BlitSurface(source,&clip[CLIPSOURCE][choice],destination, &clip[CLIPDEST][choice]);
-}
-*/
 SDL_Surface *loadBMP(char *file){
 	SDL_Surface *image = NULL;
 	char fullname[MAXLEN] = IMAGEDIR;
@@ -31,32 +13,53 @@ SDL_Surface *loadBMP(char *file){
 
 	image = SDL_LoadBMP(fullname);
 
-	if(image != NULL){
-            //Color key surface
-            SDL_SetColorKey( image, SDL_SRCCOLORKEY, SDL_MapRGB( image->format, BR, BG, BB ) );
+	if(image == NULL){
+		printf("File '%s' not found\n",file);
+		return NULL;
         }
+
+	/* Color key surface - background color is BR BG BB */
+	SDL_SetColorKey( image, SDL_SRCCOLORKEY, SDL_MapRGB( image->format, BR, BG, BB ) );
 
 	return image;
 }
-/*
-void loadClip(char *file, SDL_Surface *image, SDL_Rect *clip){
-	int i,j,n;
-	FILE *F;
 
-	F = fopen(file,"r");
+
+
+void applyDoubleInfoClip(SDL_Surface *destination, SDL_Surface *source, SDL_Rect clip[][2], int choice){
+	if(destination && source && (int)clip[0][0].x != -1)
+		SDL_BlitSurface(source,&(clip[choice][0]),destination, &(clip[choice][1]));
+}
+
+
+
+
+void loadDoubleInfoClip(char *file, SDL_Rect clip[][2]){
+	int i,j,num;
+	FILE *F;
+	char fullname[MAXLEN] = IMAGEDIR;
+	
+	strcat(fullname,file);
+
+	F = fopen(fullname,"r");
 
 	if(F == NULL){
-		printf("File %s not found\n",file);
+		printf("File '%s' not found\n",file);
+		clip[0][0].x = -1;
 		return;
 	}
-
-	fscanf(F," %d",&n);
-	for(i = 0; i < 2; i++){
-		for(j = 0; j < n; j++){
-			fscanf(F," %d %d %d %d",&(clip[i][j].x), &(clip[i][j].y), &(clip[i][j].w), &(clip[i][j].h));
+	else{	
+		fscanf(F," %d",&num);
+		for(i = 0; i < 2; i++){
+			for(j = 0; j < num; j++){
+				fscanf(F," %d %d %d %d",&(clip[j][i].x), &(clip[j][i].y), &(clip[j][i].w), &(clip[j][i].h));
+			}
 		}
+		fclose(F);
 	}
-	
-	fclose(F);
 }
-*/				
+
+void safeFreeSurface(SDL_Surface *dead){
+	if(dead)
+		SDL_FreeSurface(dead);
+}

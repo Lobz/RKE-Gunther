@@ -9,10 +9,6 @@
 
 #define MAXLEN 100
 
-#define WIDTH 320
-#define HEIGHT 240
-#define RESOLUTION 16
-
 #define QUIT -1
 
 #define NEWGAME 0
@@ -23,20 +19,19 @@
 #define TITLE 5
 #define COMMANDS 6
 
-#define CLIPSOURCE 1
-#define CLIPDEST 0
-
 #define IMAGEDIR "imagens_prov/"
+#define WIDTH 320
+#define HEIGHT 240
+#define RESOLUTION 16
 #define BR 0
 #define BG 0xFF
 #define BB 0xFF
 
 /* SDL */
-bool initSDL(SDL_Surface **screen);
 SDL_Surface *loadBMP(char *file);
-void applySurface(SDL_Surface *source, SDL_Surface *destination);
-void applyClip(SDL_Surface *source, SDL_Surface *destination, SDL_Rect clip, int choice);
-void loadClip(char *file,SDL_Surface *image, SDL_Rect *clip);
+void applySurface(SDL_Surface *destination, SDL_Surface *source);
+void applyTitleButtonsClip(SDL_Surface *destination, SDL_Surface *source, SDL_Rect clip[][TITLE], int choice);
+void loadTitleButtonsClip(char *file, SDL_Rect clip[][TITLE]);
 
 /* telas */
 int intro(SDL_Surface *screen);
