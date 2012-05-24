@@ -36,6 +36,8 @@ void applyDoubleInfoClip(SDL_Surface *destination, SDL_Surface *source, SDL_Rect
 
 void loadDoubleInfoClip(char *file, SDL_Rect clip[][2]){
 	int i,j,num;
+	int x,y,w,h;
+	SDL_Rect *p;
 	FILE *F;
 	char fullname[MAXLEN] = IMAGEDIR;
 	
@@ -52,7 +54,12 @@ void loadDoubleInfoClip(char *file, SDL_Rect clip[][2]){
 		fscanf(F," %d",&num);
 		for(i = 0; i < 2; i++){
 			for(j = 0; j < num; j++){
-				fscanf(F," %d %d %d %d",&(clip[j][i].x), &(clip[j][i].y), &(clip[j][i].w), &(clip[j][i].h));
+				fscanf(F," %d %d %d %d",&x,&y,&w,&h);
+				p = &clip[j][i];
+				p->x = x;
+				p->y = y;
+				p->w = w;
+				p->h = h;
 			}
 		}
 		fclose(F);
