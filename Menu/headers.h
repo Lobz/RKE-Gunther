@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "SDL/SDL.h"
 
 #define bool int
 #define true 1
 #define false 0
 
-#define WIDTH 640
-#define HEIGHT 480
+#define MAXLEN 100
+
+#define WIDTH 320
+#define HEIGHT 240
 #define RESOLUTION 16
 
 #define QUIT -1
@@ -22,6 +25,11 @@
 
 #define CLIPSOURCE 1
 #define CLIPDEST 0
+
+#define IMAGEDIR "imagens_prov/"
+#define BR 0
+#define BG 0xFF
+#define BB 0xFF
 
 /* SDL */
 bool initSDL(SDL_Surface **screen);

@@ -13,23 +13,32 @@ bool initSDL(SDL_Surface **screen){
 	}
 
 	return true;
+}
 
 void applySurface(SDL_Surface *source, SDL_Surface *destination){
 	SDL_BlitSurface(source, NULL, destination, NULL);
 }
-
+/*
 void applyClip(SDL_Surface *source, SDL_Surface *destination, SDL_Rect clip, int choice){
 	SDL_BlitSurface(source,&clip[CLIPSOURCE][choice],destination, &clip[CLIPDEST][choice]);
 }
-
+*/
 SDL_Surface *loadBMP(char *file){
 	SDL_Surface *image = NULL;
+	char fullname[MAXLEN] = IMAGEDIR;
 
-	image = SDL_LoadBMP(file);
+	strcat(fullname,file);
+
+	image = SDL_LoadBMP(fullname);
+
+	if(image != NULL){
+            //Color key surface
+            SDL_SetColorKey( image, SDL_SRCCOLORKEY, SDL_MapRGB( image->format, BR, BG, BB ) );
+        }
 
 	return image;
 }
-
+/*
 void loadClip(char *file, SDL_Surface *image, SDL_Rect *clip){
 	int i,j,n;
 	FILE *F;
@@ -50,4 +59,4 @@ void loadClip(char *file, SDL_Surface *image, SDL_Rect *clip){
 	
 	fclose(F);
 }
-				
+*/				

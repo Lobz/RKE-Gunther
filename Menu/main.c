@@ -1,4 +1,4 @@
-#include "menu.h"
+#include "headers.h"
 
 int main(){
 	bool play = false;
@@ -6,18 +6,22 @@ int main(){
 
 	SDL_Surface *screen;
 
-	init(&screen);
+	if(SDL_Init(SDL_INIT_EVERYTHING) == -1)	return 1;
+
+	screen = SDL_SetVideoMode(WIDTH,HEIGHT,RESOLUTION,SDL_SWSURFACE);
+
+	if(screen == NULL) return 1;
 
 	while (section != QUIT){
-		if(play){
+	/*	if(play){
 			section = Game(screen,section);
 			play = true;
 		}
-		else switch(section){
+		else*/ switch(section){
 		case TITLE:
 			section = title(screen);
 			break;
-		case NEWGAME:
+/*		case NEWGAME:
 			section = Game(screen,NEWGAME);
 			break;
 		case LOADGAME:
@@ -36,8 +40,8 @@ int main(){
 		case CREDITS:
 			section = credits(screen);
 			break;
-		default:
-			printerr("Retorno inválido: %d \n",section);
+*/		default:
+			printf(" %d",section);
 			return 1;
 		}
 	}
