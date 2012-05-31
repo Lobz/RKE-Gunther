@@ -2,7 +2,7 @@
 
 int title(SDL_Surface *screen){
 	/* utils */
-	bool quit = false;
+	bool quit = false, selected = false;
 	Uint8 *keystates;
 	SDL_Event event;
 
@@ -37,16 +37,19 @@ int title(SDL_Surface *screen){
 
 	applySurface(screen,TitleScreen);
 
-//	applyDoubleInfoClip(screen,Buttons,ButtonsClip,selectedButton);
-//	applyDoubleInfoClip(screen,Cannon,CannonClip,selectedButton);
+	applyDoubleInfoClip(screen,Buttons,ButtonsClip,selectedButton);
+	applyDoubleInfoClip(screen,Cannon,CannonClip,selectedButton);
 
 	SDL_Flip(screen);
 	/* da loop */
-	while(!quit){
+	while(!selected){
 
 		while(SDL_PollEvent(&event)){
-			if(event.type == SDL_QUIT)
+			if(event.type == SDL_QUIT){
 				quit = true;
+				selected = true;
+				break;
+			}
 			else if(event.type == SDL_KEYDOWN){
 				switch(event.key.keysym.sym){
 					/* seleciona o botão mod(TITLE) para não selecionar botões inexistentes */
@@ -58,11 +61,18 @@ int title(SDL_Surface *screen){
 						++selectedButton;
 						selectedButton %= TITLE;
 						break;
+					case SDLK_RETURN:
+						selected = true;
+						break;
+					case SDLK_ESCAPE:
+						selected = true;
+						quit = true;
+						break;
 					default:;
 				}
 			}
 		}
-
+/*
 		keystates = SDL_GetKeyState(NULL);
 
 		if(keystates[SDLK_RETURN])
@@ -73,7 +83,7 @@ int title(SDL_Surface *screen){
 			break;
 		}
 
-/*		if(keystates[SDLK_UP]){
+		if(keystates[SDLK_UP]){
 			selectedButton += TITLE-1;
 			selectedButton %= TITLE;
 		}

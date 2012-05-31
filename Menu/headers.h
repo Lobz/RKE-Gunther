@@ -20,7 +20,7 @@
 #define COMMANDS 6
 
 #define IMAGEDIR "imagens_prov/"
-#define WIDTH 320
+#define WIDTH 360
 #define HEIGHT 240
 #define RESOLUTION 16
 #define BR 0
@@ -30,8 +30,8 @@
 /* SDL */
 SDL_Surface *loadBMP(char *file);
 void applySurface(SDL_Surface *destination, SDL_Surface *source);
-void applyTitleButtonsClip(SDL_Surface *destination, SDL_Surface *source, SDL_Rect clip[][TITLE], int choice);
-void loadTitleButtonsClip(char *file, SDL_Rect clip[][TITLE]);
+void applyDoubleInfoClip(SDL_Surface *destination, SDL_Surface *source, SDL_Rect clip[][2], int choice);
+void loadDoubleInfoClip(char *file, SDL_Rect clip[][2]);
 
 /* telas */
 int intro(SDL_Surface *screen);

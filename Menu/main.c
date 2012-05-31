@@ -1,11 +1,11 @@
 #include "headers.h"
 
 int main(){
-	bool play = false;
 	int section = TITLE;
 
-	SDL_Surface *screen;
+	SDL_Surface *screen = NULL;
 
+	/* incializa tela */
 	if(SDL_Init(SDL_INIT_EVERYTHING) == -1)	return 1;
 
 	screen = SDL_SetVideoMode(WIDTH,HEIGHT,RESOLUTION,SDL_SWSURFACE);
@@ -13,35 +13,30 @@ int main(){
 	if(screen == NULL) return 1;
 
 	while (section != QUIT){
-	/*	if(play){
-			section = Game(screen,section);
-			play = true;
-		}
-		else*/ switch(section){
+		switch(section){
 		case TITLE:
 			section = title(screen);
 			break;
 /*		case NEWGAME:
-			section = Game(screen,NEWGAME);
+			section = Game(screen,NULL);
 			break;
 		case LOADGAME:
 			section = loadgame(screen);
-			play = true
 			break;
 		case OPTIONS:
 			section = options(screen);
 			break;
-		case MANUAL:
-			section = manual(screen,MANUAL);
+*/		case MANUAL:
+			section = manual(screen,0);
 			break;
-		case COMMANDS:
+/*		case COMMANDS:
 			section = manual(screen,COMMANDS);
 			break;
 		case CREDITS:
 			section = credits(screen);
 			break;
 */		default:
-			printf(" %d",section);
+			printf(" %d\n",section);
 			return 1;
 		}
 	}
