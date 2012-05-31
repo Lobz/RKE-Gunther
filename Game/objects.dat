@@ -1,0 +1,15 @@
+#id name image_pos.y image_pos.x HP expire movement_pattern [parameters] attack_others? attack_num {attack_pattern damage [parameters=range, firerate]} imunities_num [imunities]
+
+#towers
+A ArrowTower 2 0 100 0 NONE 0 1 arrow 1 5 5 1 arrow
+B BombardTower 2 1 150 0 NONE 0 1 cannon 6 5 2 2 arrow touch
+
+#monsters
+y TubaraoAmarelo 0 0 2 3 line 3 0 1 touch 3 1 bomb
+t TubaraoCinza 0 1 4 5 line 3 0 1 touch 6 2 bomb arrow
+T Tartarugao 0 2 20 0 random 2 0 1 tackle 6 3 arrow magic ship
+l Lesma 0 3 10 0 line 4 0 1 tackle 6 0
+D Dragao 1 0 15 0 randlines 10 6 1 2 touch 8 magic 8 2 1 1 bomb
+
+#treasures/fishes
+f Fish 0 4 1 0 random 3 0 1 touch -3 0
