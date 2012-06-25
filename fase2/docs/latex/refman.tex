@@ -1,0 +1,88 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Gunther's Quest Alpha \\[1ex]\large 0.\-2 }\\
+\vspace*{1cm}
+{\large Gerado por Doxygen 1.8.0}\\
+\vspace*{0.5cm}
+{\small Domingo, 17 de Junho de 2012 23:27:58}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{Índice das Estruturas de Dados}
+\input{annotated}
+\chapter{Índice dos Arquivos}
+\input{files}
+\chapter{Estruturas}
+\input{struct__jogador}
+\input{struct__ladrilho}
+\input{struct__objeto}
+\input{struct__tabuleiro}
+\input{structstruct__objeto}
+\input{structstruct__vetor}
+\chapter{Arquivos}
+\input{gunther_8h}
+\input{rkefisica_8h}
+\input{rkegraficos_8h}
+\input{rkerender_8h}
+\input{rketypes_8h}
+\input{main_8c}
+\input{menu_8c}
+\input{rkegraficos_8c}
+\input{rkerender_8c}
+\printindex
+\end{document}

@@ -1,0 +1,15 @@
+#id name image_pos.y image_pos.x
+
+#towers
+A ArrowTower 2 0
+B BombardTower 2 1
+
+#monsters
+y TubaraoAmarelo 0 0
+t TubaraoCinza 0 1
+T Tartarugao 0 2
+l Lesma 0 3
+D Dragao 1 0
+
+#treasures/fishes
+f Fish 0 4

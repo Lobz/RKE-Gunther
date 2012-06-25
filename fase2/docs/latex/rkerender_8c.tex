@@ -1,0 +1,173 @@
+\hypertarget{rkerender_8c}{\section{Referência do Arquivo src/rkerender/rkerender.c}
+\label{rkerender_8c}\index{src/rkerender/rkerender.\-c@{src/rkerender/rkerender.\-c}}
+}
+
+
+Renderizador de fases.  
+
+
+{\ttfamily \#include \char`\"{}gunther.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+Gráfico de dependência de inclusões para rkerender.\-c\-:
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rkerender_8c_a239c7a748de2f7055719398fc04fe922}{rke\-\_\-render} (char $\ast$fase, char $\ast$imagens, char $\ast$img\-\_\-jogador, int largura, int altura, int larg\-\_\-ladrilho, int alt\-\_\-ladrilho)
+\item 
+void \hyperlink{rkerender_8c_a4fb57e2863d45d122b3cfa8b70a78aa9}{rke\-\_\-move\-\_\-jogador} (\hyperlink{rkerender_8h_a244c5487b0f580caedc3e744dfa296dc}{Jogador} $\ast$jogador, \hyperlink{rkerender_8h_a0daefc5bc2fe00432f1dbe344d946d67}{Tabuleiro} tabuleiro, \hyperlink{rkerender_8h_a8be5d5879377ab21271dad6f3691f9fe}{Ladrilho} $\ast$terrenos, \hyperlink{rkerender_8h_a83af8ea0f645662f4b2b0d720cdf1748}{Objeto} $\ast$objetos, int delta\-\_\-x, int delta\-\_\-y)
+\item 
+void \hyperlink{rkerender_8c_a8dc5a9555b2b8a1e08c811a7a35469ea}{rke\-\_\-carrega\-\_\-terreno} (char $\ast$arquivo, \hyperlink{rkerender_8h_a8be5d5879377ab21271dad6f3691f9fe}{Ladrilho} terrenos\mbox{[}$\,$\mbox{]}, int larg\-\_\-ladrilho, int alt\-\_\-ladrilho)
+\item 
+void \hyperlink{rkerender_8c_af0f031a450b3be6ba5c5bc5b6d103653}{rke\-\_\-carrega\-\_\-objetos} (char $\ast$arquivo, \hyperlink{rkerender_8h_a83af8ea0f645662f4b2b0d720cdf1748}{Objeto} objetos\mbox{[}$\,$\mbox{]}, int larg\-\_\-ladrilho, int alt\-\_\-ladrilho)
+\item 
+void \hyperlink{rkerender_8c_aaa263ecd9eccd396516779b7ef6710f6}{rke\-\_\-carrega\-\_\-fase} (char $\ast$arquivo, \hyperlink{rkerender_8h_a0daefc5bc2fe00432f1dbe344d946d67}{Tabuleiro} $\ast$tabuleiro, int $\ast$jogador\-\_\-x, int $\ast$jogador\-\_\-y)
+\item 
+void \hyperlink{rkerender_8c_a367aed7c3de5f557a25d934be4aee8a4}{rke\-\_\-carrega\-\_\-jogador} (\hyperlink{rkerender_8h_a244c5487b0f580caedc3e744dfa296dc}{Jogador} $\ast$jogador, int larg\-\_\-ladrilho, int alt\-\_\-ladrilho)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Renderizador de fases. \begin{DoxyAuthor}{Autor}
+João da Silva, Marina Salles, Ricardo Macedo 
+\end{DoxyAuthor}
+
+
+\subsection{Funções}
+\hypertarget{rkerender_8c_aaa263ecd9eccd396516779b7ef6710f6}{\index{rkerender.\-c@{rkerender.\-c}!rke\-\_\-carrega\-\_\-fase@{rke\-\_\-carrega\-\_\-fase}}
+\index{rke\-\_\-carrega\-\_\-fase@{rke\-\_\-carrega\-\_\-fase}!rkerender.c@{rkerender.\-c}}
+\subsubsection[{rke\-\_\-carrega\-\_\-fase}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-carrega\-\_\-fase} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{arquivo, }
+\item[{{\bf Tabuleiro} $\ast$}]{tabuleiro, }
+\item[{int $\ast$}]{jogador\-\_\-x, }
+\item[{int $\ast$}]{jogador\-\_\-y}
+\end{DoxyParamCaption}
+)}}\label{rkerender_8c_aaa263ecd9eccd396516779b7ef6710f6}
+Carrega as informações do tabuleiro da fase 
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & O arquivo com as informações \\
+\hline
+{\em tabuleiro} & O lugar para armazenar as informações \\
+\hline
+{\em jogador\-\_\-x} & Argumento que devolve a posição X do jogador \\
+\hline
+{\em jogador\-\_\-y} & Argumento que devolve a posição Y do jogador \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkerender_8c_a367aed7c3de5f557a25d934be4aee8a4}{\index{rkerender.\-c@{rkerender.\-c}!rke\-\_\-carrega\-\_\-jogador@{rke\-\_\-carrega\-\_\-jogador}}
+\index{rke\-\_\-carrega\-\_\-jogador@{rke\-\_\-carrega\-\_\-jogador}!rkerender.c@{rkerender.\-c}}
+\subsubsection[{rke\-\_\-carrega\-\_\-jogador}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-carrega\-\_\-jogador} (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{jogador, }
+\item[{int}]{larg\-\_\-ladrilho, }
+\item[{int}]{alt\-\_\-ladrilho}
+\end{DoxyParamCaption}
+)}}\label{rkerender_8c_a367aed7c3de5f557a25d934be4aee8a4}
+Carrega os retângulos da imagem do jogador 
+\begin{DoxyParams}{Parâmetros}
+{\em O} & lugar para armazenar as informações \\
+\hline
+{\em Largura} & em pixels do ladrilho \\
+\hline
+{\em Altura} & em pixels do ladrilho \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkerender_8c_af0f031a450b3be6ba5c5bc5b6d103653}{\index{rkerender.\-c@{rkerender.\-c}!rke\-\_\-carrega\-\_\-objetos@{rke\-\_\-carrega\-\_\-objetos}}
+\index{rke\-\_\-carrega\-\_\-objetos@{rke\-\_\-carrega\-\_\-objetos}!rkerender.c@{rkerender.\-c}}
+\subsubsection[{rke\-\_\-carrega\-\_\-objetos}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-carrega\-\_\-objetos} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{arquivo, }
+\item[{{\bf Objeto}}]{objetos\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{larg\-\_\-ladrilho, }
+\item[{int}]{alt\-\_\-ladrilho}
+\end{DoxyParamCaption}
+)}}\label{rkerender_8c_af0f031a450b3be6ba5c5bc5b6d103653}
+Carrega as informações dos objetos de um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & O arquivo com as informações \\
+\hline
+{\em objetos} & O lugar para armazenar as informações \\
+\hline
+{\em larg\-\_\-ladrilho} & Largura em pixels do ladrilho \\
+\hline
+{\em alt\-\_\-ladrilho} & Altura em pixels do ladrilho \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkerender_8c_a8dc5a9555b2b8a1e08c811a7a35469ea}{\index{rkerender.\-c@{rkerender.\-c}!rke\-\_\-carrega\-\_\-terreno@{rke\-\_\-carrega\-\_\-terreno}}
+\index{rke\-\_\-carrega\-\_\-terreno@{rke\-\_\-carrega\-\_\-terreno}!rkerender.c@{rkerender.\-c}}
+\subsubsection[{rke\-\_\-carrega\-\_\-terreno}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-carrega\-\_\-terreno} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{arquivo, }
+\item[{{\bf Ladrilho}}]{terrenos\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{larg\-\_\-ladrilho, }
+\item[{int}]{alt\-\_\-ladrilho}
+\end{DoxyParamCaption}
+)}}\label{rkerender_8c_a8dc5a9555b2b8a1e08c811a7a35469ea}
+Carrega as informações dos elementos de terreno de um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & O arquivo com as informações \\
+\hline
+{\em terrenos} & O lugar para armazenar as informações \\
+\hline
+{\em larg\-\_\-ladrilho} & Largura em pixels do ladrilho \\
+\hline
+{\em alt\-\_\-ladrilho} & Altura em pixels do ladrilho \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkerender_8c_a4fb57e2863d45d122b3cfa8b70a78aa9}{\index{rkerender.\-c@{rkerender.\-c}!rke\-\_\-move\-\_\-jogador@{rke\-\_\-move\-\_\-jogador}}
+\index{rke\-\_\-move\-\_\-jogador@{rke\-\_\-move\-\_\-jogador}!rkerender.c@{rkerender.\-c}}
+\subsubsection[{rke\-\_\-move\-\_\-jogador}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-move\-\_\-jogador} (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{jogador, }
+\item[{{\bf Tabuleiro}}]{tabuleiro, }
+\item[{{\bf Ladrilho} $\ast$}]{terrenos, }
+\item[{{\bf Objeto} $\ast$}]{objetos, }
+\item[{int}]{delta\-\_\-x, }
+\item[{int}]{delta\-\_\-y}
+\end{DoxyParamCaption}
+)}}\label{rkerender_8c_a4fb57e2863d45d122b3cfa8b70a78aa9}
+Função de movimentação do jogador. 
+\begin{DoxyParams}{Parâmetros}
+{\em jogador} & Informações do jogador \\
+\hline
+{\em tabuleiro} & Informações do tabuleiro \\
+\hline
+{\em terrenos} & Informações dos elementos de terreno \\
+\hline
+{\em objetos} & Informações dos objetos \\
+\hline
+{\em delta\-\_\-x} & Movimentação no eixo X \\
+\hline
+{\em delta\-\_\-y} & Movimentação no eixo Y \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkerender_8c_a239c7a748de2f7055719398fc04fe922}{\index{rkerender.\-c@{rkerender.\-c}!rke\-\_\-render@{rke\-\_\-render}}
+\index{rke\-\_\-render@{rke\-\_\-render}!rkerender.c@{rkerender.\-c}}
+\subsubsection[{rke\-\_\-render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-render} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fase, }
+\item[{char $\ast$}]{imagens, }
+\item[{char $\ast$}]{img\-\_\-jogador, }
+\item[{int}]{largura, }
+\item[{int}]{altura, }
+\item[{int}]{larg\-\_\-ladrilho, }
+\item[{int}]{alt\-\_\-ladrilho}
+\end{DoxyParamCaption}
+)}}\label{rkerender_8c_a239c7a748de2f7055719398fc04fe922}
+Função principal do renderizador de fases 
+\begin{DoxyParams}{Parâmetros}
+{\em fase} & Arquivo de fase \\
+\hline
+{\em imagens} & Arquivo clipboard com as imagens para terreno e objetos \\
+\hline
+{\em img\-\_\-jogador} & Arquivo clipboard com as imagens do jogador \\
+\hline
+{\em largura} & Largura em ladrilhos da tela \\
+\hline
+{\em altura} & Altura em ladrilhos da tela \\
+\hline
+{\em larg\-\_\-ladrilho} & Largura em pixels do ladrilho \\
+\hline
+{\em alt\-\_\-ladrilho} & Altura em pixels do ladrilho \\
+\hline
+\end{DoxyParams}

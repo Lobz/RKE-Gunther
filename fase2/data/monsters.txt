@@ -1,0 +1,8 @@
+arraialvermelho.bmp
+dragao.bmp
+dragaodepedra.bmp
+lesmao.bmp
+peixoso.bmp
+tartarugao.bmp
+tubaraoamarelo.bmp
+tubarao.bmp

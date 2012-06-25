@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Gunther&#39;s Quest Alpha: Referência do Arquivo src/rkerender/rkerender.c</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Gunther&#39;s Quest Alpha
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Gerado por Doxygen 1.8.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo src/rkerender/rkerender.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Renderizador de fases.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="gunther_8h_source.html">gunther.h</a>&quot;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para rkerender.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="rkerender_8c__incl.png" border="0" usemap="#src_2rkerender_2rkerender_8c" alt=""/></div>
+<map name="src_2rkerender_2rkerender_8c" id="src_2rkerender_2rkerender_8c">
+</map>
+</div>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a239c7a748de2f7055719398fc04fe922"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rkerender_8c.html#a239c7a748de2f7055719398fc04fe922">rke_render</a> (char *fase, char *imagens, char *img_jogador, int largura, int altura, int larg_ladrilho, int alt_ladrilho)</td></tr>
+<tr class="memitem:a4fb57e2863d45d122b3cfa8b70a78aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rkerender_8c.html#a4fb57e2863d45d122b3cfa8b70a78aa9">rke_move_jogador</a> (<a class="el" href="rkerender_8h.html#a244c5487b0f580caedc3e744dfa296dc">Jogador</a> *jogador, <a class="el" href="rkerender_8h.html#a0daefc5bc2fe00432f1dbe344d946d67">Tabuleiro</a> tabuleiro, <a class="el" href="rkerender_8h.html#a8be5d5879377ab21271dad6f3691f9fe">Ladrilho</a> *terrenos, <a class="el" href="rkerender_8h.html#a83af8ea0f645662f4b2b0d720cdf1748">Objeto</a> *objetos, int delta_x, int delta_y)</td></tr>
+<tr class="memitem:a8dc5a9555b2b8a1e08c811a7a35469ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rkerender_8c.html#a8dc5a9555b2b8a1e08c811a7a35469ea">rke_carrega_terreno</a> (char *arquivo, <a class="el" href="rkerender_8h.html#a8be5d5879377ab21271dad6f3691f9fe">Ladrilho</a> terrenos[], int larg_ladrilho, int alt_ladrilho)</td></tr>
+<tr class="memitem:af0f031a450b3be6ba5c5bc5b6d103653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rkerender_8c.html#af0f031a450b3be6ba5c5bc5b6d103653">rke_carrega_objetos</a> (char *arquivo, <a class="el" href="rkerender_8h.html#a83af8ea0f645662f4b2b0d720cdf1748">Objeto</a> objetos[], int larg_ladrilho, int alt_ladrilho)</td></tr>
+<tr class="memitem:aaa263ecd9eccd396516779b7ef6710f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rkerender_8c.html#aaa263ecd9eccd396516779b7ef6710f6">rke_carrega_fase</a> (char *arquivo, <a class="el" href="rkerender_8h.html#a0daefc5bc2fe00432f1dbe344d946d67">Tabuleiro</a> *tabuleiro, int *jogador_x, int *jogador_y)</td></tr>
+<tr class="memitem:a367aed7c3de5f557a25d934be4aee8a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rkerender_8c.html#a367aed7c3de5f557a25d934be4aee8a4">rke_carrega_jogador</a> (<a class="el" href="rkerender_8h.html#a244c5487b0f580caedc3e744dfa296dc">Jogador</a> *jogador, int larg_ladrilho, int alt_ladrilho)</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Descrição Detalhada</h2>
+<div class="textblock"><p>Renderizador de fases. </p>
+<dl class="section author"><dt>Autor:</dt><dd>João da Silva, Marina Salles, Ricardo Macedo </dd></dl>
+</div><hr/><h2>Funções</h2>
+<a class="anchor" id="aaa263ecd9eccd396516779b7ef6710f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="rkerender_8c.html#aaa263ecd9eccd396516779b7ef6710f6">rke_carrega_fase</a> </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arquivo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a0daefc5bc2fe00432f1dbe344d946d67">Tabuleiro</a> *&#160;</td>
+          <td class="paramname"><em>tabuleiro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>jogador_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>jogador_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega as informações do tabuleiro da fase </p>
+<dl class="params"><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arquivo</td><td>O arquivo com as informações </td></tr>
+    <tr><td class="paramname">tabuleiro</td><td>O lugar para armazenar as informações </td></tr>
+    <tr><td class="paramname">jogador_x</td><td>Argumento que devolve a posição X do jogador </td></tr>
+    <tr><td class="paramname">jogador_y</td><td>Argumento que devolve a posição Y do jogador </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a367aed7c3de5f557a25d934be4aee8a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="rkerender_8c.html#a367aed7c3de5f557a25d934be4aee8a4">rke_carrega_jogador</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a244c5487b0f580caedc3e744dfa296dc">Jogador</a> *&#160;</td>
+          <td class="paramname"><em>jogador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>larg_ladrilho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alt_ladrilho</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega os retângulos da imagem do jogador </p>
+<dl class="params"><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">O</td><td>lugar para armazenar as informações </td></tr>
+    <tr><td class="paramname">Largura</td><td>em pixels do ladrilho </td></tr>
+    <tr><td class="paramname">Altura</td><td>em pixels do ladrilho </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af0f031a450b3be6ba5c5bc5b6d103653"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="rkerender_8c.html#af0f031a450b3be6ba5c5bc5b6d103653">rke_carrega_objetos</a> </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arquivo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a83af8ea0f645662f4b2b0d720cdf1748">Objeto</a>&#160;</td>
+          <td class="paramname"><em>objetos</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>larg_ladrilho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alt_ladrilho</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega as informações dos objetos de um arquivo </p>
+<dl class="params"><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arquivo</td><td>O arquivo com as informações </td></tr>
+    <tr><td class="paramname">objetos</td><td>O lugar para armazenar as informações </td></tr>
+    <tr><td class="paramname">larg_ladrilho</td><td>Largura em pixels do ladrilho </td></tr>
+    <tr><td class="paramname">alt_ladrilho</td><td>Altura em pixels do ladrilho </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8dc5a9555b2b8a1e08c811a7a35469ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="rkerender_8c.html#a8dc5a9555b2b8a1e08c811a7a35469ea">rke_carrega_terreno</a> </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arquivo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a8be5d5879377ab21271dad6f3691f9fe">Ladrilho</a>&#160;</td>
+          <td class="paramname"><em>terrenos</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>larg_ladrilho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alt_ladrilho</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega as informações dos elementos de terreno de um arquivo </p>
+<dl class="params"><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arquivo</td><td>O arquivo com as informações </td></tr>
+    <tr><td class="paramname">terrenos</td><td>O lugar para armazenar as informações </td></tr>
+    <tr><td class="paramname">larg_ladrilho</td><td>Largura em pixels do ladrilho </td></tr>
+    <tr><td class="paramname">alt_ladrilho</td><td>Altura em pixels do ladrilho </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4fb57e2863d45d122b3cfa8b70a78aa9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="rkerender_8c.html#a4fb57e2863d45d122b3cfa8b70a78aa9">rke_move_jogador</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a244c5487b0f580caedc3e744dfa296dc">Jogador</a> *&#160;</td>
+          <td class="paramname"><em>jogador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a0daefc5bc2fe00432f1dbe344d946d67">Tabuleiro</a>&#160;</td>
+          <td class="paramname"><em>tabuleiro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a8be5d5879377ab21271dad6f3691f9fe">Ladrilho</a> *&#160;</td>
+          <td class="paramname"><em>terrenos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rkerender_8h.html#a83af8ea0f645662f4b2b0d720cdf1748">Objeto</a> *&#160;</td>
+          <td class="paramname"><em>objetos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delta_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delta_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Função de movimentação do jogador. </p>
+<dl class="params"><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogador</td><td>Informações do jogador </td></tr>
+    <tr><td class="paramname">tabuleiro</td><td>Informações do tabuleiro </td></tr>
+    <tr><td class="paramname">terrenos</td><td>Informações dos elementos de terreno </td></tr>
+    <tr><td class="paramname">objetos</td><td>Informações dos objetos </td></tr>
+    <tr><td class="paramname">delta_x</td><td>Movimentação no eixo X </td></tr>
+    <tr><td class="paramname">delta_y</td><td>Movimentação no eixo Y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a239c7a748de2f7055719398fc04fe922"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="rkerender_8c.html#a239c7a748de2f7055719398fc04fe922">rke_render</a> </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>imagens</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>img_jogador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>altura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>larg_ladrilho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alt_ladrilho</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Função principal do renderizador de fases </p>
+<dl class="params"><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fase</td><td>Arquivo de fase </td></tr>
+    <tr><td class="paramname">imagens</td><td>Arquivo clipboard com as imagens para terreno e objetos </td></tr>
+    <tr><td class="paramname">img_jogador</td><td>Arquivo clipboard com as imagens do jogador </td></tr>
+    <tr><td class="paramname">largura</td><td>Largura em ladrilhos da tela </td></tr>
+    <tr><td class="paramname">altura</td><td>Altura em ladrilhos da tela </td></tr>
+    <tr><td class="paramname">larg_ladrilho</td><td>Largura em pixels do ladrilho </td></tr>
+    <tr><td class="paramname">alt_ladrilho</td><td>Altura em pixels do ladrilho </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Gerado em Domingo, 17 de Junho de 2012 23:27:58 para Gunther's Quest Alpha por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.0
+</small></address>
+
+</body>
+</html>

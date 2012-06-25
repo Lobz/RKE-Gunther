@@ -1,0 +1,4 @@
+#id nome passavel linha_do_mapa coluna_do_mapa
+
+l terra 0 2 5
+w agua 1 2 4

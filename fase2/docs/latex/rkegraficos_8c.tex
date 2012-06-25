@@ -1,0 +1,150 @@
+\hypertarget{rkegraficos_8c}{\section{Referência do Arquivo src/rkegraficos/rkegraficos.c}
+\label{rkegraficos_8c}\index{src/rkegraficos/rkegraficos.\-c@{src/rkegraficos/rkegraficos.\-c}}
+}
+
+
+Utilitários gráficos.  
+
+
+{\ttfamily \#include \char`\"{}gunther.\-h\char`\"{}}\\*
+Gráfico de dependência de inclusões para rkegraficos.\-c\-:
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+S\-D\-L\-\_\-\-Surface $\ast$ \hyperlink{rkegraficos_8c_a53d0882910021c0b29435e2c04b4c341}{rke\-\_\-abre\-\_\-janela} (int largura, int altura)
+\item 
+void \hyperlink{rkegraficos_8c_a630239d2b9e61caeb0c1d6bdc8e78bab}{rke\-\_\-aplica\-\_\-tela} (S\-D\-L\-\_\-\-Surface $\ast$destino, S\-D\-L\-\_\-\-Surface $\ast$origem)
+\item 
+S\-D\-L\-\_\-\-Surface $\ast$ \hyperlink{rkegraficos_8c_ac56e3ff6e5a31f288b8f79b1b2deafb4}{rke\-\_\-carrega\-\_\-\-B\-M\-P} (char $\ast$arquivo)
+\item 
+void \hyperlink{rkegraficos_8c_aabf56f1febb197788ed7f0f0e08ddee1}{rke\-\_\-aplica\-\_\-clip\-\_\-duplo} (S\-D\-L\-\_\-\-Surface $\ast$destino, S\-D\-L\-\_\-\-Surface $\ast$origem, S\-D\-L\-\_\-\-Rect clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int selecao)
+\item 
+void \hyperlink{rkegraficos_8c_a950c17bba5cee25bbbce48eb76732d62}{rke\-\_\-carrega\-\_\-clip\-\_\-duplo} (char $\ast$arquivo, S\-D\-L\-\_\-\-Rect clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\item 
+void \hyperlink{rkegraficos_8c_a904c2e2c797baab5f56609a7eb450e90}{rke\-\_\-libera\-\_\-tela} (S\-D\-L\-\_\-\-Surface $\ast$tela)
+\item 
+void \hyperlink{rkegraficos_8c_a93d1a1125deb9c4995b13208df7d5fa4}{rke\-\_\-aplica\-\_\-clip\-\_\-a\-\_\-mapa} (S\-D\-L\-\_\-\-Surface $\ast$destino, S\-D\-L\-\_\-\-Surface $\ast$origem, int mapa\-\_\-x, int mapa\-\_\-y, S\-D\-L\-\_\-\-Rect clip)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Utilitários gráficos. \begin{DoxyAuthor}{Autor}
+João da Silva, Marina Salles, Ricardo Macedo 
+\end{DoxyAuthor}
+
+
+\subsection{Funções}
+\hypertarget{rkegraficos_8c_a53d0882910021c0b29435e2c04b4c341}{\index{rkegraficos.\-c@{rkegraficos.\-c}!rke\-\_\-abre\-\_\-janela@{rke\-\_\-abre\-\_\-janela}}
+\index{rke\-\_\-abre\-\_\-janela@{rke\-\_\-abre\-\_\-janela}!rkegraficos.c@{rkegraficos.\-c}}
+\subsubsection[{rke\-\_\-abre\-\_\-janela}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Surface$\ast$ {\bf rke\-\_\-abre\-\_\-janela} (
+\begin{DoxyParamCaption}
+\item[{int}]{largura, }
+\item[{int}]{altura}
+\end{DoxyParamCaption}
+)}}\label{rkegraficos_8c_a53d0882910021c0b29435e2c04b4c341}
+Abre uma nova janela 
+\begin{DoxyParams}{Parâmetros}
+{\em largura} & Largura em pixels \\
+\hline
+{\em altura} & Altura em pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkegraficos_8c_a93d1a1125deb9c4995b13208df7d5fa4}{\index{rkegraficos.\-c@{rkegraficos.\-c}!rke\-\_\-aplica\-\_\-clip\-\_\-a\-\_\-mapa@{rke\-\_\-aplica\-\_\-clip\-\_\-a\-\_\-mapa}}
+\index{rke\-\_\-aplica\-\_\-clip\-\_\-a\-\_\-mapa@{rke\-\_\-aplica\-\_\-clip\-\_\-a\-\_\-mapa}!rkegraficos.c@{rkegraficos.\-c}}
+\subsubsection[{rke\-\_\-aplica\-\_\-clip\-\_\-a\-\_\-mapa}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-aplica\-\_\-clip\-\_\-a\-\_\-mapa} (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{destino, }
+\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{origem, }
+\item[{int}]{mapa\-\_\-x, }
+\item[{int}]{mapa\-\_\-y, }
+\item[{S\-D\-L\-\_\-\-Rect}]{clip}
+\end{DoxyParamCaption}
+)}}\label{rkegraficos_8c_a93d1a1125deb9c4995b13208df7d5fa4}
+Aplica um retângulo a uma tela 
+\begin{DoxyParams}{Parâmetros}
+{\em destino} & A tela que receberá a imagem \\
+\hline
+{\em origem} & A tela de origem \\
+\hline
+{\em mapa\-\_\-x} & A posição X (em ladrilhos) no destino \\
+\hline
+{\em mapa\-\_\-y} & A posição Y (em ladrilhos) no destino \\
+\hline
+{\em clip} & O retângulo a ser aplicado \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkegraficos_8c_aabf56f1febb197788ed7f0f0e08ddee1}{\index{rkegraficos.\-c@{rkegraficos.\-c}!rke\-\_\-aplica\-\_\-clip\-\_\-duplo@{rke\-\_\-aplica\-\_\-clip\-\_\-duplo}}
+\index{rke\-\_\-aplica\-\_\-clip\-\_\-duplo@{rke\-\_\-aplica\-\_\-clip\-\_\-duplo}!rkegraficos.c@{rkegraficos.\-c}}
+\subsubsection[{rke\-\_\-aplica\-\_\-clip\-\_\-duplo}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-aplica\-\_\-clip\-\_\-duplo} (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{destino, }
+\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{origem, }
+\item[{S\-D\-L\-\_\-\-Rect}]{clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, }
+\item[{int}]{selecao}
+\end{DoxyParamCaption}
+)}}\label{rkegraficos_8c_aabf56f1febb197788ed7f0f0e08ddee1}
+Copia um retângulo em uma tela para um outro retângulo em outra tela 
+\begin{DoxyParams}{Parâmetros}
+{\em destino} & Tela de destino \\
+\hline
+{\em origem} & Tela de origem \\
+\hline
+{\em clip} & Vetor com os retângulos \\
+\hline
+{\em selecao} & Opção selecionada no menu \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkegraficos_8c_a630239d2b9e61caeb0c1d6bdc8e78bab}{\index{rkegraficos.\-c@{rkegraficos.\-c}!rke\-\_\-aplica\-\_\-tela@{rke\-\_\-aplica\-\_\-tela}}
+\index{rke\-\_\-aplica\-\_\-tela@{rke\-\_\-aplica\-\_\-tela}!rkegraficos.c@{rkegraficos.\-c}}
+\subsubsection[{rke\-\_\-aplica\-\_\-tela}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-aplica\-\_\-tela} (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{destino, }
+\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{origem}
+\end{DoxyParamCaption}
+)}}\label{rkegraficos_8c_a630239d2b9e61caeb0c1d6bdc8e78bab}
+Aplica uma tela guardada em memória em outra 
+\begin{DoxyParams}{Parâmetros}
+{\em destino} & Tela de destino \\
+\hline
+{\em origem} & Tela de origem \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkegraficos_8c_ac56e3ff6e5a31f288b8f79b1b2deafb4}{\index{rkegraficos.\-c@{rkegraficos.\-c}!rke\-\_\-carrega\-\_\-\-B\-M\-P@{rke\-\_\-carrega\-\_\-\-B\-M\-P}}
+\index{rke\-\_\-carrega\-\_\-\-B\-M\-P@{rke\-\_\-carrega\-\_\-\-B\-M\-P}!rkegraficos.c@{rkegraficos.\-c}}
+\subsubsection[{rke\-\_\-carrega\-\_\-\-B\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Surface$\ast$ {\bf rke\-\_\-carrega\-\_\-\-B\-M\-P} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{arquivo}
+\end{DoxyParamCaption}
+)}}\label{rkegraficos_8c_ac56e3ff6e5a31f288b8f79b1b2deafb4}
+Carrega um arquivo Bitmap em uma tela 
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & O nome do arquivo \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkegraficos_8c_a950c17bba5cee25bbbce48eb76732d62}{\index{rkegraficos.\-c@{rkegraficos.\-c}!rke\-\_\-carrega\-\_\-clip\-\_\-duplo@{rke\-\_\-carrega\-\_\-clip\-\_\-duplo}}
+\index{rke\-\_\-carrega\-\_\-clip\-\_\-duplo@{rke\-\_\-carrega\-\_\-clip\-\_\-duplo}!rkegraficos.c@{rkegraficos.\-c}}
+\subsubsection[{rke\-\_\-carrega\-\_\-clip\-\_\-duplo}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-carrega\-\_\-clip\-\_\-duplo} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{arquivo, }
+\item[{S\-D\-L\-\_\-\-Rect}]{clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{rkegraficos_8c_a950c17bba5cee25bbbce48eb76732d62}
+Carrega retângulos a partir de um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & O arquivo a ser carregado \\
+\hline
+{\em clip} & O vetor de retângulos que conterá as informações \\
+\hline
+\end{DoxyParams}
+\hypertarget{rkegraficos_8c_a904c2e2c797baab5f56609a7eb450e90}{\index{rkegraficos.\-c@{rkegraficos.\-c}!rke\-\_\-libera\-\_\-tela@{rke\-\_\-libera\-\_\-tela}}
+\index{rke\-\_\-libera\-\_\-tela@{rke\-\_\-libera\-\_\-tela}!rkegraficos.c@{rkegraficos.\-c}}
+\subsubsection[{rke\-\_\-libera\-\_\-tela}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf rke\-\_\-libera\-\_\-tela} (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{tela}
+\end{DoxyParamCaption}
+)}}\label{rkegraficos_8c_a904c2e2c797baab5f56609a7eb450e90}
+Libera a memória de uma tela 
+\begin{DoxyParams}{Parâmetros}
+{\em tela} & A tela em questão \\
+\hline
+\end{DoxyParams}
