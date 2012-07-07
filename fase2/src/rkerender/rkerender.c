@@ -171,7 +171,7 @@ void rke_carrega_objetos(char* arquivo, Objeto objetos[], int larg_ladrilho, int
 {
     FILE* arq;
     char nome[255], codigo;
-    int x, y;
+    int x, y, attack, hp, bonus;
 
     arq = fopen(arquivo, "r");
 
@@ -187,7 +187,7 @@ void rke_carrega_objetos(char* arquivo, Objeto objetos[], int larg_ladrilho, int
             continue;
         }
 
-        fscanf(arq, "%s %d %d", nome, &y, &x);
+        fscanf(arq, "%s %d %d %d %d %d", nome, &hp, &attack, &bonus, &y, &x);
 
         objetos[(int)codigo].retangulo.x = x * larg_ladrilho;
         objetos[(int)codigo].retangulo.y = y * alt_ladrilho;
