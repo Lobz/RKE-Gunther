@@ -72,3 +72,4 @@ void rke_carrega_fase(char* arquivo, Tabuleiro* tabuleiro, int* jogador_x, int* 
 void rke_carrega_jogador(Jogador* jogador, int larg_ladrilho, int alt_ladrilho);
 void rke_move_jogador(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos, int delta_x, int delta_y);
 void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos);
+int rke_acoes_objetos(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos);

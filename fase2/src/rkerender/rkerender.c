@@ -66,28 +66,35 @@ void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int a
             {
                 sair = 1;
             }
-            else if(evento.type == SDL_KEYDOWN)
+            else
             {
-                switch (evento.key.keysym.sym)
+                if(evento.type == SDL_KEYDOWN)
                 {
-                case SDLK_ESCAPE:
-                    sair = 1;
-                    break;
-                case SDLK_UP:
-                    rke_move_jogador(&jogador, tabuleiro, terrenos, objetos, -1, 0);
-                    break;
-                case SDLK_DOWN:
-                    rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  1, 0);
-                    break;
-                case SDLK_LEFT:
-                    rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  0, -1);
-                    break;
-                case SDLK_RIGHT:
-                    rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  0,  1);
-                    break;
-                default:
-                    break;
+                    switch (evento.key.keysym.sym)
+                    {
+                    case SDLK_ESCAPE:
+                        sair = 1;
+                        break;
+                    case SDLK_UP:
+                        rke_move_jogador(&jogador, tabuleiro, terrenos, objetos, -1, 0);
+                        break;
+                    case SDLK_DOWN:
+                        rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  1, 0);
+                        break;
+                    case SDLK_LEFT:
+                        rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  0, -1);
+                        break;
+                    case SDLK_RIGHT:
+                        rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  0,  1);
+                        break;
+                    case SDLK_SPACE:
+                        rke_jogador_atira(jogador, tabuleiro, terrenos, objetos);
+                        break;
+                    default:
+                        break;
+                    }
                 }
+                sair = rke_acoes_objetos(&jogador, tabuleiro, terrenos, objetos);
             }
         }
     }
@@ -120,6 +127,29 @@ void rke_move_jogador(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos,
         else if (delta_x == 0 && delta_y <  0) jogador->direcao = O;
         else if (delta_x <  0 && delta_y <  0) jogador->direcao = NO;
     }
+}
+
+/**
+ * Função de acao de atirar do jogador.
+ * \param jogador Informações do jogador
+ * \param tabuleiro Informações do tabuleiro
+ * \param terrenos Informações dos elementos de terreno
+ * \param objetos Informações dos objetos
+ */
+void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos)
+{
+}
+
+/**
+ * Função de acoes independentes dos objetos.
+ * \param jogador Informações do jogador
+ * \param tabuleiro Informações do tabuleiro
+ * \param terrenos Informações dos elementos de terreno
+ * \param objetos Informações dos objetos
+ */
+int rke_acoes_objetos(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos)
+{
+    return 0;
 }
 
 /**
