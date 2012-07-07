@@ -41,6 +41,9 @@ typedef struct _tabuleiro
 /**
  * Struct Objeto
  * \param retangulo Retângulo do objeto
+ * \param hp Quantidade de hp do objeto
+ * \param attack Tipo de ataque do objeto
+ * \param bonus Tipo de bonus do objeto
  */
 typedef struct _objeto
 {
@@ -54,6 +57,7 @@ typedef struct _objeto
  * \param x Posição x do jogador
  * \param y Posição y do jogador
  * \param direcao Direção que o jogador está olhando
+ * \param hp Quantidade de hp do jogador
  */
 typedef struct _jogador
 {

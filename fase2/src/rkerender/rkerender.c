@@ -40,6 +40,7 @@ void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int a
 
     rke_carrega_fase(fase, &tabuleiro, &(jogador.x), &(jogador.y));
     jogador.direcao = E;
+    jogador.hp = 1000;
 
     tela = SDL_GetVideoSurface();
     SDL_FillRect(tela, NULL, 0x000000);
@@ -193,6 +194,9 @@ void rke_carrega_objetos(char* arquivo, Objeto objetos[], int larg_ladrilho, int
         objetos[(int)codigo].retangulo.y = y * alt_ladrilho;
         objetos[(int)codigo].retangulo.w = larg_ladrilho;
         objetos[(int)codigo].retangulo.h = alt_ladrilho;
+        objetos[(int)codigo].hp = hp;
+        objetos[(int)codigo].attack = attack;
+        objetos[(int)codigo].bonus = bonus;
     }
 
     fclose(arq);
