@@ -8,6 +8,9 @@
 #include "gunther.h"
 #include <string.h>
 
+#define BOMBA 1
+#define FLECHA 0
+
 /**
  * Função principal do renderizador de fases
  * \param fase Arquivo de fase
@@ -91,10 +94,10 @@ void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int a
                         rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  0,  1);
                         break;
                     case SDLK_SPACE:
-                        rke_jogador_atira(&jogador, tabuleiro, terrenos, objetos, 0);
+                        rke_jogador_atira(&jogador, tabuleiro, terrenos, objetos, FLECHA);
                         break;
                     case SDLK_RETURN:
-                        rke_jogador_atira(&jogador, tabuleiro, terrenos, objetos, 1);
+                        rke_jogador_atira(&jogador, tabuleiro, terrenos, objetos, BOMBA);
                         break;
                     default:
                         break;
