@@ -18,7 +18,7 @@
 
 /**
  * Struct Ladrilho
- * \param retangulo Retângulo do ladrilho
+ * \param retangulo Retângulo do ladrilho no clipboard
  * \param passavel  Indica se o jogador pode andar em cima do ladrilho
  */
 typedef struct _ladrilho
@@ -40,7 +40,7 @@ typedef struct _tabuleiro
 
 /**
  * Struct Objeto
- * \param retangulo Retângulo do objeto
+ * \param retangulo Retângulo da imagem do objeto no clipboard
  * \param hp Quantidade de hp do objeto
  * \param attack Tipo de ataque do objeto
  * \param bonus Tipo de bonus do objeto
