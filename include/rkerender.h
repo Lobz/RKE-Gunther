@@ -63,8 +63,11 @@ typedef struct _jogador
 {
     SDL_Rect retangulo[8];
     int x, y, direcao, hp;
+<<<<<<< HEAD:include/rkerender.h
     int poder_flecha, poder_bomba;
     int bombas;
+=======
+>>>>>>> towers_bombs:fase2/include/rkerender.h
 } Jogador;
 
 void rke_render(char* fase, char* imagens, char* img_jogador, int larg, int alt, int largura_ladrilho, int altura_ladrilho);
@@ -73,5 +76,9 @@ void rke_carrega_objetos(char* arquivo, Objeto objetos[], int larg_ladrilho, int
 void rke_carrega_fase(char* arquivo, Tabuleiro* tabuleiro, int* jogador_x, int* jogador_y);
 void rke_carrega_jogador(Jogador* jogador, int larg_ladrilho, int alt_ladrilho);
 void rke_move_jogador(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos, int delta_x, int delta_y);
+<<<<<<< HEAD:include/rkerender.h
 void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos, int bomba);
+=======
+void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos);
+>>>>>>> towers_bombs:fase2/include/rkerender.h
 int rke_acoes_objetos(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos);
