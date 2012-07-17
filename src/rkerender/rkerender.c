@@ -41,6 +41,9 @@ void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int a
     rke_carrega_fase(fase, &tabuleiro, &(jogador.x), &(jogador.y));
     jogador.direcao = E;
     jogador.hp = 1000;
+    jogador.poder_flecha=3;
+    jogador.poder_bomba=10;
+    jogador.bombas=5;
 
     tela = SDL_GetVideoSurface();
     SDL_FillRect(tela, NULL, 0x000000);
@@ -88,7 +91,10 @@ void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int a
                         rke_move_jogador(&jogador, tabuleiro, terrenos, objetos,  0,  1);
                         break;
                     case SDLK_SPACE:
-                        rke_jogador_atira(jogador, tabuleiro, terrenos, objetos);
+                        rke_jogador_atira(&jogador, tabuleiro, terrenos, objetos, 0);
+                        break;
+                    case SDLK_RETURN:
+                        rke_jogador_atira(&jogador, tabuleiro, terrenos, objetos, 1);
                         break;
                     default:
                         break;
@@ -136,8 +142,17 @@ void rke_move_jogador(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos,
  * \param terrenos Informações dos elementos de terreno
  * \param objetos Informações dos objetos
  */
-void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos)
+void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos, int bomba)
 {
+    if (bomba && jogador->bombas) {
+        jogador->bombas--;
+        printf("atirou bomba\n%d\n", jogador->bombas);
+        /*lanca_bomba(jogador);*/
+    }
+    else {
+        printf("atirou flecha\n");
+        /*lanca_flecha(jogador);*/
+    }
 }
 
 /**
@@ -149,6 +164,7 @@ void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos
  */
 int rke_acoes_objetos(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos)
 {
+
     return 0;
 }
 
