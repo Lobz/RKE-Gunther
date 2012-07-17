@@ -1,15 +1,15 @@
-#id name image_pos.y image_pos.x
+#id name hp atack_type bonus_type image_pos.y image_pos.x
 
 #towers
-A ArrowTower 2 0
-B BombardTower 2 1
+A ArrowTower 100 1 1 2 0
+B BombardTower 200 2 1 2 1
 
 #monsters
-y TubaraoAmarelo 0 0
-t TubaraoCinza 0 1
-T Tartarugao 0 2
-l Lesma 0 3
-D Dragao 1 0
+y TubaraoAmarelo 20 3 2 0 0
+t TubaraoCinza 30 4 2 0 1
+T Tartarugao 10 5 2 0 2
+l Lesma 5 6 0 0 3
+D Dragao 400 7 3 1 0
 
 #treasures/fishes
-f Fish 0 4
+f Fish 1 8 2 0 4

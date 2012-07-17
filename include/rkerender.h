@@ -41,10 +41,14 @@ typedef struct _tabuleiro
 /**
  * Struct Objeto
  * \param retangulo Retângulo do objeto
+ * \param hp Quantidade de hp do objeto
+ * \param attack Tipo de ataque do objeto
+ * \param bonus Tipo de bonus do objeto
  */
 typedef struct _objeto
 {
     SDL_Rect retangulo;
+    int hp, attack, bonus;
 } Objeto;
 
 /**
@@ -53,11 +57,14 @@ typedef struct _objeto
  * \param x Posição x do jogador
  * \param y Posição y do jogador
  * \param direcao Direção que o jogador está olhando
+ * \param hp Quantidade de hp do jogador
  */
 typedef struct _jogador
 {
     SDL_Rect retangulo[8];
-    int x, y, direcao;
+    int x, y, direcao, hp;
+    int poder_flecha, poder_bomba;
+    int bombas;
 } Jogador;
 
 void rke_render(char* fase, char* imagens, char* img_jogador, int larg, int alt, int largura_ladrilho, int altura_ladrilho);
@@ -66,3 +73,5 @@ void rke_carrega_objetos(char* arquivo, Objeto objetos[], int larg_ladrilho, int
 void rke_carrega_fase(char* arquivo, Tabuleiro* tabuleiro, int* jogador_x, int* jogador_y);
 void rke_carrega_jogador(Jogador* jogador, int larg_ladrilho, int alt_ladrilho);
 void rke_move_jogador(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos, int delta_x, int delta_y);
+void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos);
+int rke_acoes_objetos(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos);
