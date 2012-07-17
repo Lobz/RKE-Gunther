@@ -24,7 +24,7 @@
 void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int altura, int larg_ladrilho, int alt_ladrilho)
 {
     int i, j;
-    int sair = 0;
+    int sair = 0, turno = 0;
     SDL_Event evento;
     Tabuleiro tabuleiro;
     Ladrilho terrenos[255];
@@ -43,7 +43,7 @@ void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int a
 
     rke_carrega_fase(fase, &tabuleiro, &(jogador.x), &(jogador.y));
     jogador.direcao = E;
-    jogador.hp = 1000;
+    jogador.vida = 1000;
     jogador.poder_flecha=3;
     jogador.poder_bomba=10;
     jogador.bombas=5;
@@ -102,8 +102,8 @@ void rke_render(char* fase, char* imagens, char* img_jogador, int largura, int a
                     default:
                         break;
                     }
+                    sair = rke_acoes_objetos(&jogador, tabuleiro, terrenos, objetos, turno++);
                 }
-                sair = rke_acoes_objetos(&jogador, tabuleiro, terrenos, objetos);
             }
         }
     }
@@ -167,7 +167,7 @@ void rke_jogador_atira(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos
  */
 int rke_acoes_objetos(Jogador* jogador, Tabuleiro tabuleiro, Ladrilho* terrenos, Objeto* objetos)
 {
-
+    printf("acao\n");
     return 0;
 }
 
@@ -221,7 +221,7 @@ void rke_carrega_objetos(char* arquivo, Objeto objetos[], int larg_ladrilho, int
 {
     FILE* arq;
     char nome[255], codigo;
-    int x, y, attack, hp, bonus;
+    int x, y, ataque, periodo_ataque, vida, bonus;
 
     arq = fopen(arquivo, "r");
 
@@ -237,14 +237,15 @@ void rke_carrega_objetos(char* arquivo, Objeto objetos[], int larg_ladrilho, int
             continue;
         }
 
-        fscanf(arq, "%s %d %d %d %d %d", nome, &hp, &attack, &bonus, &y, &x);
+        fscanf(arq, "%s %d %d %d %d %d %d", nome, &vida, &ataque, &periodo_ataque, &bonus, &y, &x);
 
         objetos[(int)codigo].retangulo.x = x * larg_ladrilho;
         objetos[(int)codigo].retangulo.y = y * alt_ladrilho;
         objetos[(int)codigo].retangulo.w = larg_ladrilho;
         objetos[(int)codigo].retangulo.h = alt_ladrilho;
-        objetos[(int)codigo].hp = hp;
-        objetos[(int)codigo].attack = attack;
+        objetos[(int)codigo].vida = vida;
+        objetos[(int)codigo].ataque = ataque;
+        objetos[(int)codigo].periodo = periodo_ataque;
         objetos[(int)codigo].bonus = bonus;
     }
 
