@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$player_8h.html" title="Header para o jogador: imagens, ataques, movimentos, comandos, etc." alt="" coords="128,83,195,112"/>
+<area shape="rect" id="node5" href="$boardloader_8c.html" title="Funções para carregar as informações pertinentes a monstros, terrenos, objetos, fases a partir de seu..." alt="" coords="5,160,104,189"/>
+<area shape="rect" id="node7" href="$_game_8c.html" title="Função principal do jogo." alt="" coords="128,160,195,189"/>
+<area shape="rect" id="node9" href="$player_8c.html" title="Código para o jogador: imagens, ataques, movimentos, comandos, etc." alt="" coords="219,160,285,189"/>
+</map>

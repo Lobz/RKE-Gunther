@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Gunther&#39;s Quest Alpha: Referência do Arquivo boardloader.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Gunther's Quest Alpha&#160;<span id="projectnumber">0.2</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo boardloader.c</div>  </div>
+</div>
+<div class="contents">
+
+<p>Funções para carregar as informações pertinentes a monstros, terrenos, objetos, fases a partir de seus arquivos de dados.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para boardloader.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="boardloader_8c__incl.png" border="0" usemap="#boardloader_8c" alt=""/></div>
+<map name="boardloader_8c" id="boardloader_8c">
+<area shape="rect" id="node3" href="player_8h.html" title="Header para o jogador: imagens, ataques, movimentos, comandos, etc." alt="" coords="133,83,200,112"/><area shape="rect" id="node5" href="game_8h.html" title="Headers para unidades e mapa: ataques, movimentos, etc." alt="" coords="135,160,199,189"/><area shape="rect" id="node7" href="headers_8h.html" title="Arquivo header geral do jogo, incluindo menu e gráficos." alt="" coords="128,237,205,267"/></map>
+</div>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#afc079f6d58f20203e10b4eb0e8ea1874">loadObjectDefinitions</a> (<a class="el" href="structobj.html">Object</a> definitions[], char *filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#ae1eff1d5b3c14bbde4cf0338de7628a6">loadTerrainDefinitions</a> (<a class="el" href="structterreno.html">Terrain</a> terrenos[], char *file)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#aa102949124f504e93924288296217d7b">loadObjectDefinition</a> (<a class="el" href="structobj.html">Object</a> *def, FILE *F)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">SDL_Rect *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#a2a1f0038c2fd0907742662aa17566fad">loadBoard</a> (<a class="el" href="structgmboard.html">GameBoard</a> *board, <a class="el" href="structobj.html">Object</a> definitions[], char *file)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structobj.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#a522d39ac8eb7f87b05063d2719489bae">newObject</a> (char id, <a class="el" href="structobj.html">Object</a> defs[])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structobj.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#ab2b45b422b800ecc1ed60652267edbc1">searchObjectDefinition</a> (char id, <a class="el" href="structobj.html">Object</a> defs[])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#a8fa0c71f272ab9b4cca146f1fe14ec51">copyObject</a> (<a class="el" href="structobj.html">Object</a> *new, <a class="el" href="structobj.html">Object</a> *ref)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#aa6a6de2f0301d872e313fdf5448a823a">copyMovement</a> (<a class="el" href="structmov.html">Movement</a> *new, <a class="el" href="structmov.html">Movement</a> *ref)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#af2e739e0f57149c0581db35571a23290">copyAttack</a> (<a class="el" href="structatt.html">Attack</a> *new, <a class="el" href="structatt.html">Attack</a> *ref)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#a40dd9223c1b66c364eafe63cb2681957">copyObjectClip</a> (SDL_Rect *new, SDL_Rect *ref)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#a52fbb46e4c838dac553df46caaebbc48">loadMovementInfo</a> (<a class="el" href="structmov.html">Movement</a> *<a class="el" href="structmov.html">mov</a>, FILE *F)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#a916135ea4fd3a8e15fb21860686dbf09">loadAttackInfo</a> (<a class="el" href="structatt.html">Attack</a> *<a class="el" href="structatt.html">att</a>, FILE *F)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boardloader_8c.html#a78ef8a82133b9cdffc71f167ebcd3305">loadImmunitiesInfo</a> (attackType *type, FILE *F)</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Descrição Detalhada</h2>
+<div class="textblock"><p>Funções para carregar as informações pertinentes a monstros, terrenos, objetos, fases a partir de seus arquivos de dados. </p>
+<dl class="author"><dt><b>Autor:</b></dt><dd>João da Silva, Marina Salles, Ricardo Macedo </dd></dl>
+</div><hr/><h2>Funções</h2>
+<a class="anchor" id="af2e739e0f57149c0581db35571a23290"></a><!-- doxytag: member="boardloader.c::copyAttack" ref="af2e739e0f57149c0581db35571a23290" args="(Attack *new, Attack *ref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copyAttack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structatt.html">Attack</a> *&#160;</td>
+          <td class="paramname"><em>new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structatt.html">Attack</a> *&#160;</td>
+          <td class="paramname"><em>ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copia uma estrutura do tipo ataque (usado para copiar objeto) </p>
+
+</div>
+</div>
+<a class="anchor" id="aa6a6de2f0301d872e313fdf5448a823a"></a><!-- doxytag: member="boardloader.c::copyMovement" ref="aa6a6de2f0301d872e313fdf5448a823a" args="(Movement *new, Movement *ref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copyMovement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmov.html">Movement</a> *&#160;</td>
+          <td class="paramname"><em>new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmov.html">Movement</a> *&#160;</td>
+          <td class="paramname"><em>ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copia uma estrutura do tipo movimento (usado para copiar objeto) </p>
+
+</div>
+</div>
+<a class="anchor" id="a8fa0c71f272ab9b4cca146f1fe14ec51"></a><!-- doxytag: member="boardloader.c::copyObject" ref="a8fa0c71f272ab9b4cca146f1fe14ec51" args="(Object *new, Object *ref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copyObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structobj.html">Object</a> *&#160;</td>
+          <td class="paramname"><em>new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structobj.html">Object</a> *&#160;</td>
+          <td class="paramname"><em>ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copia um Object (usado para criar um objeto a partir das definições) </p>
+
+</div>
+</div>
+<a class="anchor" id="a40dd9223c1b66c364eafe63cb2681957"></a><!-- doxytag: member="boardloader.c::copyObjectClip" ref="a40dd9223c1b66c364eafe63cb2681957" args="(SDL_Rect *new, SDL_Rect *ref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copyObjectClip </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copia um retângulo </p>
+
+</div>
+</div>
+<a class="anchor" id="a916135ea4fd3a8e15fb21860686dbf09"></a><!-- doxytag: member="boardloader.c::loadAttackInfo" ref="a916135ea4fd3a8e15fb21860686dbf09" args="(Attack *att, FILE *F)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadAttackInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structatt.html">Attack</a> *&#160;</td>
+          <td class="paramname"><em>att</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>F</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega informação de ataque do arquivo de dados de objeto </p>
+
+</div>
+</div>
+<a class="anchor" id="a2a1f0038c2fd0907742662aa17566fad"></a><!-- doxytag: member="boardloader.c::loadBoard" ref="a2a1f0038c2fd0907742662aa17566fad" args="(GameBoard *board, Object definitions[], char *file)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Rect* loadBoard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgmboard.html">GameBoard</a> *&#160;</td>
+          <td class="paramname"><em>board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structobj.html">Object</a>&#160;</td>
+          <td class="paramname"><em>definitions</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega uma fase a partir de um arquivo de fase </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>Estrutura de dados que guarda as informações do tabuleiro/mapa </td></tr>
+    <tr><td class="paramname">definitions</td><td>Estrutura de dados que guarda as definições de objetos </td></tr>
+    <tr><td class="paramname">file</td><td>Arquivo de fase </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a78ef8a82133b9cdffc71f167ebcd3305"></a><!-- doxytag: member="boardloader.c::loadImmunitiesInfo" ref="a78ef8a82133b9cdffc71f167ebcd3305" args="(attackType *type, FILE *F)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadImmunitiesInfo </td>
+          <td>(</td>
+          <td class="paramtype">attackType *&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>F</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega informação de imunidade do arquivo de dados de objeto </p>
+
+</div>
+</div>
+<a class="anchor" id="a52fbb46e4c838dac553df46caaebbc48"></a><!-- doxytag: member="boardloader.c::loadMovementInfo" ref="a52fbb46e4c838dac553df46caaebbc48" args="(Movement *mov, FILE *F)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadMovementInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmov.html">Movement</a> *&#160;</td>
+          <td class="paramname"><em>mov</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>F</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega informação de movimento do arquito de dados de objeto </p>
+
+</div>
+</div>
+<a class="anchor" id="aa102949124f504e93924288296217d7b"></a><!-- doxytag: member="boardloader.c::loadObjectDefinition" ref="aa102949124f504e93924288296217d7b" args="(Object *def, FILE *F)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadObjectDefinition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structobj.html">Object</a> *&#160;</td>
+          <td class="paramname"><em>def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>F</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lê uma linha do arquivo de definições de objetos e carrega um objeto-definição para futura referência </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">def</td><td>Object a ser carregado com a definição </td></tr>
+    <tr><td class="paramname">F</td><td>leitor do arquivo de objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afc079f6d58f20203e10b4eb0e8ea1874"></a><!-- doxytag: member="boardloader.c::loadObjectDefinitions" ref="afc079f6d58f20203e10b4eb0e8ea1874" args="(Object definitions[], char *filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadObjectDefinitions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structobj.html">Object</a>&#160;</td>
+          <td class="paramname"><em>definitions</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega as definições de objetos de um arquivo de dados </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">definitions</td><td>Estrutura de dados que armazena as definições </td></tr>
+    <tr><td class="paramname">filename</td><td>Nome do arquivo de dados (default: object.dat) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae1eff1d5b3c14bbde4cf0338de7628a6"></a><!-- doxytag: member="boardloader.c::loadTerrainDefinitions" ref="ae1eff1d5b3c14bbde4cf0338de7628a6" args="(Terrain terrenos[], char *file)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadTerrainDefinitions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structterreno.html">Terrain</a>&#160;</td>
+          <td class="paramname"><em>terrenos</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carrega as informações dos elementos de terreno de um arquivo </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>O arquivo com as informações </td></tr>
+    <tr><td class="paramname">terrenos</td><td>O lugar para armazenar as informações </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a522d39ac8eb7f87b05063d2719489bae"></a><!-- doxytag: member="boardloader.c::newObject" ref="a522d39ac8eb7f87b05063d2719489bae" args="(char id, Object defs[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structobj.html">Object</a>* newObject </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structobj.html">Object</a>&#160;</td>
+          <td class="paramname"><em>defs</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cria novo objeto, cópia de uma definição </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificador do tipo de objeto </td></tr>
+    <tr><td class="paramname">defs</td><td>Lista de definições </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab2b45b422b800ecc1ed60652267edbc1"></a><!-- doxytag: member="boardloader.c::searchObjectDefinition" ref="ab2b45b422b800ecc1ed60652267edbc1" args="(char id, Object defs[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structobj.html">Object</a>* searchObjectDefinition </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structobj.html">Object</a>&#160;</td>
+          <td class="paramname"><em>defs</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devolve endereço de uma definição </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificador do tipo de objeto </td></tr>
+    <tr><td class="paramname">defs</td><td>Lista de definições </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Terça, 17 de Julho de 2012 22:45:47 para Gunther's Quest Alpha por&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

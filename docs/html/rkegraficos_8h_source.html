@@ -2,54 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Gunther&#39;s Quest Alpha: Código-Fonte de include/rkegraficos.h</title>
-
+<title>Gunther&#39;s Quest Alpha: Código-Fonte de bkp/rkegraficos.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
-
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-<div id="top"><!-- do not remove this div! -->
-
-
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div id="top">
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  
-  
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Gunther&#39;s Quest Alpha
-   &#160;<span id="projectnumber">0.2</span>
-   </div>
-   
+   <div id="projectname">Gunther's Quest Alpha&#160;<span id="projectnumber">0.2</span></div>
   </td>
-  
-  
-  
  </tr>
  </tbody>
 </table>
 </div>
-
-<!-- Gerado por Doxygen 1.8.0 -->
-<script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'Busca');
-</script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
       <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
-      <li>
+      <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -73,25 +54,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
       <li><a href="globals.html"><span>Globais</span></a></li>
     </ul>
   </div>
-</div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
 <div class="header">
   <div class="headertitle">
-<div class="title">include/rkegraficos.h</div>  </div>
-</div><!--header-->
+<div class="title">bkp/rkegraficos.h</div>  </div>
+</div>
 <div class="contents">
 <a href="rkegraficos_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;SDL/SDL.h&quot;</span>
@@ -109,21 +75,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define KEY_AZUL     0xFF</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 SDL_Surface* <a class="code" href="rkegraficos_8h.html#a53d0882910021c0b29435e2c04b4c341">rke_abre_janela</a>(<span class="keywordtype">int</span> largura, <span class="keywordtype">int</span> altura);
-<a name="l00025"></a>00025 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8h.html#a630239d2b9e61caeb0c1d6bdc8e78bab">rke_aplica_tela</a>(SDL_Surface *destino, SDL_Surface *origem);
-<a name="l00026"></a>00026 SDL_Surface *<a class="code" href="rkegraficos_8h.html#ac56e3ff6e5a31f288b8f79b1b2deafb4">rke_carrega_BMP</a>(<span class="keywordtype">char</span>* arquivo);
-<a name="l00027"></a>00027 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8h.html#aabf56f1febb197788ed7f0f0e08ddee1">rke_aplica_clip_duplo</a>(SDL_Surface *destino, SDL_Surface *origem, SDL_Rect clip[][2], <span class="keywordtype">int</span> selecao);
-<a name="l00028"></a>00028 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8h.html#a950c17bba5cee25bbbce48eb76732d62">rke_carrega_clip_duplo</a>(<span class="keywordtype">char</span> *arquivo, SDL_Rect clip[][2]);
-<a name="l00029"></a>00029 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8h.html#a904c2e2c797baab5f56609a7eb450e90">rke_libera_tela</a>(SDL_Surface *tela);
-<a name="l00030"></a>00030 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8h.html#a93d1a1125deb9c4995b13208df7d5fa4">rke_aplica_clip_a_mapa</a>(SDL_Surface *destino, SDL_Surface *origem, <span class="keywordtype">int</span> mapa_x, <span class="keywordtype">int</span> mapa_y, SDL_Rect clip);
-</pre></div></div><!-- contents -->
+<a name="l00024"></a>00024 SDL_Surface* <a class="code" href="rkegraficos_8c.html#a53d0882910021c0b29435e2c04b4c341">rke_abre_janela</a>(<span class="keywordtype">int</span> largura, <span class="keywordtype">int</span> altura);
+<a name="l00025"></a>00025 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8c.html#a630239d2b9e61caeb0c1d6bdc8e78bab">rke_aplica_tela</a>(SDL_Surface *destino, SDL_Surface *origem);
+<a name="l00026"></a>00026 SDL_Surface *<a class="code" href="rkegraficos_8c.html#ac56e3ff6e5a31f288b8f79b1b2deafb4">rke_carrega_BMP</a>(<span class="keywordtype">char</span>* arquivo);
+<a name="l00027"></a>00027 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8c.html#aabf56f1febb197788ed7f0f0e08ddee1">rke_aplica_clip_duplo</a>(SDL_Surface *destino, SDL_Surface *origem, SDL_Rect clip[][2], <span class="keywordtype">int</span> selecao);
+<a name="l00028"></a>00028 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8c.html#a950c17bba5cee25bbbce48eb76732d62">rke_carrega_clip_duplo</a>(<span class="keywordtype">char</span> *arquivo, SDL_Rect clip[][2]);
+<a name="l00029"></a>00029 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8c.html#a904c2e2c797baab5f56609a7eb450e90">rke_libera_tela</a>(SDL_Surface *tela);
+<a name="l00030"></a>00030 <span class="keywordtype">void</span> <a class="code" href="rkegraficos_8c.html#a93d1a1125deb9c4995b13208df7d5fa4">rke_aplica_clip_a_mapa</a>(SDL_Surface *destino, SDL_Surface *origem, <span class="keywordtype">int</span> mapa_x, <span class="keywordtype">int</span> mapa_y, SDL_Rect clip);
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
 
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
 
-<hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 17 de Junho de 2012 23:27:58 para Gunther's Quest Alpha por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.0
-</small></address>
-
+<hr class="footer"/><address class="footer"><small>Gerado em Terça, 17 de Julho de 2012 22:42:46 para Gunther's Quest Alpha por&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
 </html>

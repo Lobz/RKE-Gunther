@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Gunther&#39;s Quest Alpha: Código-Fonte de game.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Gunther's Quest Alpha&#160;<span id="projectnumber">0.2</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">game.h</div>  </div>
+</div>
+<div class="contents">
+<a href="game_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="headers_8h.html" title="Arquivo header geral do jogo, incluindo menu e gráficos.">headers.h</a>&quot;</span>
+<a name="l00009"></a><a class="code" href="structvector.html">00009</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structvector.html">vector</a> {
+<a name="l00010"></a>00010         <span class="keywordtype">int</span> x,y;
+<a name="l00011"></a>00011 }<a class="code" href="structvector.html">Vector</a>;
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="comment">/* terrain */</span>
+<a name="l00014"></a><a class="code" href="structterreno.html">00014</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structterreno.html">terreno</a> {
+<a name="l00015"></a>00015         <span class="keywordtype">int</span> passavel;
+<a name="l00016"></a>00016         SDL_Rect retangulo;
+<a name="l00017"></a>00017 } <a class="code" href="structterreno.html">Terrain</a>;
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="comment">/* attacks */</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#define MAXATTACKS 3</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define MAXIMMUNITIES 10</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span>
+<a name="l00023"></a>00023 <span class="preprocessor">#define attackType int</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span><span class="preprocessor">#define ATT_ARROW 10</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#define ATT_CANNON 11</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span><span class="preprocessor">#define ATT_TOUCH 12</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#define ATT_TACKLE 13</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="preprocessor">#define ATT_MAGIC 14</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span><span class="preprocessor">#define ATT_SHIP 16</span>
+<a name="l00030"></a>00030 <span class="preprocessor"></span><span class="preprocessor">#define ATT_BOMB 15</span>
+<a name="l00031"></a>00031 <span class="preprocessor"></span>
+<a name="l00032"></a><a class="code" href="structatt.html">00032</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structatt.html">att</a>{
+<a name="l00033"></a>00033         attackType type;
+<a name="l00034"></a>00034         <span class="keywordtype">int</span> range;
+<a name="l00035"></a>00035         <span class="keywordtype">int</span> firerate;
+<a name="l00036"></a>00036         <span class="keywordtype">int</span> damage;
+<a name="l00037"></a>00037 } <a class="code" href="structatt.html">Attack</a>;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="comment">/* movements */</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#define movementPattern int</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">#define MOV_LINE 20</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span><span class="preprocessor">#define MOV_RANDOM 21</span>
+<a name="l00043"></a>00043 <span class="preprocessor"></span><span class="preprocessor">#define MOV_RANDLINES 22</span>
+<a name="l00044"></a>00044 <span class="preprocessor"></span><span class="preprocessor">#define MOV_NONE -20</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span>
+<a name="l00046"></a><a class="code" href="structmov.html">00046</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmov.html">mov</a>{
+<a name="l00047"></a>00047         movementPattern pattern;
+<a name="l00048"></a>00048         <span class="keywordtype">int</span> speed;
+<a name="l00049"></a>00049         <a class="code" href="structvector.html">Vector</a> direction;
+<a name="l00050"></a>00050         <span class="keywordtype">int</span> expire;
+<a name="l00051"></a>00051 } <a class="code" href="structmov.html">Movement</a>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="comment">/* Objects */</span>
+<a name="l00054"></a><a class="code" href="structobj.html">00054</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structobj.html">obj</a>{
+<a name="l00055"></a>00055         <span class="keywordtype">char</span> name[MAXLEN];
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057         <span class="keywordtype">char</span> id;
+<a name="l00058"></a>00058         <span class="keywordtype">int</span> HP;
+<a name="l00059"></a>00059         <span class="keywordtype">int</span> expire;
+<a name="l00060"></a>00060         <span class="keywordtype">bool</span> attackOthers;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062         <a class="code" href="structmov.html">Movement</a> movement;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064         <span class="keywordtype">int</span> numAttacks;
+<a name="l00065"></a>00065         <a class="code" href="structatt.html">Attack</a> attacks[MAXATTACKS];
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         <span class="keywordtype">int</span> numImmunities;
+<a name="l00068"></a>00068         attackType immunities[MAXIMMUNITIES];
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070         SDL_Rect clip;
+<a name="l00071"></a>00071 }<a class="code" href="structobj.html">Object</a>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="comment">/* the board controller */</span>
+<a name="l00074"></a><a class="code" href="structgmboard.html">00074</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structgmboard.html">gmboard</a>{
+<a name="l00075"></a>00075         <span class="keywordtype">char</span> scenario[BOARD_HEIGHT][BOARD_WIDTH];
+<a name="l00076"></a>00076         <a class="code" href="structobj.html">Object</a> *objects[BOARD_HEIGHT][BOARD_WIDTH];
+<a name="l00077"></a>00077 } <a class="code" href="structgmboard.html">GameBoard</a>;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="comment">/* loaders */</span>
+<a name="l00080"></a>00080 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#afc079f6d58f20203e10b4eb0e8ea1874">loadObjectDefinitions</a>(<a class="code" href="structobj.html">Object</a> definitions[],<span class="keywordtype">char</span> *filename);
+<a name="l00081"></a>00081 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#ae1eff1d5b3c14bbde4cf0338de7628a6">loadTerrainDefinitions</a>(<a class="code" href="structterreno.html">Terrain</a> definitions[],<span class="keywordtype">char</span> *filename);
+<a name="l00082"></a>00082 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#aa102949124f504e93924288296217d7b">loadObjectDefinition</a>(<a class="code" href="structobj.html">Object</a> *definition,FILE *F);
+<a name="l00083"></a>00083 SDL_Rect *<a class="code" href="boardloader_8c.html#a2a1f0038c2fd0907742662aa17566fad">loadBoard</a>(<a class="code" href="structgmboard.html">GameBoard</a> *board,<a class="code" href="structobj.html">Object</a> definitions[],<span class="keywordtype">char</span> *file);
+<a name="l00084"></a>00084 <a class="code" href="structobj.html">Object</a> *<a class="code" href="boardloader_8c.html#a522d39ac8eb7f87b05063d2719489bae">newObject</a>(<span class="keywordtype">char</span> <span class="keywordtype">id</span>,<a class="code" href="structobj.html">Object</a> defs[]);
+<a name="l00085"></a>00085 <a class="code" href="structobj.html">Object</a> *<a class="code" href="boardloader_8c.html#ab2b45b422b800ecc1ed60652267edbc1">searchObjectDefinition</a>(<span class="keywordtype">char</span> <span class="keywordtype">id</span>, <a class="code" href="structobj.html">Object</a> defs[]);
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#a52fbb46e4c838dac553df46caaebbc48">loadMovementInfo</a>(<a class="code" href="structmov.html">Movement</a> *<a class="code" href="structmov.html">mov</a>,FILE *F);
+<a name="l00088"></a>00088 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#a916135ea4fd3a8e15fb21860686dbf09">loadAttackInfo</a>(<a class="code" href="structatt.html">Attack</a> *<a class="code" href="structatt.html">att</a>,FILE *F);
+<a name="l00089"></a>00089 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#a78ef8a82133b9cdffc71f167ebcd3305">loadImmunitiesInfo</a>(attackType *type,FILE *F);
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#a8fa0c71f272ab9b4cca146f1fe14ec51">copyObject</a>(<a class="code" href="structobj.html">Object</a> *<span class="keyword">new</span>,<a class="code" href="structobj.html">Object</a> *ref);
+<a name="l00092"></a>00092 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#aa6a6de2f0301d872e313fdf5448a823a">copyMovement</a>(<a class="code" href="structmov.html">Movement</a> *<span class="keyword">new</span>,<a class="code" href="structmov.html">Movement</a> *ref);
+<a name="l00093"></a>00093 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#af2e739e0f57149c0581db35571a23290">copyAttack</a>(<a class="code" href="structatt.html">Attack</a> *<span class="keyword">new</span>,<a class="code" href="structatt.html">Attack</a> *ref);
+<a name="l00094"></a>00094 <span class="keywordtype">void</span> <a class="code" href="boardloader_8c.html#a40dd9223c1b66c364eafe63cb2681957">copyObjectClip</a>(SDL_Rect *<span class="keyword">new</span>, SDL_Rect *ref);
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 <span class="comment">/* acters */</span>
+<a name="l00098"></a>00098 <span class="keywordtype">void</span> fireAttack(<a class="code" href="structgmboard.html">GameBoard</a> *gameboard, <a class="code" href="structobj.html">Object</a> *attacker, <a class="code" href="structvector.html">Vector</a> direction, attackType type);
+<a name="l00099"></a>00099 <span class="keywordtype">void</span> moveObject(<a class="code" href="structgmboard.html">GameBoard</a> *gameboard, <a class="code" href="structobj.html">Object</a> *mover);
+<a name="l00100"></a>00100 <span class="keywordtype">void</span> updateGameboard(<a class="code" href="structgmboard.html">GameBoard</a> *gameboard);
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Gerado em Terça, 17 de Julho de 2012 22:45:47 para Gunther's Quest Alpha por&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

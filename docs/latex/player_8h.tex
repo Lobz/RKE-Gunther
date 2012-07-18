@@ -1,0 +1,189 @@
+\hypertarget{player_8h}{
+\section{Referência do Arquivo player.h}
+\label{player_8h}\index{player.h@{player.h}}
+}
+
+
+Header para o jogador: imagens, ataques, movimentos, comandos, etc.  
+
+
+{\ttfamily \#include \char`\"{}game.h\char`\"{}}\par
+Gráfico de dependência de inclusões para player.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{player_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{player_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__jogador}{\_\-jogador}
+\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{player_8h_a0240ac851181b84ac374872dc5434ee4}{
+\#define {\bfseries N}~0}
+\label{player_8h_a0240ac851181b84ac374872dc5434ee4}
+
+\item 
+\hypertarget{player_8h_a5af9139e882aef6c820ae908589a40d6}{
+\#define {\bfseries NE}~1}
+\label{player_8h_a5af9139e882aef6c820ae908589a40d6}
+
+\item 
+\hypertarget{player_8h_a07484107e6d9fdf38b53edf631d6511d}{
+\#define {\bfseries E}~2}
+\label{player_8h_a07484107e6d9fdf38b53edf631d6511d}
+
+\item 
+\hypertarget{player_8h_a18bbe716f5be6adbd2150139244c0262}{
+\#define {\bfseries SE}~3}
+\label{player_8h_a18bbe716f5be6adbd2150139244c0262}
+
+\item 
+\hypertarget{player_8h_af933676109efed7ab34cea71d748a517}{
+\#define {\bfseries S}~4}
+\label{player_8h_af933676109efed7ab34cea71d748a517}
+
+\item 
+\hypertarget{player_8h_a02cc6d026fad97c4a8c84675a0619d03}{
+\#define {\bfseries SO}~5}
+\label{player_8h_a02cc6d026fad97c4a8c84675a0619d03}
+
+\item 
+\hypertarget{player_8h_a396fecfabe3105afc15a61c209f910f0}{
+\#define {\bfseries O}~6}
+\label{player_8h_a396fecfabe3105afc15a61c209f910f0}
+
+\item 
+\hypertarget{player_8h_a996bde01ecac342918f0a2c4e7ce7bd5}{
+\#define {\bfseries NO}~7}
+\label{player_8h_a996bde01ecac342918f0a2c4e7ce7bd5}
+
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__jogador}{\_\-jogador} \hyperlink{player_8h_a244c5487b0f580caedc3e744dfa296dc}{Jogador}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{player_8h_a367aed7c3de5f557a25d934be4aee8a4}{rke\_\-carrega\_\-jogador} (\hyperlink{struct__jogador}{Jogador} $\ast$jogador, int larg\_\-ladrilho, int alt\_\-ladrilho)
+\item 
+void \hyperlink{player_8h_a16dbdc2e1ba993cc3b577143b292252f}{rke\_\-move\_\-jogador} (\hyperlink{struct__jogador}{Jogador} $\ast$jogador, \hyperlink{structgmboard}{GameBoard} tabuleiro, \hyperlink{structterreno}{Terrain} $\ast$terrenos, \hyperlink{structobj}{Object} $\ast$objetos, int delta\_\-x, int delta\_\-y)
+\item 
+void \hyperlink{player_8h_af58d7aad09f5ab9f3c4ca221436be2cd}{rke\_\-jogador\_\-atira} (\hyperlink{struct__jogador}{Jogador} $\ast$jogador, \hyperlink{structgmboard}{GameBoard} tabuleiro, \hyperlink{structterreno}{Terrain} $\ast$terrenos, \hyperlink{structobj}{Object} $\ast$objetos, int bomba)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Header para o jogador: imagens, ataques, movimentos, comandos, etc. \begin{DoxyAuthor}{Autor}
+João da Silva, Marina Salles, Ricardo Macedo 
+\end{DoxyAuthor}
+
+
+\subsection{Definições dos tipos}
+\hypertarget{player_8h_a244c5487b0f580caedc3e744dfa296dc}{
+\index{player.h@{player.h}!Jogador@{Jogador}}
+\index{Jogador@{Jogador}!player.h@{player.h}}
+\subsubsection[{Jogador}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \_\-jogador}  {\bf Jogador}}}
+\label{player_8h_a244c5487b0f580caedc3e744dfa296dc}
+Struct Jogador 
+\begin{DoxyParams}{Parâmetros}
+{\em retangulo} & Vetor com os 8 retângulos das visões do jogador \\
+\hline
+{\em x} & Posição x do jogador \\
+\hline
+{\em y} & Posição y do jogador \\
+\hline
+{\em direcao} & Direção que o jogador está olhando \\
+\hline
+{\em hp} & Quantidade de hp do jogador \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Funções}
+\hypertarget{player_8h_a367aed7c3de5f557a25d934be4aee8a4}{
+\index{player.h@{player.h}!rke\_\-carrega\_\-jogador@{rke\_\-carrega\_\-jogador}}
+\index{rke\_\-carrega\_\-jogador@{rke\_\-carrega\_\-jogador}!player.h@{player.h}}
+\subsubsection[{rke\_\-carrega\_\-jogador}]{\setlength{\rightskip}{0pt plus 5cm}void rke\_\-carrega\_\-jogador (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{jogador, }
+\item[{int}]{larg\_\-ladrilho, }
+\item[{int}]{alt\_\-ladrilho}
+\end{DoxyParamCaption}
+)}}
+\label{player_8h_a367aed7c3de5f557a25d934be4aee8a4}
+Carrega os retângulos da imagem do jogador 
+\begin{DoxyParams}{Parâmetros}
+{\em O} & lugar para armazenar as informações \\
+\hline
+{\em Largura} & em pixels do ladrilho \\
+\hline
+{\em Altura} & em pixels do ladrilho \\
+\hline
+\end{DoxyParams}
+\hypertarget{player_8h_af58d7aad09f5ab9f3c4ca221436be2cd}{
+\index{player.h@{player.h}!rke\_\-jogador\_\-atira@{rke\_\-jogador\_\-atira}}
+\index{rke\_\-jogador\_\-atira@{rke\_\-jogador\_\-atira}!player.h@{player.h}}
+\subsubsection[{rke\_\-jogador\_\-atira}]{\setlength{\rightskip}{0pt plus 5cm}void rke\_\-jogador\_\-atira (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{jogador, }
+\item[{{\bf GameBoard}}]{tabuleiro, }
+\item[{{\bf Terrain} $\ast$}]{terrenos, }
+\item[{{\bf Object} $\ast$}]{objetos, }
+\item[{int}]{bomba}
+\end{DoxyParamCaption}
+)}}
+\label{player_8h_af58d7aad09f5ab9f3c4ca221436be2cd}
+Função de acao de atirar do jogador. 
+\begin{DoxyParams}{Parâmetros}
+{\em jogador} & Informações do jogador \\
+\hline
+{\em tabuleiro} & Informações do tabuleiro \\
+\hline
+{\em terrenos} & Informações dos elementos de terreno \\
+\hline
+{\em objetos} & Informações dos objetos \\
+\hline
+\end{DoxyParams}
+\hypertarget{player_8h_a16dbdc2e1ba993cc3b577143b292252f}{
+\index{player.h@{player.h}!rke\_\-move\_\-jogador@{rke\_\-move\_\-jogador}}
+\index{rke\_\-move\_\-jogador@{rke\_\-move\_\-jogador}!player.h@{player.h}}
+\subsubsection[{rke\_\-move\_\-jogador}]{\setlength{\rightskip}{0pt plus 5cm}void rke\_\-move\_\-jogador (
+\begin{DoxyParamCaption}
+\item[{{\bf Jogador} $\ast$}]{jogador, }
+\item[{{\bf GameBoard}}]{tabuleiro, }
+\item[{{\bf Terrain} $\ast$}]{terrenos, }
+\item[{{\bf Object} $\ast$}]{objetos, }
+\item[{int}]{delta\_\-x, }
+\item[{int}]{delta\_\-y}
+\end{DoxyParamCaption}
+)}}
+\label{player_8h_a16dbdc2e1ba993cc3b577143b292252f}
+Função de movimentação do jogador. 
+\begin{DoxyParams}{Parâmetros}
+{\em jogador} & Informações do jogador \\
+\hline
+{\em tabuleiro} & Informações do tabuleiro \\
+\hline
+{\em terrenos} & Informações dos elementos de terreno \\
+\hline
+{\em objetos} & Informações dos objetos \\
+\hline
+{\em delta\_\-x} & Movimentação no eixo X \\
+\hline
+{\em delta\_\-y} & Movimentação no eixo Y \\
+\hline
+\end{DoxyParams}

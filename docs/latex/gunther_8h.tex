@@ -1,67 +1,111 @@
-\hypertarget{gunther_8h}{\section{Referência do Arquivo include/gunther.h}
-\label{gunther_8h}\index{include/gunther.\-h@{include/gunther.\-h}}
+\hypertarget{gunther_8h}{
+\section{Referência do Arquivo bkp/gunther.h}
+\label{gunther_8h}\index{bkp/gunther.h@{bkp/gunther.h}}
 }
 
 
 Arquivo header geral do jogo.  
 
 
-{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L.\-h$>$}\\*
-{\ttfamily \#include \char`\"{}rkegraficos.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}rkefisica.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}rkerender.\-h\char`\"{}}\\*
-Gráfico de dependência de inclusões para gunther.\-h\-:
-Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\-:
+{\ttfamily \#include $<$SDL/SDL.h$>$}\par
+{\ttfamily \#include \char`\"{}rkegraficos.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}rkefisica.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}rkerender.h\char`\"{}}\par
+Gráfico de dependência de inclusões para gunther.h:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{gunther_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{gunther_8h__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Definições e Macros}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{gunther_8h_aa29850487e98eb77aec0eb11074210bf}{\#define {\bfseries D\-I\-R\-\_\-\-I\-M\-A\-G\-E\-N\-S}~\char`\"{}data/imagens/\char`\"{}}\label{gunther_8h_aa29850487e98eb77aec0eb11074210bf}
+\hypertarget{gunther_8h_aa29850487e98eb77aec0eb11074210bf}{
+\#define {\bfseries DIR\_\-IMAGENS}~\char`\"{}data/imagens/\char`\"{}}
+\label{gunther_8h_aa29850487e98eb77aec0eb11074210bf}
 
 \item 
-\hypertarget{gunther_8h_a76006c64dff69d69316d1e75795d7fa2}{\#define {\bfseries L\-A\-D\-R\-I\-L\-H\-O\-\_\-\-A\-L\-T\-U\-R\-A}~48}\label{gunther_8h_a76006c64dff69d69316d1e75795d7fa2}
+\hypertarget{gunther_8h_a76006c64dff69d69316d1e75795d7fa2}{
+\#define {\bfseries LADRILHO\_\-ALTURA}~48}
+\label{gunther_8h_a76006c64dff69d69316d1e75795d7fa2}
 
 \item 
-\hypertarget{gunther_8h_ac57ee6ff2f62d9fd05e4c636bc432617}{\#define {\bfseries L\-A\-D\-R\-I\-L\-H\-O\-\_\-\-L\-A\-R\-G\-U\-R\-A}~48}\label{gunther_8h_ac57ee6ff2f62d9fd05e4c636bc432617}
+\hypertarget{gunther_8h_ac57ee6ff2f62d9fd05e4c636bc432617}{
+\#define {\bfseries LADRILHO\_\-LARGURA}~48}
+\label{gunther_8h_ac57ee6ff2f62d9fd05e4c636bc432617}
 
 \item 
-\hypertarget{gunther_8h_a5c2f746df6889e0255a635c9fff490fe}{\#define {\bfseries T\-E\-L\-A\-\_\-\-L\-A\-R\-G\-U\-R\-A}~15}\label{gunther_8h_a5c2f746df6889e0255a635c9fff490fe}
+\hypertarget{gunther_8h_a5c2f746df6889e0255a635c9fff490fe}{
+\#define {\bfseries TELA\_\-LARGURA}~15}
+\label{gunther_8h_a5c2f746df6889e0255a635c9fff490fe}
 
 \item 
-\hypertarget{gunther_8h_a18bb49d2ce68f4af9651cad0173968f0}{\#define {\bfseries T\-E\-L\-A\-\_\-\-A\-L\-T\-U\-R\-A}~10}\label{gunther_8h_a18bb49d2ce68f4af9651cad0173968f0}
+\hypertarget{gunther_8h_a18bb49d2ce68f4af9651cad0173968f0}{
+\#define {\bfseries TELA\_\-ALTURA}~10}
+\label{gunther_8h_a18bb49d2ce68f4af9651cad0173968f0}
 
 \item 
-\hypertarget{gunther_8h_a1ebfd016359b8eecc23a2d3149b11631}{\#define {\bfseries S\-A\-I\-R}~-\/1}\label{gunther_8h_a1ebfd016359b8eecc23a2d3149b11631}
+\hypertarget{gunther_8h_a1ebfd016359b8eecc23a2d3149b11631}{
+\#define {\bfseries SAIR}~-\/1}
+\label{gunther_8h_a1ebfd016359b8eecc23a2d3149b11631}
 
 \item 
-\hypertarget{gunther_8h_a60034ec3e699870774b3424699164ad6}{\#define {\bfseries N\-O\-V\-O\-J\-O\-G\-O}~0}\label{gunther_8h_a60034ec3e699870774b3424699164ad6}
+\hypertarget{gunther_8h_a60034ec3e699870774b3424699164ad6}{
+\#define {\bfseries NOVOJOGO}~0}
+\label{gunther_8h_a60034ec3e699870774b3424699164ad6}
 
 \item 
-\hypertarget{gunther_8h_a28bf6e0dbe895b412486bec8741fb84c}{\#define {\bfseries C\-A\-R\-R\-E\-G\-A\-J\-O\-G\-O}~1}\label{gunther_8h_a28bf6e0dbe895b412486bec8741fb84c}
+\hypertarget{gunther_8h_a28bf6e0dbe895b412486bec8741fb84c}{
+\#define {\bfseries CARREGAJOGO}~1}
+\label{gunther_8h_a28bf6e0dbe895b412486bec8741fb84c}
 
 \item 
-\hypertarget{gunther_8h_acbb11be448a8d2fe5244c1a270ae60a5}{\#define {\bfseries O\-P\-C\-O\-E\-S}~2}\label{gunther_8h_acbb11be448a8d2fe5244c1a270ae60a5}
+\hypertarget{gunther_8h_acbb11be448a8d2fe5244c1a270ae60a5}{
+\#define {\bfseries OPCOES}~2}
+\label{gunther_8h_acbb11be448a8d2fe5244c1a270ae60a5}
 
 \item 
-\hypertarget{gunther_8h_a8187a9af791c0a44ba67edd9cf266961}{\#define {\bfseries M\-A\-N\-U\-A\-L}~3}\label{gunther_8h_a8187a9af791c0a44ba67edd9cf266961}
+\hypertarget{gunther_8h_a8187a9af791c0a44ba67edd9cf266961}{
+\#define {\bfseries MANUAL}~3}
+\label{gunther_8h_a8187a9af791c0a44ba67edd9cf266961}
 
 \item 
-\hypertarget{gunther_8h_af1b45216a8f0fae46932075409f7e4c9}{\#define {\bfseries C\-R\-E\-D\-I\-T\-O\-S}~4}\label{gunther_8h_af1b45216a8f0fae46932075409f7e4c9}
+\hypertarget{gunther_8h_af1b45216a8f0fae46932075409f7e4c9}{
+\#define {\bfseries CREDITOS}~4}
+\label{gunther_8h_af1b45216a8f0fae46932075409f7e4c9}
 
 \item 
-\hypertarget{gunther_8h_a79b459f7661569a7c189d4279dfb5468}{\#define {\bfseries I\-N\-I\-C\-I\-O}~5}\label{gunther_8h_a79b459f7661569a7c189d4279dfb5468}
+\hypertarget{gunther_8h_a79b459f7661569a7c189d4279dfb5468}{
+\#define {\bfseries INICIO}~5}
+\label{gunther_8h_a79b459f7661569a7c189d4279dfb5468}
 
 \item 
-\hypertarget{gunther_8h_a1e4a399af19cbd4b1c2fc5f437cddc19}{\#define {\bfseries C\-O\-M\-M\-A\-N\-D\-O\-S}~6}\label{gunther_8h_a1e4a399af19cbd4b1c2fc5f437cddc19}
+\hypertarget{gunther_8h_a1e4a399af19cbd4b1c2fc5f437cddc19}{
+\#define {\bfseries COMMANDOS}~6}
+\label{gunther_8h_a1e4a399af19cbd4b1c2fc5f437cddc19}
 
 \end{DoxyCompactItemize}
 \subsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{gunther_8h_acf814435dd822e55f2537b49cc6c1505}{gunther\-\_\-menu} (S\-D\-L\-\_\-\-Surface $\ast$tela)
+void \hyperlink{gunther_8h_acf814435dd822e55f2537b49cc6c1505}{gunther\_\-menu} (SDL\_\-Surface $\ast$tela)
 \item 
-int \hyperlink{gunther_8h_ac241ff40fd02c916d3dd71a0f150d3f6}{inicio} (S\-D\-L\-\_\-\-Surface $\ast$screen)
+\hypertarget{gunther_8h_ac241ff40fd02c916d3dd71a0f150d3f6}{
+int {\bfseries inicio} (SDL\_\-Surface $\ast$screen)}
+\label{gunther_8h_ac241ff40fd02c916d3dd71a0f150d3f6}
+
 \item 
-int \hyperlink{gunther_8h_af3231d0d69b075fdf6a3fffc4e05f50b}{manual} (S\-D\-L\-\_\-\-Surface $\ast$screen, int section)
+int \hyperlink{gunther_8h_af3231d0d69b075fdf6a3fffc4e05f50b}{manual} (SDL\_\-Surface $\ast$screen, int section)
 \end{DoxyCompactItemize}
 
 
@@ -72,39 +116,31 @@ João da Silva, Marina Salles, Ricardo Macedo
 
 
 \subsection{Funções}
-\hypertarget{gunther_8h_acf814435dd822e55f2537b49cc6c1505}{\index{gunther.\-h@{gunther.\-h}!gunther\-\_\-menu@{gunther\-\_\-menu}}
-\index{gunther\-\_\-menu@{gunther\-\_\-menu}!gunther.h@{gunther.\-h}}
-\subsubsection[{gunther\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf gunther\-\_\-menu} (
+\hypertarget{gunther_8h_acf814435dd822e55f2537b49cc6c1505}{
+\index{gunther.h@{gunther.h}!gunther\_\-menu@{gunther\_\-menu}}
+\index{gunther\_\-menu@{gunther\_\-menu}!gunther.h@{gunther.h}}
+\subsubsection[{gunther\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void gunther\_\-menu (
 \begin{DoxyParamCaption}
-\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{tela}
+\item[{SDL\_\-Surface $\ast$}]{screen}
 \end{DoxyParamCaption}
-)}}\label{gunther_8h_acf814435dd822e55f2537b49cc6c1505}
+)}}
+\label{gunther_8h_acf814435dd822e55f2537b49cc6c1505}
 Renderiza o menu baseado na seleção 
 \begin{DoxyParams}{Parâmetros}
 {\em tela} & Tela onde o menu será renderizado \\
 \hline
 \end{DoxyParams}
-\hypertarget{gunther_8h_ac241ff40fd02c916d3dd71a0f150d3f6}{\index{gunther.\-h@{gunther.\-h}!inicio@{inicio}}
-\index{inicio@{inicio}!gunther.h@{gunther.\-h}}
-\subsubsection[{inicio}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf inicio} (
+\hypertarget{gunther_8h_af3231d0d69b075fdf6a3fffc4e05f50b}{
+\index{gunther.h@{gunther.h}!manual@{manual}}
+\index{manual@{manual}!gunther.h@{gunther.h}}
+\subsubsection[{manual}]{\setlength{\rightskip}{0pt plus 5cm}int manual (
 \begin{DoxyParamCaption}
-\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{screen}
-\end{DoxyParamCaption}
-)}}\label{gunther_8h_ac241ff40fd02c916d3dd71a0f150d3f6}
-Menu principal 
-\begin{DoxyParams}{Parâmetros}
-{\em tela} & Tela onde o menu será renderizado \\
-\hline
-\end{DoxyParams}
-\hypertarget{gunther_8h_af3231d0d69b075fdf6a3fffc4e05f50b}{\index{gunther.\-h@{gunther.\-h}!manual@{manual}}
-\index{manual@{manual}!gunther.h@{gunther.\-h}}
-\subsubsection[{manual}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf manual} (
-\begin{DoxyParamCaption}
-\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{screen, }
+\item[{SDL\_\-Surface $\ast$}]{screen, }
 \item[{int}]{mode}
 \end{DoxyParamCaption}
-)}}\label{gunther_8h_af3231d0d69b075fdf6a3fffc4e05f50b}
-Seção \char`\"{}\-Manual\char`\"{} do menu 
+)}}
+\label{gunther_8h_af3231d0d69b075fdf6a3fffc4e05f50b}
+Seção \char`\"{}Manual\char`\"{} do menu 
 \begin{DoxyParams}{Parâmetros}
 {\em tela} & Tela onde a seção será renderizada \\
 \hline

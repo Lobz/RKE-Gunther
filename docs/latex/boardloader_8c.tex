@@ -1,0 +1,230 @@
+\hypertarget{boardloader_8c}{
+\section{Referência do Arquivo boardloader.c}
+\label{boardloader_8c}\index{boardloader.c@{boardloader.c}}
+}
+
+
+Funções para carregar as informações pertinentes a monstros, terrenos, objetos, fases a partir de seus arquivos de dados.  
+
+
+{\ttfamily \#include \char`\"{}player.h\char`\"{}}\par
+Gráfico de dependência de inclusões para boardloader.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{boardloader_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{boardloader_8c_afc079f6d58f20203e10b4eb0e8ea1874}{loadObjectDefinitions} (\hyperlink{structobj}{Object} definitions\mbox{[}$\,$\mbox{]}, char $\ast$filename)
+\item 
+void \hyperlink{boardloader_8c_ae1eff1d5b3c14bbde4cf0338de7628a6}{loadTerrainDefinitions} (\hyperlink{structterreno}{Terrain} terrenos\mbox{[}$\,$\mbox{]}, char $\ast$file)
+\item 
+void \hyperlink{boardloader_8c_aa102949124f504e93924288296217d7b}{loadObjectDefinition} (\hyperlink{structobj}{Object} $\ast$def, FILE $\ast$F)
+\item 
+SDL\_\-Rect $\ast$ \hyperlink{boardloader_8c_a2a1f0038c2fd0907742662aa17566fad}{loadBoard} (\hyperlink{structgmboard}{GameBoard} $\ast$board, \hyperlink{structobj}{Object} definitions\mbox{[}$\,$\mbox{]}, char $\ast$file)
+\item 
+\hyperlink{structobj}{Object} $\ast$ \hyperlink{boardloader_8c_a522d39ac8eb7f87b05063d2719489bae}{newObject} (char id, \hyperlink{structobj}{Object} defs\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{structobj}{Object} $\ast$ \hyperlink{boardloader_8c_ab2b45b422b800ecc1ed60652267edbc1}{searchObjectDefinition} (char id, \hyperlink{structobj}{Object} defs\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{boardloader_8c_a8fa0c71f272ab9b4cca146f1fe14ec51}{copyObject} (\hyperlink{structobj}{Object} $\ast$new, \hyperlink{structobj}{Object} $\ast$ref)
+\item 
+void \hyperlink{boardloader_8c_aa6a6de2f0301d872e313fdf5448a823a}{copyMovement} (\hyperlink{structmov}{Movement} $\ast$new, \hyperlink{structmov}{Movement} $\ast$ref)
+\item 
+void \hyperlink{boardloader_8c_af2e739e0f57149c0581db35571a23290}{copyAttack} (\hyperlink{structatt}{Attack} $\ast$new, \hyperlink{structatt}{Attack} $\ast$ref)
+\item 
+void \hyperlink{boardloader_8c_a40dd9223c1b66c364eafe63cb2681957}{copyObjectClip} (SDL\_\-Rect $\ast$new, SDL\_\-Rect $\ast$ref)
+\item 
+void \hyperlink{boardloader_8c_a52fbb46e4c838dac553df46caaebbc48}{loadMovementInfo} (\hyperlink{structmov}{Movement} $\ast$\hyperlink{structmov}{mov}, FILE $\ast$F)
+\item 
+void \hyperlink{boardloader_8c_a916135ea4fd3a8e15fb21860686dbf09}{loadAttackInfo} (\hyperlink{structatt}{Attack} $\ast$\hyperlink{structatt}{att}, FILE $\ast$F)
+\item 
+void \hyperlink{boardloader_8c_a78ef8a82133b9cdffc71f167ebcd3305}{loadImmunitiesInfo} (attackType $\ast$type, FILE $\ast$F)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Funções para carregar as informações pertinentes a monstros, terrenos, objetos, fases a partir de seus arquivos de dados. \begin{DoxyAuthor}{Autor}
+João da Silva, Marina Salles, Ricardo Macedo 
+\end{DoxyAuthor}
+
+
+\subsection{Funções}
+\hypertarget{boardloader_8c_af2e739e0f57149c0581db35571a23290}{
+\index{boardloader.c@{boardloader.c}!copyAttack@{copyAttack}}
+\index{copyAttack@{copyAttack}!boardloader.c@{boardloader.c}}
+\subsubsection[{copyAttack}]{\setlength{\rightskip}{0pt plus 5cm}void copyAttack (
+\begin{DoxyParamCaption}
+\item[{{\bf Attack} $\ast$}]{new, }
+\item[{{\bf Attack} $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_af2e739e0f57149c0581db35571a23290}
+Copia uma estrutura do tipo ataque (usado para copiar objeto) \hypertarget{boardloader_8c_aa6a6de2f0301d872e313fdf5448a823a}{
+\index{boardloader.c@{boardloader.c}!copyMovement@{copyMovement}}
+\index{copyMovement@{copyMovement}!boardloader.c@{boardloader.c}}
+\subsubsection[{copyMovement}]{\setlength{\rightskip}{0pt plus 5cm}void copyMovement (
+\begin{DoxyParamCaption}
+\item[{{\bf Movement} $\ast$}]{new, }
+\item[{{\bf Movement} $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_aa6a6de2f0301d872e313fdf5448a823a}
+Copia uma estrutura do tipo movimento (usado para copiar objeto) \hypertarget{boardloader_8c_a8fa0c71f272ab9b4cca146f1fe14ec51}{
+\index{boardloader.c@{boardloader.c}!copyObject@{copyObject}}
+\index{copyObject@{copyObject}!boardloader.c@{boardloader.c}}
+\subsubsection[{copyObject}]{\setlength{\rightskip}{0pt plus 5cm}void copyObject (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{new, }
+\item[{{\bf Object} $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_a8fa0c71f272ab9b4cca146f1fe14ec51}
+Copia um Object (usado para criar um objeto a partir das definições) \hypertarget{boardloader_8c_a40dd9223c1b66c364eafe63cb2681957}{
+\index{boardloader.c@{boardloader.c}!copyObjectClip@{copyObjectClip}}
+\index{copyObjectClip@{copyObjectClip}!boardloader.c@{boardloader.c}}
+\subsubsection[{copyObjectClip}]{\setlength{\rightskip}{0pt plus 5cm}void copyObjectClip (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Rect $\ast$}]{new, }
+\item[{SDL\_\-Rect $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_a40dd9223c1b66c364eafe63cb2681957}
+Copia um retângulo \hypertarget{boardloader_8c_a916135ea4fd3a8e15fb21860686dbf09}{
+\index{boardloader.c@{boardloader.c}!loadAttackInfo@{loadAttackInfo}}
+\index{loadAttackInfo@{loadAttackInfo}!boardloader.c@{boardloader.c}}
+\subsubsection[{loadAttackInfo}]{\setlength{\rightskip}{0pt plus 5cm}void loadAttackInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf Attack} $\ast$}]{att, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_a916135ea4fd3a8e15fb21860686dbf09}
+Carrega informação de ataque do arquivo de dados de objeto \hypertarget{boardloader_8c_a2a1f0038c2fd0907742662aa17566fad}{
+\index{boardloader.c@{boardloader.c}!loadBoard@{loadBoard}}
+\index{loadBoard@{loadBoard}!boardloader.c@{boardloader.c}}
+\subsubsection[{loadBoard}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Rect$\ast$ loadBoard (
+\begin{DoxyParamCaption}
+\item[{{\bf GameBoard} $\ast$}]{board, }
+\item[{{\bf Object}}]{definitions\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_a2a1f0038c2fd0907742662aa17566fad}
+Carrega uma fase a partir de um arquivo de fase 
+\begin{DoxyParams}{Parâmetros}
+{\em board} & Estrutura de dados que guarda as informações do tabuleiro/mapa \\
+\hline
+{\em definitions} & Estrutura de dados que guarda as definições de objetos \\
+\hline
+{\em file} & Arquivo de fase \\
+\hline
+\end{DoxyParams}
+\hypertarget{boardloader_8c_a78ef8a82133b9cdffc71f167ebcd3305}{
+\index{boardloader.c@{boardloader.c}!loadImmunitiesInfo@{loadImmunitiesInfo}}
+\index{loadImmunitiesInfo@{loadImmunitiesInfo}!boardloader.c@{boardloader.c}}
+\subsubsection[{loadImmunitiesInfo}]{\setlength{\rightskip}{0pt plus 5cm}void loadImmunitiesInfo (
+\begin{DoxyParamCaption}
+\item[{attackType $\ast$}]{type, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_a78ef8a82133b9cdffc71f167ebcd3305}
+Carrega informação de imunidade do arquivo de dados de objeto \hypertarget{boardloader_8c_a52fbb46e4c838dac553df46caaebbc48}{
+\index{boardloader.c@{boardloader.c}!loadMovementInfo@{loadMovementInfo}}
+\index{loadMovementInfo@{loadMovementInfo}!boardloader.c@{boardloader.c}}
+\subsubsection[{loadMovementInfo}]{\setlength{\rightskip}{0pt plus 5cm}void loadMovementInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf Movement} $\ast$}]{mov, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_a52fbb46e4c838dac553df46caaebbc48}
+Carrega informação de movimento do arquito de dados de objeto \hypertarget{boardloader_8c_aa102949124f504e93924288296217d7b}{
+\index{boardloader.c@{boardloader.c}!loadObjectDefinition@{loadObjectDefinition}}
+\index{loadObjectDefinition@{loadObjectDefinition}!boardloader.c@{boardloader.c}}
+\subsubsection[{loadObjectDefinition}]{\setlength{\rightskip}{0pt plus 5cm}void loadObjectDefinition (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{def, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_aa102949124f504e93924288296217d7b}
+Lê uma linha do arquivo de definições de objetos e carrega um objeto-\/definição para futura referência 
+\begin{DoxyParams}{Parâmetros}
+{\em def} & Object a ser carregado com a definição \\
+\hline
+{\em F} & leitor do arquivo de objeto \\
+\hline
+\end{DoxyParams}
+\hypertarget{boardloader_8c_afc079f6d58f20203e10b4eb0e8ea1874}{
+\index{boardloader.c@{boardloader.c}!loadObjectDefinitions@{loadObjectDefinitions}}
+\index{loadObjectDefinitions@{loadObjectDefinitions}!boardloader.c@{boardloader.c}}
+\subsubsection[{loadObjectDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void loadObjectDefinitions (
+\begin{DoxyParamCaption}
+\item[{{\bf Object}}]{definitions\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_afc079f6d58f20203e10b4eb0e8ea1874}
+Carrega as definições de objetos de um arquivo de dados 
+\begin{DoxyParams}{Parâmetros}
+{\em definitions} & Estrutura de dados que armazena as definições \\
+\hline
+{\em filename} & Nome do arquivo de dados (default: object.dat) \\
+\hline
+\end{DoxyParams}
+\hypertarget{boardloader_8c_ae1eff1d5b3c14bbde4cf0338de7628a6}{
+\index{boardloader.c@{boardloader.c}!loadTerrainDefinitions@{loadTerrainDefinitions}}
+\index{loadTerrainDefinitions@{loadTerrainDefinitions}!boardloader.c@{boardloader.c}}
+\subsubsection[{loadTerrainDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void loadTerrainDefinitions (
+\begin{DoxyParamCaption}
+\item[{{\bf Terrain}}]{terrenos\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_ae1eff1d5b3c14bbde4cf0338de7628a6}
+Carrega as informações dos elementos de terreno de um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em file} & O arquivo com as informações \\
+\hline
+{\em terrenos} & O lugar para armazenar as informações \\
+\hline
+\end{DoxyParams}
+\hypertarget{boardloader_8c_a522d39ac8eb7f87b05063d2719489bae}{
+\index{boardloader.c@{boardloader.c}!newObject@{newObject}}
+\index{newObject@{newObject}!boardloader.c@{boardloader.c}}
+\subsubsection[{newObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ newObject (
+\begin{DoxyParamCaption}
+\item[{char}]{id, }
+\item[{{\bf Object}}]{defs\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_a522d39ac8eb7f87b05063d2719489bae}
+Cria novo objeto, cópia de uma definição 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do tipo de objeto \\
+\hline
+{\em defs} & Lista de definições \\
+\hline
+\end{DoxyParams}
+\hypertarget{boardloader_8c_ab2b45b422b800ecc1ed60652267edbc1}{
+\index{boardloader.c@{boardloader.c}!searchObjectDefinition@{searchObjectDefinition}}
+\index{searchObjectDefinition@{searchObjectDefinition}!boardloader.c@{boardloader.c}}
+\subsubsection[{searchObjectDefinition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ searchObjectDefinition (
+\begin{DoxyParamCaption}
+\item[{char}]{id, }
+\item[{{\bf Object}}]{defs\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{boardloader_8c_ab2b45b422b800ecc1ed60652267edbc1}
+Devolve endereço de uma definição 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do tipo de objeto \\
+\hline
+{\em defs} & Lista de definições \\
+\hline
+\end{DoxyParams}

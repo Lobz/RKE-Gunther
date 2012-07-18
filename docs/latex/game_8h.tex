@@ -1,0 +1,378 @@
+\hypertarget{game_8h}{
+\section{Referência do Arquivo game.h}
+\label{game_8h}\index{game.h@{game.h}}
+}
+
+
+Headers para unidades e mapa: ataques, movimentos, etc.  
+
+
+{\ttfamily \#include \char`\"{}headers.h\char`\"{}}\par
+Gráfico de dependência de inclusões para game.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{game_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvector}{vector}
+\item 
+struct \hyperlink{structterreno}{terreno}
+\item 
+struct \hyperlink{structatt}{att}
+\item 
+struct \hyperlink{structmov}{mov}
+\item 
+struct \hyperlink{structobj}{obj}
+\item 
+struct \hyperlink{structgmboard}{gmboard}
+\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{game_8h_ae5fc570cf88422a1c5233f5e87ea4cc4}{
+\#define {\bfseries MAXATTACKS}~3}
+\label{game_8h_ae5fc570cf88422a1c5233f5e87ea4cc4}
+
+\item 
+\hypertarget{game_8h_a2e3fa703b74a79159357a228d111c98f}{
+\#define {\bfseries MAXIMMUNITIES}~10}
+\label{game_8h_a2e3fa703b74a79159357a228d111c98f}
+
+\item 
+\hypertarget{game_8h_a21be893fd9b7a79cfe2ab37f064c9403}{
+\#define {\bfseries attackType}~int}
+\label{game_8h_a21be893fd9b7a79cfe2ab37f064c9403}
+
+\item 
+\hypertarget{game_8h_a6db849583506ed57837f9457d40c1cf8}{
+\#define {\bfseries ATT\_\-ARROW}~10}
+\label{game_8h_a6db849583506ed57837f9457d40c1cf8}
+
+\item 
+\hypertarget{game_8h_acbd969a6516e84e3112da752cd0dc274}{
+\#define {\bfseries ATT\_\-CANNON}~11}
+\label{game_8h_acbd969a6516e84e3112da752cd0dc274}
+
+\item 
+\hypertarget{game_8h_acf65ed90a2656632ce60be75a65d861f}{
+\#define {\bfseries ATT\_\-TOUCH}~12}
+\label{game_8h_acf65ed90a2656632ce60be75a65d861f}
+
+\item 
+\hypertarget{game_8h_a701a122c008d563884e4d7ee21d17438}{
+\#define {\bfseries ATT\_\-TACKLE}~13}
+\label{game_8h_a701a122c008d563884e4d7ee21d17438}
+
+\item 
+\hypertarget{game_8h_a51b48ce80e8e6b9d3df0008c38a9bea8}{
+\#define {\bfseries ATT\_\-MAGIC}~14}
+\label{game_8h_a51b48ce80e8e6b9d3df0008c38a9bea8}
+
+\item 
+\hypertarget{game_8h_ad75544f6c49de952a2ab1963368e20c0}{
+\#define {\bfseries ATT\_\-SHIP}~16}
+\label{game_8h_ad75544f6c49de952a2ab1963368e20c0}
+
+\item 
+\hypertarget{game_8h_af5ccccc9e8fe176c3657121389226494}{
+\#define {\bfseries ATT\_\-BOMB}~15}
+\label{game_8h_af5ccccc9e8fe176c3657121389226494}
+
+\item 
+\hypertarget{game_8h_ae32536b7c391d34a9fbce30b1fbc4fb8}{
+\#define {\bfseries movementPattern}~int}
+\label{game_8h_ae32536b7c391d34a9fbce30b1fbc4fb8}
+
+\item 
+\hypertarget{game_8h_abf6fd74fac96e247e3f52f97e9067f79}{
+\#define {\bfseries MOV\_\-LINE}~20}
+\label{game_8h_abf6fd74fac96e247e3f52f97e9067f79}
+
+\item 
+\hypertarget{game_8h_a87891e2ea498a4baa8285795082aad5f}{
+\#define {\bfseries MOV\_\-RANDOM}~21}
+\label{game_8h_a87891e2ea498a4baa8285795082aad5f}
+
+\item 
+\hypertarget{game_8h_ae04a6814bcf4e2a4c61a338260ed9adc}{
+\#define {\bfseries MOV\_\-RANDLINES}~22}
+\label{game_8h_ae04a6814bcf4e2a4c61a338260ed9adc}
+
+\item 
+\hypertarget{game_8h_a6ef4eaee533cc02dd23fce302620671b}{
+\#define {\bfseries MOV\_\-NONE}~-\/20}
+\label{game_8h_a6ef4eaee533cc02dd23fce302620671b}
+
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{game_8h_a67df6442cbc09def7e2d82c71522e1ae}{
+typedef struct \hyperlink{structvector}{vector} {\bfseries Vector}}
+\label{game_8h_a67df6442cbc09def7e2d82c71522e1ae}
+
+\item 
+\hypertarget{game_8h_ad9f0bb93009117351dc61c52ce5bc203}{
+typedef struct \hyperlink{structterreno}{terreno} {\bfseries Terrain}}
+\label{game_8h_ad9f0bb93009117351dc61c52ce5bc203}
+
+\item 
+\hypertarget{game_8h_a20b7794669e0be47f6ae27f635e9888a}{
+typedef struct \hyperlink{structatt}{att} {\bfseries Attack}}
+\label{game_8h_a20b7794669e0be47f6ae27f635e9888a}
+
+\item 
+\hypertarget{game_8h_a8b9a1d113b7fefcdc535e352867d62fd}{
+typedef struct \hyperlink{structmov}{mov} {\bfseries Movement}}
+\label{game_8h_a8b9a1d113b7fefcdc535e352867d62fd}
+
+\item 
+\hypertarget{game_8h_a5c7504d186628cda40c61cac845c5e1d}{
+typedef struct \hyperlink{structobj}{obj} {\bfseries Object}}
+\label{game_8h_a5c7504d186628cda40c61cac845c5e1d}
+
+\item 
+\hypertarget{game_8h_a20afb84b0cfb61d1263151eaef97465f}{
+typedef struct \hyperlink{structgmboard}{gmboard} {\bfseries GameBoard}}
+\label{game_8h_a20afb84b0cfb61d1263151eaef97465f}
+
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{game_8h_afc079f6d58f20203e10b4eb0e8ea1874}{loadObjectDefinitions} (\hyperlink{structobj}{Object} definitions\mbox{[}$\,$\mbox{]}, char $\ast$filename)
+\item 
+void \hyperlink{game_8h_a058375b33f392796aaa9049460639426}{loadTerrainDefinitions} (\hyperlink{structterreno}{Terrain} definitions\mbox{[}$\,$\mbox{]}, char $\ast$filename)
+\item 
+void \hyperlink{game_8h_a4dbeac8b6caf8362bd70531ac1904cbd}{loadObjectDefinition} (\hyperlink{structobj}{Object} $\ast$definition, FILE $\ast$F)
+\item 
+SDL\_\-Rect $\ast$ \hyperlink{game_8h_a2a1f0038c2fd0907742662aa17566fad}{loadBoard} (\hyperlink{structgmboard}{GameBoard} $\ast$board, \hyperlink{structobj}{Object} definitions\mbox{[}$\,$\mbox{]}, char $\ast$file)
+\item 
+\hyperlink{structobj}{Object} $\ast$ \hyperlink{game_8h_a522d39ac8eb7f87b05063d2719489bae}{newObject} (char id, \hyperlink{structobj}{Object} defs\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{structobj}{Object} $\ast$ \hyperlink{game_8h_ab2b45b422b800ecc1ed60652267edbc1}{searchObjectDefinition} (char id, \hyperlink{structobj}{Object} defs\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{game_8h_a52fbb46e4c838dac553df46caaebbc48}{loadMovementInfo} (\hyperlink{structmov}{Movement} $\ast$\hyperlink{structmov}{mov}, FILE $\ast$F)
+\item 
+void \hyperlink{game_8h_a916135ea4fd3a8e15fb21860686dbf09}{loadAttackInfo} (\hyperlink{structatt}{Attack} $\ast$\hyperlink{structatt}{att}, FILE $\ast$F)
+\item 
+void \hyperlink{game_8h_a78ef8a82133b9cdffc71f167ebcd3305}{loadImmunitiesInfo} (attackType $\ast$type, FILE $\ast$F)
+\item 
+void \hyperlink{game_8h_a8fa0c71f272ab9b4cca146f1fe14ec51}{copyObject} (\hyperlink{structobj}{Object} $\ast$new, \hyperlink{structobj}{Object} $\ast$ref)
+\item 
+void \hyperlink{game_8h_aa6a6de2f0301d872e313fdf5448a823a}{copyMovement} (\hyperlink{structmov}{Movement} $\ast$new, \hyperlink{structmov}{Movement} $\ast$ref)
+\item 
+void \hyperlink{game_8h_af2e739e0f57149c0581db35571a23290}{copyAttack} (\hyperlink{structatt}{Attack} $\ast$new, \hyperlink{structatt}{Attack} $\ast$ref)
+\item 
+void \hyperlink{game_8h_a40dd9223c1b66c364eafe63cb2681957}{copyObjectClip} (SDL\_\-Rect $\ast$new, SDL\_\-Rect $\ast$ref)
+\item 
+\hypertarget{game_8h_a961d9591c97111f68c89816bf4c7374b}{
+void {\bfseries fireAttack} (\hyperlink{structgmboard}{GameBoard} $\ast$gameboard, \hyperlink{structobj}{Object} $\ast$attacker, \hyperlink{structvector}{Vector} direction, attackType type)}
+\label{game_8h_a961d9591c97111f68c89816bf4c7374b}
+
+\item 
+\hypertarget{game_8h_a8f745a5ca2c5247285b39b4db27a8b9b}{
+void {\bfseries moveObject} (\hyperlink{structgmboard}{GameBoard} $\ast$gameboard, \hyperlink{structobj}{Object} $\ast$mover)}
+\label{game_8h_a8f745a5ca2c5247285b39b4db27a8b9b}
+
+\item 
+\hypertarget{game_8h_a71fe52114b66d7e2788ded2a9dccbdd8}{
+void {\bfseries updateGameboard} (\hyperlink{structgmboard}{GameBoard} $\ast$gameboard)}
+\label{game_8h_a71fe52114b66d7e2788ded2a9dccbdd8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Headers para unidades e mapa: ataques, movimentos, etc. \begin{DoxyAuthor}{Autor}
+João da Silva, Marina Salles, Ricardo Macedo 
+\end{DoxyAuthor}
+
+
+\subsection{Funções}
+\hypertarget{game_8h_af2e739e0f57149c0581db35571a23290}{
+\index{game.h@{game.h}!copyAttack@{copyAttack}}
+\index{copyAttack@{copyAttack}!game.h@{game.h}}
+\subsubsection[{copyAttack}]{\setlength{\rightskip}{0pt plus 5cm}void copyAttack (
+\begin{DoxyParamCaption}
+\item[{{\bf Attack} $\ast$}]{new, }
+\item[{{\bf Attack} $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_af2e739e0f57149c0581db35571a23290}
+Copia uma estrutura do tipo ataque (usado para copiar objeto) \hypertarget{game_8h_aa6a6de2f0301d872e313fdf5448a823a}{
+\index{game.h@{game.h}!copyMovement@{copyMovement}}
+\index{copyMovement@{copyMovement}!game.h@{game.h}}
+\subsubsection[{copyMovement}]{\setlength{\rightskip}{0pt plus 5cm}void copyMovement (
+\begin{DoxyParamCaption}
+\item[{{\bf Movement} $\ast$}]{new, }
+\item[{{\bf Movement} $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_aa6a6de2f0301d872e313fdf5448a823a}
+Copia uma estrutura do tipo movimento (usado para copiar objeto) \hypertarget{game_8h_a8fa0c71f272ab9b4cca146f1fe14ec51}{
+\index{game.h@{game.h}!copyObject@{copyObject}}
+\index{copyObject@{copyObject}!game.h@{game.h}}
+\subsubsection[{copyObject}]{\setlength{\rightskip}{0pt plus 5cm}void copyObject (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{new, }
+\item[{{\bf Object} $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a8fa0c71f272ab9b4cca146f1fe14ec51}
+Copia um Object (usado para criar um objeto a partir das definições) \hypertarget{game_8h_a40dd9223c1b66c364eafe63cb2681957}{
+\index{game.h@{game.h}!copyObjectClip@{copyObjectClip}}
+\index{copyObjectClip@{copyObjectClip}!game.h@{game.h}}
+\subsubsection[{copyObjectClip}]{\setlength{\rightskip}{0pt plus 5cm}void copyObjectClip (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Rect $\ast$}]{new, }
+\item[{SDL\_\-Rect $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a40dd9223c1b66c364eafe63cb2681957}
+Copia um retângulo \hypertarget{game_8h_a916135ea4fd3a8e15fb21860686dbf09}{
+\index{game.h@{game.h}!loadAttackInfo@{loadAttackInfo}}
+\index{loadAttackInfo@{loadAttackInfo}!game.h@{game.h}}
+\subsubsection[{loadAttackInfo}]{\setlength{\rightskip}{0pt plus 5cm}void loadAttackInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf Attack} $\ast$}]{att, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a916135ea4fd3a8e15fb21860686dbf09}
+Carrega informação de ataque do arquivo de dados de objeto \hypertarget{game_8h_a2a1f0038c2fd0907742662aa17566fad}{
+\index{game.h@{game.h}!loadBoard@{loadBoard}}
+\index{loadBoard@{loadBoard}!game.h@{game.h}}
+\subsubsection[{loadBoard}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Rect$\ast$ loadBoard (
+\begin{DoxyParamCaption}
+\item[{{\bf GameBoard} $\ast$}]{board, }
+\item[{{\bf Object}}]{definitions\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a2a1f0038c2fd0907742662aa17566fad}
+Carrega uma fase a partir de um arquivo de fase 
+\begin{DoxyParams}{Parâmetros}
+{\em board} & Estrutura de dados que guarda as informações do tabuleiro/mapa \\
+\hline
+{\em definitions} & Estrutura de dados que guarda as definições de objetos \\
+\hline
+{\em file} & Arquivo de fase \\
+\hline
+\end{DoxyParams}
+\hypertarget{game_8h_a78ef8a82133b9cdffc71f167ebcd3305}{
+\index{game.h@{game.h}!loadImmunitiesInfo@{loadImmunitiesInfo}}
+\index{loadImmunitiesInfo@{loadImmunitiesInfo}!game.h@{game.h}}
+\subsubsection[{loadImmunitiesInfo}]{\setlength{\rightskip}{0pt plus 5cm}void loadImmunitiesInfo (
+\begin{DoxyParamCaption}
+\item[{attackType $\ast$}]{type, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a78ef8a82133b9cdffc71f167ebcd3305}
+Carrega informação de imunidade do arquivo de dados de objeto \hypertarget{game_8h_a52fbb46e4c838dac553df46caaebbc48}{
+\index{game.h@{game.h}!loadMovementInfo@{loadMovementInfo}}
+\index{loadMovementInfo@{loadMovementInfo}!game.h@{game.h}}
+\subsubsection[{loadMovementInfo}]{\setlength{\rightskip}{0pt plus 5cm}void loadMovementInfo (
+\begin{DoxyParamCaption}
+\item[{{\bf Movement} $\ast$}]{mov, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a52fbb46e4c838dac553df46caaebbc48}
+Carrega informação de movimento do arquito de dados de objeto \hypertarget{game_8h_a4dbeac8b6caf8362bd70531ac1904cbd}{
+\index{game.h@{game.h}!loadObjectDefinition@{loadObjectDefinition}}
+\index{loadObjectDefinition@{loadObjectDefinition}!game.h@{game.h}}
+\subsubsection[{loadObjectDefinition}]{\setlength{\rightskip}{0pt plus 5cm}void loadObjectDefinition (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{def, }
+\item[{FILE $\ast$}]{F}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a4dbeac8b6caf8362bd70531ac1904cbd}
+Lê uma linha do arquivo de definições de objetos e carrega um objeto-\/definição para futura referência 
+\begin{DoxyParams}{Parâmetros}
+{\em def} & Object a ser carregado com a definição \\
+\hline
+{\em F} & leitor do arquivo de objeto \\
+\hline
+\end{DoxyParams}
+\hypertarget{game_8h_afc079f6d58f20203e10b4eb0e8ea1874}{
+\index{game.h@{game.h}!loadObjectDefinitions@{loadObjectDefinitions}}
+\index{loadObjectDefinitions@{loadObjectDefinitions}!game.h@{game.h}}
+\subsubsection[{loadObjectDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void loadObjectDefinitions (
+\begin{DoxyParamCaption}
+\item[{{\bf Object}}]{definitions\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_afc079f6d58f20203e10b4eb0e8ea1874}
+Carrega as definições de objetos de um arquivo de dados 
+\begin{DoxyParams}{Parâmetros}
+{\em definitions} & Estrutura de dados que armazena as definições \\
+\hline
+{\em filename} & Nome do arquivo de dados (default: object.dat) \\
+\hline
+\end{DoxyParams}
+\hypertarget{game_8h_a058375b33f392796aaa9049460639426}{
+\index{game.h@{game.h}!loadTerrainDefinitions@{loadTerrainDefinitions}}
+\index{loadTerrainDefinitions@{loadTerrainDefinitions}!game.h@{game.h}}
+\subsubsection[{loadTerrainDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void loadTerrainDefinitions (
+\begin{DoxyParamCaption}
+\item[{{\bf Terrain}}]{terrenos\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a058375b33f392796aaa9049460639426}
+Carrega as informações dos elementos de terreno de um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em file} & O arquivo com as informações \\
+\hline
+{\em terrenos} & O lugar para armazenar as informações \\
+\hline
+\end{DoxyParams}
+\hypertarget{game_8h_a522d39ac8eb7f87b05063d2719489bae}{
+\index{game.h@{game.h}!newObject@{newObject}}
+\index{newObject@{newObject}!game.h@{game.h}}
+\subsubsection[{newObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ newObject (
+\begin{DoxyParamCaption}
+\item[{char}]{id, }
+\item[{{\bf Object}}]{defs\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_a522d39ac8eb7f87b05063d2719489bae}
+Cria novo objeto, cópia de uma definição 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do tipo de objeto \\
+\hline
+{\em defs} & Lista de definições \\
+\hline
+\end{DoxyParams}
+\hypertarget{game_8h_ab2b45b422b800ecc1ed60652267edbc1}{
+\index{game.h@{game.h}!searchObjectDefinition@{searchObjectDefinition}}
+\index{searchObjectDefinition@{searchObjectDefinition}!game.h@{game.h}}
+\subsubsection[{searchObjectDefinition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ searchObjectDefinition (
+\begin{DoxyParamCaption}
+\item[{char}]{id, }
+\item[{{\bf Object}}]{defs\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{game_8h_ab2b45b422b800ecc1ed60652267edbc1}
+Devolve endereço de uma definição 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do tipo de objeto \\
+\hline
+{\em defs} & Lista de definições \\
+\hline
+\end{DoxyParams}

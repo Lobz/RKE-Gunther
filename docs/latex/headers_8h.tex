@@ -1,0 +1,383 @@
+\hypertarget{headers_8h}{
+\section{Referência do Arquivo headers.h}
+\label{headers_8h}\index{headers.h@{headers.h}}
+}
+
+
+Arquivo header geral do jogo, incluindo menu e gráficos.  
+
+
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}SDL/SDL.h\char`\"{}}\par
+Gráfico de dependência de inclusões para headers.h:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{headers_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=351pt]{headers_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{headers_8h_abb452686968e48b67397da5f97445f5b}{
+\#define {\bfseries bool}~int}
+\label{headers_8h_abb452686968e48b67397da5f97445f5b}
+
+\item 
+\hypertarget{headers_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{
+\#define {\bfseries true}~1}
+\label{headers_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}
+
+\item 
+\hypertarget{headers_8h_a65e9886d74aaee76545e83dd09011727}{
+\#define {\bfseries false}~0}
+\label{headers_8h_a65e9886d74aaee76545e83dd09011727}
+
+\item 
+\hypertarget{headers_8h_ae6648cd71a8bd49d58ae8ed33ba910d1}{
+\#define {\bfseries MAXLEN}~100}
+\label{headers_8h_ae6648cd71a8bd49d58ae8ed33ba910d1}
+
+\item 
+\hypertarget{headers_8h_ad24e2b54375e12474e65ebf7175988fb}{
+\#define {\bfseries QUIT}~-\/1}
+\label{headers_8h_ad24e2b54375e12474e65ebf7175988fb}
+
+\item 
+\hypertarget{headers_8h_a0cfd5d3f47cf0b1f532c667efa58ec77}{
+\#define {\bfseries IMAGEDIR}~\char`\"{}data/imagens/\char`\"{}}
+\label{headers_8h_a0cfd5d3f47cf0b1f532c667efa58ec77}
+
+\item 
+\hypertarget{headers_8h_a2cd109632a6dcccaa80b43561b1ab700}{
+\#define {\bfseries SCREEN\_\-WIDTH}~(48$\ast$15)}
+\label{headers_8h_a2cd109632a6dcccaa80b43561b1ab700}
+
+\item 
+\hypertarget{headers_8h_a6974d08a74da681b3957b2fead2608b8}{
+\#define {\bfseries SCREEN\_\-HEIGHT}~480}
+\label{headers_8h_a6974d08a74da681b3957b2fead2608b8}
+
+\item 
+\hypertarget{headers_8h_a95d55ebfa2f2f1bd14867ad6a6cc9bfb}{
+\#define {\bfseries RESOLUTION}~24}
+\label{headers_8h_a95d55ebfa2f2f1bd14867ad6a6cc9bfb}
+
+\item 
+\hypertarget{headers_8h_afa556a68b7c0fcc58cd87c5f36859f30}{
+\#define {\bfseries BR}~0}
+\label{headers_8h_afa556a68b7c0fcc58cd87c5f36859f30}
+
+\item 
+\hypertarget{headers_8h_ab05cfd0a3a5e9ed76d38482e2cd26f9f}{
+\#define {\bfseries BG}~0xFF}
+\label{headers_8h_ab05cfd0a3a5e9ed76d38482e2cd26f9f}
+
+\item 
+\hypertarget{headers_8h_ad91fa5bb7926a489c6e63eb6f6ca4a19}{
+\#define {\bfseries BB}~0xFF}
+\label{headers_8h_ad91fa5bb7926a489c6e63eb6f6ca4a19}
+
+\item 
+\hypertarget{headers_8h_a76108891dc4352082a676f2978ee446d}{
+\#define {\bfseries TILE\_\-WIDTH}~48}
+\label{headers_8h_a76108891dc4352082a676f2978ee446d}
+
+\item 
+\hypertarget{headers_8h_a74b119c5bb38a697fc531b7b86fb0a54}{
+\#define {\bfseries TILE\_\-HEIGHT}~48}
+\label{headers_8h_a74b119c5bb38a697fc531b7b86fb0a54}
+
+\item 
+\hypertarget{headers_8h_a1cd139e8d1f7ae83f54c8d477313d8ea}{
+\#define {\bfseries BOARD\_\-WIDTH}~15}
+\label{headers_8h_a1cd139e8d1f7ae83f54c8d477313d8ea}
+
+\item 
+\hypertarget{headers_8h_a94ed08e31d2f3a38d35f0cb89c762f04}{
+\#define {\bfseries BOARD\_\-HEIGHT}~10}
+\label{headers_8h_a94ed08e31d2f3a38d35f0cb89c762f04}
+
+\item 
+\hypertarget{headers_8h_a17897dbbc6ff46c90212d087f60f38c4}{
+\#define {\bfseries DATADIR}~\char`\"{}data/\char`\"{}}
+\label{headers_8h_a17897dbbc6ff46c90212d087f60f38c4}
+
+\item 
+\hypertarget{headers_8h_ac7d60a97ab67b251d5ddfed2cc51ee8d}{
+\#define {\bfseries NEWGAME}~0}
+\label{headers_8h_ac7d60a97ab67b251d5ddfed2cc51ee8d}
+
+\item 
+\hypertarget{headers_8h_af727c65f29aaa8a4115479768590819e}{
+\#define {\bfseries LOADGAME}~1}
+\label{headers_8h_af727c65f29aaa8a4115479768590819e}
+
+\item 
+\hypertarget{headers_8h_aec95ee3aec6673f51ed3c6a833a2dc71}{
+\#define {\bfseries OPTIONS}~2}
+\label{headers_8h_aec95ee3aec6673f51ed3c6a833a2dc71}
+
+\item 
+\hypertarget{headers_8h_a8187a9af791c0a44ba67edd9cf266961}{
+\#define {\bfseries MANUAL}~3}
+\label{headers_8h_a8187a9af791c0a44ba67edd9cf266961}
+
+\item 
+\hypertarget{headers_8h_a28017dea6f5becdb38eba6eac6f51bbc}{
+\#define {\bfseries CREDITS}~4}
+\label{headers_8h_a28017dea6f5becdb38eba6eac6f51bbc}
+
+\item 
+\hypertarget{headers_8h_a60a56c499875b57369f7ef3a5a227cb9}{
+\#define {\bfseries TITLE}~5}
+\label{headers_8h_a60a56c499875b57369f7ef3a5a227cb9}
+
+\item 
+\hypertarget{headers_8h_ac90300e1e2bc5e5b092407b9c5267c9a}{
+\#define {\bfseries COMMANDS}~6}
+\label{headers_8h_ac90300e1e2bc5e5b092407b9c5267c9a}
+
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+SDL\_\-Surface $\ast$ \hyperlink{headers_8h_a69fd26d27992269d2bf768c2d6d885cc}{initScreen} (int largura, int altura)
+\item 
+SDL\_\-Surface $\ast$ \hyperlink{headers_8h_a263da16929f6ea3d596249c06da671ad}{loadBMP} (char $\ast$file)
+\item 
+void \hyperlink{headers_8h_af439732bba4b3a81495c9460ae57b734}{applySurface} (SDL\_\-Surface $\ast$destination, SDL\_\-Surface $\ast$source)
+\item 
+void \hyperlink{headers_8h_aec41560888e5d758a2a1d6a08436859d}{applyDoubleInfoClip} (SDL\_\-Surface $\ast$destination, SDL\_\-Surface $\ast$source, SDL\_\-Rect clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int choice)
+\item 
+void \hyperlink{headers_8h_a8a7df9bbda68e46b75a2bdf2056c870d}{loadDoubleInfoClip} (char $\ast$file, SDL\_\-Rect clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\item 
+\hypertarget{headers_8h_a0ac6a35818a1ebdb166959fad63d4d32}{
+void {\bfseries applyClip} (SDL\_\-Surface $\ast$destination, SDL\_\-Surface $\ast$source, int x, int y, SDL\_\-Rect clip)}
+\label{headers_8h_a0ac6a35818a1ebdb166959fad63d4d32}
+
+\item 
+void \hyperlink{headers_8h_ad2fc94e1c6dbf5ef17a9ac286c8cceaf}{applyClipToBoard} (SDL\_\-Surface $\ast$destination, SDL\_\-Surface $\ast$source, int board\_\-x, int board\_\-y, SDL\_\-Rect clip)
+\item 
+void \hyperlink{headers_8h_ac1069ac1fdef17f65759ecd6819a0f11}{safeFreeSurface} (SDL\_\-Surface $\ast$dead)
+\item 
+void \hyperlink{headers_8h_a54ce253826e283991f35d6a97d346a46}{gunther\_\-menu} (SDL\_\-Surface $\ast$screen)
+\item 
+\hypertarget{headers_8h_af26f6b5c02e28bd5037ef7ee6dc2e2cf}{
+int {\bfseries intro} (SDL\_\-Surface $\ast$screen)}
+\label{headers_8h_af26f6b5c02e28bd5037ef7ee6dc2e2cf}
+
+\item 
+int \hyperlink{headers_8h_a79fb862d32102adb3afd6c4850efa80f}{title} (SDL\_\-Surface $\ast$screen)
+\item 
+\hypertarget{headers_8h_a7d1a4254bb9ad756b0528b4c95be9443}{
+int {\bfseries options} (SDL\_\-Surface $\ast$screen)}
+\label{headers_8h_a7d1a4254bb9ad756b0528b4c95be9443}
+
+\item 
+int \hyperlink{headers_8h_af3231d0d69b075fdf6a3fffc4e05f50b}{manual} (SDL\_\-Surface $\ast$screen, int section)
+\item 
+\hypertarget{headers_8h_a10e82c49851064a9aae3397425f5b936}{
+int {\bfseries credits} (SDL\_\-Surface $\ast$screen)}
+\label{headers_8h_a10e82c49851064a9aae3397425f5b936}
+
+\item 
+\hypertarget{headers_8h_a9b2b03b22322472c34ec8868873ca5ae}{
+int {\bfseries loadgame} (SDL\_\-Surface $\ast$screen)}
+\label{headers_8h_a9b2b03b22322472c34ec8868873ca5ae}
+
+\item 
+\hypertarget{headers_8h_a4f17058b32ebcc5c2195d9a98ae46ad0}{
+int {\bfseries newgame} (SDL\_\-Surface $\ast$screen)}
+\label{headers_8h_a4f17058b32ebcc5c2195d9a98ae46ad0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Arquivo header geral do jogo, incluindo menu e gráficos. \begin{DoxyAuthor}{Autor}
+João da Silva, Marina Salles, Ricardo Macedo 
+\end{DoxyAuthor}
+
+
+\subsection{Funções}
+\hypertarget{headers_8h_ad2fc94e1c6dbf5ef17a9ac286c8cceaf}{
+\index{headers.h@{headers.h}!applyClipToBoard@{applyClipToBoard}}
+\index{applyClipToBoard@{applyClipToBoard}!headers.h@{headers.h}}
+\subsubsection[{applyClipToBoard}]{\setlength{\rightskip}{0pt plus 5cm}void applyClipToBoard (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{destination, }
+\item[{SDL\_\-Surface $\ast$}]{source, }
+\item[{int}]{board\_\-x, }
+\item[{int}]{board\_\-y, }
+\item[{SDL\_\-Rect}]{clip}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_ad2fc94e1c6dbf5ef17a9ac286c8cceaf}
+Aplica um retângulo a uma tela 
+\begin{DoxyParams}{Parâmetros}
+{\em destino} & A tela que receberá a imagem \\
+\hline
+{\em origem} & A tela de origem \\
+\hline
+{\em mapa\_\-x} & A posição X (em ladrilhos) no destino \\
+\hline
+{\em mapa\_\-y} & A posição Y (em ladrilhos) no destino \\
+\hline
+{\em clip} & O retângulo a ser aplicado \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_aec41560888e5d758a2a1d6a08436859d}{
+\index{headers.h@{headers.h}!applyDoubleInfoClip@{applyDoubleInfoClip}}
+\index{applyDoubleInfoClip@{applyDoubleInfoClip}!headers.h@{headers.h}}
+\subsubsection[{applyDoubleInfoClip}]{\setlength{\rightskip}{0pt plus 5cm}void applyDoubleInfoClip (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{destination, }
+\item[{SDL\_\-Surface $\ast$}]{source, }
+\item[{SDL\_\-Rect}]{clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, }
+\item[{int}]{choice}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_aec41560888e5d758a2a1d6a08436859d}
+Copia um retângulo em uma tela para um outro retângulo em outra tela 
+\begin{DoxyParams}{Parâmetros}
+{\em destino} & Tela de destino \\
+\hline
+{\em origem} & Tela de origem \\
+\hline
+{\em clip} & Vetor com os retângulos \\
+\hline
+{\em selecao} & Opção selecionada no menu \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_af439732bba4b3a81495c9460ae57b734}{
+\index{headers.h@{headers.h}!applySurface@{applySurface}}
+\index{applySurface@{applySurface}!headers.h@{headers.h}}
+\subsubsection[{applySurface}]{\setlength{\rightskip}{0pt plus 5cm}void applySurface (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{destination, }
+\item[{SDL\_\-Surface $\ast$}]{source}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_af439732bba4b3a81495c9460ae57b734}
+Aplica uma tela guardada em memória em outra 
+\begin{DoxyParams}{Parâmetros}
+{\em destino} & Tela de destino \\
+\hline
+{\em origem} & Tela de origem \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_a54ce253826e283991f35d6a97d346a46}{
+\index{headers.h@{headers.h}!gunther\_\-menu@{gunther\_\-menu}}
+\index{gunther\_\-menu@{gunther\_\-menu}!headers.h@{headers.h}}
+\subsubsection[{gunther\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void gunther\_\-menu (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{screen}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_a54ce253826e283991f35d6a97d346a46}
+Renderiza o menu baseado na seleção 
+\begin{DoxyParams}{Parâmetros}
+{\em tela} & Tela onde o menu será renderizado \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_a69fd26d27992269d2bf768c2d6d885cc}{
+\index{headers.h@{headers.h}!initScreen@{initScreen}}
+\index{initScreen@{initScreen}!headers.h@{headers.h}}
+\subsubsection[{initScreen}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ initScreen (
+\begin{DoxyParamCaption}
+\item[{int}]{largura, }
+\item[{int}]{altura}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_a69fd26d27992269d2bf768c2d6d885cc}
+Abre uma nova janela 
+\begin{DoxyParams}{Parâmetros}
+{\em largura} & Largura em pixels \\
+\hline
+{\em altura} & Altura em pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_a263da16929f6ea3d596249c06da671ad}{
+\index{headers.h@{headers.h}!loadBMP@{loadBMP}}
+\index{loadBMP@{loadBMP}!headers.h@{headers.h}}
+\subsubsection[{loadBMP}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ loadBMP (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_a263da16929f6ea3d596249c06da671ad}
+Carrega um arquivo Bitmap em uma tela 
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & O nome do arquivo \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_a8a7df9bbda68e46b75a2bdf2056c870d}{
+\index{headers.h@{headers.h}!loadDoubleInfoClip@{loadDoubleInfoClip}}
+\index{loadDoubleInfoClip@{loadDoubleInfoClip}!headers.h@{headers.h}}
+\subsubsection[{loadDoubleInfoClip}]{\setlength{\rightskip}{0pt plus 5cm}void loadDoubleInfoClip (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file, }
+\item[{SDL\_\-Rect}]{clip\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_a8a7df9bbda68e46b75a2bdf2056c870d}
+Carrega retângulos a partir de um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & O arquivo a ser carregado \\
+\hline
+{\em clip} & O vetor de retângulos que conterá as informações \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_af3231d0d69b075fdf6a3fffc4e05f50b}{
+\index{headers.h@{headers.h}!manual@{manual}}
+\index{manual@{manual}!headers.h@{headers.h}}
+\subsubsection[{manual}]{\setlength{\rightskip}{0pt plus 5cm}int manual (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{screen, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_af3231d0d69b075fdf6a3fffc4e05f50b}
+Seção \char`\"{}Manual\char`\"{} do menu 
+\begin{DoxyParams}{Parâmetros}
+{\em tela} & Tela onde a seção será renderizada \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_ac1069ac1fdef17f65759ecd6819a0f11}{
+\index{headers.h@{headers.h}!safeFreeSurface@{safeFreeSurface}}
+\index{safeFreeSurface@{safeFreeSurface}!headers.h@{headers.h}}
+\subsubsection[{safeFreeSurface}]{\setlength{\rightskip}{0pt plus 5cm}void safeFreeSurface (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{dead}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_ac1069ac1fdef17f65759ecd6819a0f11}
+Libera a memória de uma tela 
+\begin{DoxyParams}{Parâmetros}
+{\em tela} & A tela em questão \\
+\hline
+\end{DoxyParams}
+\hypertarget{headers_8h_a79fb862d32102adb3afd6c4850efa80f}{
+\index{headers.h@{headers.h}!title@{title}}
+\index{title@{title}!headers.h@{headers.h}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}int title (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{screen}
+\end{DoxyParamCaption}
+)}}
+\label{headers_8h_a79fb862d32102adb3afd6c4850efa80f}
+Menu principal 
+\begin{DoxyParams}{Parâmetros}
+{\em tela} & Tela onde o menu será renderizado \\
+\hline
+\end{DoxyParams}

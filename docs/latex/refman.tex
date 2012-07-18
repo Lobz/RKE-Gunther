@@ -1,7 +1,5 @@
-\documentclass{book}
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\documentclass[a4paper]{book}
 \usepackage{makeidx}
-\usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{float}
@@ -41,20 +39,16 @@
 \setcounter{tocdepth}{3}
 \renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\familydefault}{\sfdefault}
-\hfuzz=15pt
-\setlength{\emergencystretch}{15pt}
-\hbadness=750
-\tolerance=750
 \begin{document}
-\hypersetup{pageanchor=false,citecolor=blue}
+\hypersetup{pageanchor=false}
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}
-{\Large Gunther's Quest Alpha \\[1ex]\large 0.\-2 }\\
+{\Large Gunther's Quest Alpha \\[1ex]\large 0.2 }\\
 \vspace*{1cm}
-{\large Gerado por Doxygen 1.8.0}\\
+{\large Gerado por Doxygen 1.7.4}\\
 \vspace*{0.5cm}
-{\small Domingo, 17 de Junho de 2012 23:27:58}\\
+{\small Terça, 17 de Julho de 2012 22:45:47}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -62,27 +56,27 @@
 \tableofcontents
 \clearemptydoublepage
 \pagenumbering{arabic}
-\hypersetup{pageanchor=true,citecolor=blue}
+\hypersetup{pageanchor=true}
 \chapter{Índice das Estruturas de Dados}
 \input{annotated}
 \chapter{Índice dos Arquivos}
 \input{files}
 \chapter{Estruturas}
 \input{struct__jogador}
-\input{struct__ladrilho}
-\input{struct__objeto}
-\input{struct__tabuleiro}
-\input{structstruct__objeto}
-\input{structstruct__vetor}
+\input{structatt}
+\input{structgmboard}
+\input{structmov}
+\input{structobj}
+\input{structterreno}
+\input{structvector}
 \chapter{Arquivos}
-\input{gunther_8h}
-\input{rkefisica_8h}
-\input{rkegraficos_8h}
-\input{rkerender_8h}
-\input{rketypes_8h}
+\input{boardloader_8c}
+\input{_game_8c}
+\input{game_8h}
+\input{headers_8h}
 \input{main_8c}
 \input{menu_8c}
-\input{rkegraficos_8c}
-\input{rkerender_8c}
+\input{player_8c}
+\input{player_8h}
 \printindex
 \end{document}

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$gunther_8h.html" title="Arquivo header geral do jogo." alt="" coords="87,160,188,189"/>
+<area shape="rect" id="node9" href="$rkerender_8h.html" title="Arquivo header do renderizador." alt="" coords="128,83,240,112"/>
+<area shape="rect" id="node5" href="$rkegraficos_8c.html" title="Utilitários gráficos." alt="" coords="5,237,128,267"/>
+<area shape="rect" id="node7" href="$rkerender_8c.html" title="Renderizador de fases." alt="" coords="152,237,264,267"/>
+</map>

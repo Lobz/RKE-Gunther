@@ -2,54 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Gunther&#39;s Quest Alpha: Código-Fonte de include/rkerender.h</title>
-
+<title>Gunther&#39;s Quest Alpha: Código-Fonte de bkp/rkerender.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
-
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-<div id="top"><!-- do not remove this div! -->
-
-
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div id="top">
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  
-  
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Gunther&#39;s Quest Alpha
-   &#160;<span id="projectnumber">0.2</span>
-   </div>
-   
+   <div id="projectname">Gunther's Quest Alpha&#160;<span id="projectnumber">0.2</span></div>
   </td>
-  
-  
-  
  </tr>
  </tbody>
 </table>
 </div>
-
-<!-- Gerado por Doxygen 1.8.0 -->
-<script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'Busca');
-</script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
       <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
-      <li>
+      <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <img id="MSearchSelect" src="search/mag_sel.png"
@@ -73,25 +54,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
       <li><a href="globals.html"><span>Globais</span></a></li>
     </ul>
   </div>
-</div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
 <div class="header">
   <div class="headertitle">
-<div class="title">include/rkerender.h</div>  </div>
-</div><!--header-->
+<div class="title">bkp/rkerender.h</div>  </div>
+</div>
 <div class="contents">
 <a href="rkerender_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="rkegraficos_8h.html" title="Arquivo header da parte gráfica.">rkegraficos.h</a>&quot;</span>
@@ -113,35 +79,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <a name="l00029"></a>00029 
 <a name="l00035"></a><a class="code" href="struct__tabuleiro.html">00035</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__tabuleiro.html">_tabuleiro</a>
 <a name="l00036"></a>00036 {
-<a name="l00037"></a>00037     <span class="keywordtype">char</span>** terreno;
+<a name="l00037"></a>00037     <span class="keywordtype">char</span>** <a class="code" href="structterreno.html">terreno</a>;
 <a name="l00038"></a>00038     <span class="keywordtype">char</span>** objetos;
 <a name="l00039"></a>00039 } <a class="code" href="rkerender_8h.html#a0daefc5bc2fe00432f1dbe344d946d67">Tabuleiro</a>;
 <a name="l00040"></a>00040 
-<a name="l00045"></a><a class="code" href="struct__objeto.html">00045</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__objeto.html">_objeto</a>
-<a name="l00046"></a>00046 {
-<a name="l00047"></a>00047     SDL_Rect retangulo;
-<a name="l00048"></a>00048 } <a class="code" href="rkerender_8h.html#a83af8ea0f645662f4b2b0d720cdf1748">Objeto</a>;
-<a name="l00049"></a>00049 
-<a name="l00057"></a><a class="code" href="struct__jogador.html">00057</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__jogador.html">_jogador</a>
-<a name="l00058"></a>00058 {
-<a name="l00059"></a>00059     SDL_Rect retangulo[8];
-<a name="l00060"></a>00060     <span class="keywordtype">int</span> x, y, direcao;
-<a name="l00061"></a>00061 } <a class="code" href="rkerender_8h.html#a244c5487b0f580caedc3e744dfa296dc">Jogador</a>;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="keywordtype">void</span> <a class="code" href="rkerender_8h.html#a95123d6fd00a9b48016c595c427eeb55">rke_render</a>(<span class="keywordtype">char</span>* fase, <span class="keywordtype">char</span>* imagens, <span class="keywordtype">char</span>* img_jogador, <span class="keywordtype">int</span> larg, <span class="keywordtype">int</span> alt, <span class="keywordtype">int</span> largura_ladrilho, <span class="keywordtype">int</span> altura_ladrilho);
-<a name="l00064"></a>00064 <span class="keywordtype">void</span> <a class="code" href="rkerender_8h.html#a8dc5a9555b2b8a1e08c811a7a35469ea">rke_carrega_terreno</a>(<span class="keywordtype">char</span>* arquivo, <a class="code" href="struct__ladrilho.html">Ladrilho</a> terrenos[], <span class="keywordtype">int</span> larg_ladrilho, <span class="keywordtype">int</span> alt_ladrilho);
-<a name="l00065"></a>00065 <span class="keywordtype">void</span> <a class="code" href="rkerender_8h.html#af0f031a450b3be6ba5c5bc5b6d103653">rke_carrega_objetos</a>(<span class="keywordtype">char</span>* arquivo, <a class="code" href="struct__objeto.html">Objeto</a> objetos[], <span class="keywordtype">int</span> larg_ladrilho, <span class="keywordtype">int</span> alt_ladrilho);
-<a name="l00066"></a>00066 <span class="keywordtype">void</span> <a class="code" href="rkerender_8h.html#aaa263ecd9eccd396516779b7ef6710f6">rke_carrega_fase</a>(<span class="keywordtype">char</span>* arquivo, <a class="code" href="struct__tabuleiro.html">Tabuleiro</a>* tabuleiro, <span class="keywordtype">int</span>* jogador_x, <span class="keywordtype">int</span>* jogador_y);
-<a name="l00067"></a>00067 <span class="keywordtype">void</span> <a class="code" href="rkerender_8h.html#a367aed7c3de5f557a25d934be4aee8a4">rke_carrega_jogador</a>(<a class="code" href="struct__jogador.html">Jogador</a>* jogador, <span class="keywordtype">int</span> larg_ladrilho, <span class="keywordtype">int</span> alt_ladrilho);
-<a name="l00068"></a>00068 <span class="keywordtype">void</span> <a class="code" href="rkerender_8h.html#a4fb57e2863d45d122b3cfa8b70a78aa9">rke_move_jogador</a>(<a class="code" href="struct__jogador.html">Jogador</a>* jogador, <a class="code" href="struct__tabuleiro.html">Tabuleiro</a> tabuleiro, <a class="code" href="struct__ladrilho.html">Ladrilho</a>* terrenos, <a class="code" href="struct__objeto.html">Objeto</a>* objetos, <span class="keywordtype">int</span> delta_x, <span class="keywordtype">int</span> delta_y);
-</pre></div></div><!-- contents -->
+<a name="l00048"></a><a class="code" href="struct__objeto.html">00048</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__objeto.html">_objeto</a>
+<a name="l00049"></a>00049 {
+<a name="l00050"></a>00050     SDL_Rect retangulo;
+<a name="l00051"></a>00051     <span class="keywordtype">int</span> hp, attack, bonus;
+<a name="l00052"></a>00052 } <a class="code" href="rkerender_8h.html#a83af8ea0f645662f4b2b0d720cdf1748">Objeto</a>;
+<a name="l00053"></a>00053 
+<a name="l00062"></a><a class="code" href="struct__jogador.html">00062</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__jogador.html">_jogador</a>
+<a name="l00063"></a>00063 {
+<a name="l00064"></a>00064     SDL_Rect retangulo[8];
+<a name="l00065"></a>00065     <span class="keywordtype">int</span> x, y, direcao, hp;
+<a name="l00066"></a>00066 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:include/rkerender.h
+<a name="l00067"></a>00067     <span class="keywordtype">int</span> poder_flecha, poder_bomba;
+<a name="l00068"></a>00068     <span class="keywordtype">int</span> bombas;
+<a name="l00069"></a>00069 =======
+<a name="l00070"></a>00070 &gt;&gt;&gt;&gt;&gt;&gt;&gt; towers_bombs:fase2/include/rkerender.h
+<a name="l00071"></a>00071 } <a class="code" href="rkerender_8h.html#a244c5487b0f580caedc3e744dfa296dc">Jogador</a>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#a239c7a748de2f7055719398fc04fe922">rke_render</a>(<span class="keywordtype">char</span>* fase, <span class="keywordtype">char</span>* imagens, <span class="keywordtype">char</span>* img_jogador, <span class="keywordtype">int</span> larg, <span class="keywordtype">int</span> alt, <span class="keywordtype">int</span> largura_ladrilho, <span class="keywordtype">int</span> altura_ladrilho);
+<a name="l00074"></a>00074 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#a8dc5a9555b2b8a1e08c811a7a35469ea">rke_carrega_terreno</a>(<span class="keywordtype">char</span>* arquivo, <a class="code" href="struct__ladrilho.html">Ladrilho</a> terrenos[], <span class="keywordtype">int</span> larg_ladrilho, <span class="keywordtype">int</span> alt_ladrilho);
+<a name="l00075"></a>00075 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#af0f031a450b3be6ba5c5bc5b6d103653">rke_carrega_objetos</a>(<span class="keywordtype">char</span>* arquivo, <a class="code" href="struct__objeto.html">Objeto</a> objetos[], <span class="keywordtype">int</span> larg_ladrilho, <span class="keywordtype">int</span> alt_ladrilho);
+<a name="l00076"></a>00076 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#aaa263ecd9eccd396516779b7ef6710f6">rke_carrega_fase</a>(<span class="keywordtype">char</span>* arquivo, <a class="code" href="struct__tabuleiro.html">Tabuleiro</a>* tabuleiro, <span class="keywordtype">int</span>* jogador_x, <span class="keywordtype">int</span>* jogador_y);
+<a name="l00077"></a>00077 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#a367aed7c3de5f557a25d934be4aee8a4">rke_carrega_jogador</a>(<a class="code" href="struct__jogador.html">Jogador</a>* jogador, <span class="keywordtype">int</span> larg_ladrilho, <span class="keywordtype">int</span> alt_ladrilho);
+<a name="l00078"></a>00078 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#a4fb57e2863d45d122b3cfa8b70a78aa9">rke_move_jogador</a>(<a class="code" href="struct__jogador.html">Jogador</a>* jogador, <a class="code" href="struct__tabuleiro.html">Tabuleiro</a> tabuleiro, <a class="code" href="struct__ladrilho.html">Ladrilho</a>* terrenos, <a class="code" href="struct__objeto.html">Objeto</a>* objetos, <span class="keywordtype">int</span> delta_x, <span class="keywordtype">int</span> delta_y);
+<a name="l00079"></a>00079 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:include/rkerender.h
+<a name="l00080"></a>00080 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#aa69f373b7090123c26ef782d099b9524">rke_jogador_atira</a>(<a class="code" href="struct__jogador.html">Jogador</a>* jogador, <a class="code" href="struct__tabuleiro.html">Tabuleiro</a> tabuleiro, <a class="code" href="struct__ladrilho.html">Ladrilho</a>* terrenos, <a class="code" href="struct__objeto.html">Objeto</a>* objetos, <span class="keywordtype">int</span> bomba);
+<a name="l00081"></a>00081 =======
+<a name="l00082"></a>00082 <span class="keywordtype">void</span> <a class="code" href="rkerender_8c.html#aa69f373b7090123c26ef782d099b9524">rke_jogador_atira</a>(<a class="code" href="struct__jogador.html">Jogador</a>* jogador, <a class="code" href="struct__tabuleiro.html">Tabuleiro</a> tabuleiro, <a class="code" href="struct__ladrilho.html">Ladrilho</a>* terrenos, <a class="code" href="struct__objeto.html">Objeto</a>* objetos);
+<a name="l00083"></a>00083 &gt;&gt;&gt;&gt;&gt;&gt;&gt; towers_bombs:fase2/include/rkerender.h
+<a name="l00084"></a>00084 <span class="keywordtype">int</span> <a class="code" href="rkerender_8c.html#a33b39c80a9bf85e9d591eae389194976">rke_acoes_objetos</a>(<a class="code" href="struct__jogador.html">Jogador</a>* jogador, <a class="code" href="struct__tabuleiro.html">Tabuleiro</a> tabuleiro, <a class="code" href="struct__ladrilho.html">Ladrilho</a>* terrenos, <a class="code" href="struct__objeto.html">Objeto</a>* objetos);
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Estruturas de Dados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Definições de Tipos</a></div>
 
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
 
-<hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 17 de Junho de 2012 23:27:58 para Gunther's Quest Alpha por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.0
-</small></address>
-
+<hr class="footer"/><address class="footer"><small>Gerado em Terça, 17 de Julho de 2012 22:42:46 para Gunther's Quest Alpha por&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
 </html>

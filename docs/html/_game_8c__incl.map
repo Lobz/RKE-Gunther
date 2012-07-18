@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$player_8h.html" title="Header para o jogador: imagens, ataques, movimentos, comandos, etc." alt="" coords="133,83,200,112"/>
+<area shape="rect" id="node5" href="$game_8h.html" title="Headers para unidades e mapa: ataques, movimentos, etc." alt="" coords="135,160,199,189"/>
+<area shape="rect" id="node7" href="$headers_8h.html" title="Arquivo header geral do jogo, incluindo menu e gráficos." alt="" coords="128,237,205,267"/>
+</map>

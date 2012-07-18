@@ -1,21 +1,43 @@
-\hypertarget{menu_8c}{\section{Referência do Arquivo src/menu/menu.c}
-\label{menu_8c}\index{src/menu/menu.\-c@{src/menu/menu.\-c}}
+\hypertarget{menu_8c}{
+\section{Referência do Arquivo menu.c}
+\label{menu_8c}\index{menu.c@{menu.c}}
 }
 
 
 Implementação do menu principal.  
 
 
-{\ttfamily \#include \char`\"{}gunther.\-h\char`\"{}}\\*
-Gráfico de dependência de inclusões para menu.\-c\-:
+{\ttfamily \#include \char`\"{}headers.h\char`\"{}}\par
+Gráfico de dependência de inclusões para menu.c:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{menu_8c__incl}
+\end{center}
+\end{figure}
 \subsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{menu_8c_acf814435dd822e55f2537b49cc6c1505}{gunther\-\_\-menu} (S\-D\-L\-\_\-\-Surface $\ast$tela)
+void \hyperlink{menu_8c_a54ce253826e283991f35d6a97d346a46}{gunther\_\-menu} (SDL\_\-Surface $\ast$screen)
 \item 
-int \hyperlink{menu_8c_ac241ff40fd02c916d3dd71a0f150d3f6}{inicio} (S\-D\-L\-\_\-\-Surface $\ast$screen)
+int \hyperlink{menu_8c_a79fb862d32102adb3afd6c4850efa80f}{title} (SDL\_\-Surface $\ast$screen)
 \item 
-int \hyperlink{menu_8c_a4f64a22b2d93a0825625d69dec8b5524}{manual} (S\-D\-L\-\_\-\-Surface $\ast$screen, int mode)
+int \hyperlink{menu_8c_a4f64a22b2d93a0825625d69dec8b5524}{manual} (SDL\_\-Surface $\ast$screen, int mode)
+\item 
+\hypertarget{menu_8c_a7d1a4254bb9ad756b0528b4c95be9443}{
+int {\bfseries options} (SDL\_\-Surface $\ast$screen)}
+\label{menu_8c_a7d1a4254bb9ad756b0528b4c95be9443}
+
+\item 
+\hypertarget{menu_8c_af26f6b5c02e28bd5037ef7ee6dc2e2cf}{
+int {\bfseries intro} (SDL\_\-Surface $\ast$screen)}
+\label{menu_8c_af26f6b5c02e28bd5037ef7ee6dc2e2cf}
+
+\item 
+\hypertarget{menu_8c_a10e82c49851064a9aae3397425f5b936}{
+int {\bfseries credits} (SDL\_\-Surface $\ast$screen)}
+\label{menu_8c_a10e82c49851064a9aae3397425f5b936}
+
 \end{DoxyCompactItemize}
 
 
@@ -26,40 +48,46 @@ João da Silva, Marina Salles, Ricardo Macedo
 
 
 \subsection{Funções}
-\hypertarget{menu_8c_acf814435dd822e55f2537b49cc6c1505}{\index{menu.\-c@{menu.\-c}!gunther\-\_\-menu@{gunther\-\_\-menu}}
-\index{gunther\-\_\-menu@{gunther\-\_\-menu}!menu.c@{menu.\-c}}
-\subsubsection[{gunther\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf gunther\-\_\-menu} (
+\hypertarget{menu_8c_a54ce253826e283991f35d6a97d346a46}{
+\index{menu.c@{menu.c}!gunther\_\-menu@{gunther\_\-menu}}
+\index{gunther\_\-menu@{gunther\_\-menu}!menu.c@{menu.c}}
+\subsubsection[{gunther\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void gunther\_\-menu (
 \begin{DoxyParamCaption}
-\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{tela}
+\item[{SDL\_\-Surface $\ast$}]{screen}
 \end{DoxyParamCaption}
-)}}\label{menu_8c_acf814435dd822e55f2537b49cc6c1505}
+)}}
+\label{menu_8c_a54ce253826e283991f35d6a97d346a46}
 Renderiza o menu baseado na seleção 
 \begin{DoxyParams}{Parâmetros}
 {\em tela} & Tela onde o menu será renderizado \\
 \hline
 \end{DoxyParams}
-\hypertarget{menu_8c_ac241ff40fd02c916d3dd71a0f150d3f6}{\index{menu.\-c@{menu.\-c}!inicio@{inicio}}
-\index{inicio@{inicio}!menu.c@{menu.\-c}}
-\subsubsection[{inicio}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf inicio} (
+\hypertarget{menu_8c_a4f64a22b2d93a0825625d69dec8b5524}{
+\index{menu.c@{menu.c}!manual@{manual}}
+\index{manual@{manual}!menu.c@{menu.c}}
+\subsubsection[{manual}]{\setlength{\rightskip}{0pt plus 5cm}int manual (
 \begin{DoxyParamCaption}
-\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{screen}
+\item[{SDL\_\-Surface $\ast$}]{screen, }
+\item[{int}]{mode}
 \end{DoxyParamCaption}
-)}}\label{menu_8c_ac241ff40fd02c916d3dd71a0f150d3f6}
+)}}
+\label{menu_8c_a4f64a22b2d93a0825625d69dec8b5524}
+Seção \char`\"{}Manual\char`\"{} do menu 
+\begin{DoxyParams}{Parâmetros}
+{\em tela} & Tela onde a seção será renderizada \\
+\hline
+\end{DoxyParams}
+\hypertarget{menu_8c_a79fb862d32102adb3afd6c4850efa80f}{
+\index{menu.c@{menu.c}!title@{title}}
+\index{title@{title}!menu.c@{menu.c}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}int title (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{screen}
+\end{DoxyParamCaption}
+)}}
+\label{menu_8c_a79fb862d32102adb3afd6c4850efa80f}
 Menu principal 
 \begin{DoxyParams}{Parâmetros}
 {\em tela} & Tela onde o menu será renderizado \\
-\hline
-\end{DoxyParams}
-\hypertarget{menu_8c_a4f64a22b2d93a0825625d69dec8b5524}{\index{menu.\-c@{menu.\-c}!manual@{manual}}
-\index{manual@{manual}!menu.c@{menu.\-c}}
-\subsubsection[{manual}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf manual} (
-\begin{DoxyParamCaption}
-\item[{S\-D\-L\-\_\-\-Surface $\ast$}]{screen, }
-\item[{int}]{mode}
-\end{DoxyParamCaption}
-)}}\label{menu_8c_a4f64a22b2d93a0825625d69dec8b5524}
-Seção \char`\"{}\-Manual\char`\"{} do menu 
-\begin{DoxyParams}{Parâmetros}
-{\em tela} & Tela onde a seção será renderizada \\
 \hline
 \end{DoxyParams}
