@@ -18,7 +18,7 @@
 
 /**
  * Struct Jogador
- * \param retangulo Vetor com os 8 retângulos das visões do jogador
+ * \param retângulo Vetor com os 8 retângulos das visões do jogador
  * \param x Posição x do jogador
  * \param y Posição y do jogador
  * \param direcao Direção que o jogador está olhando
